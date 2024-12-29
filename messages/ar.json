@@ -1,0 +1,33 @@
+{
+  "app_title": "   ",
+  "Language": "اللغة",
+  "lang": "عربية",
+  "nav_home": "الرئيسية",
+  "nav_service": "الخدمات",
+  "nav_Products": "المنتجات",
+  "nav_Projects": "المشاريع",
+  "nav_about": "من نحن",
+  "OUR_CLIENTS": "عملاؤنا",
+  "nav_blogs": "مدونات",
+  "nav_contact": "اتصل بنا",
+  "btn_nav": "احصل على عرض",
+  "footer": {
+    "address": "العنوان",
+    "address_text": "٣ مكرم عبيد - مدينة نصر",
+    "send_email": "أرسل بريد إلكتروني",
+    "email_text": "Info@vigtas.com",
+    "call_emergency": "اتصل في حالة الطوارئ",
+    "phone_number": "+201115893336",
+    "welcome_text": "مرحبًا بكم في vigtas، شركة رائدة في تطوير البرمجيات في طليعة الثورة الرقمية.",
+    "quick_links": "روابط سريعة",
+    "contact_us": "اتصل بنا",
+    "clients": "العملاء",
+    "contact_us_link": "اتصل بنا",
+    "privacy_policy": "سياسة الخصوصية",
+    "terms_conditions": "الشروط والأحكام",
+    "address_": "٣ مكرم عبيد - مدينة نصر",
+    "phone_number_1": "+201115893336",
+    "phone_number_2": "01115893336",
+    "email": "info@vigtas.com"
+  }
+}
