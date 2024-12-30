@@ -7,11 +7,9 @@ const Slider = () => {
         <div>
             <Image
                 src={img.slider1} alt="background"
-                width={100}
-                height={100}
+                width={1934} height={951}
                 className="w-full h-full"
             />
-
         </div>
     )
 }
