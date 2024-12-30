@@ -1,7 +1,7 @@
 
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
- 
+
 import "@/style/App.scss";
 import "@/style/index.scss";
 import { ConfigProvider } from "antd";
@@ -19,8 +19,11 @@ export default async function RootLayout({ children, params }) {
   const messages = await getMessages();
   const theme = {
     token: {
-      fontSize: 16,
-      colorPrimary: '#FA6409',
+      colorPrimary: '#0A1220',
+      colorActiveText: 'red'
+    },
+    components: {
+
     },
   };
   return (
@@ -29,7 +32,7 @@ export default async function RootLayout({ children, params }) {
         <link rel="icon" type="image/png" href="/favicon.ico" />
       </head>
       <body>
-        <ConfigProvider  theme={theme}>
+        <ConfigProvider theme={theme}>
           <NextIntlClientProvider messages={messages}>
             <Navbar />
             {children}

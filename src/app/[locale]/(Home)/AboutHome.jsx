@@ -1,12 +1,13 @@
+import HeaderTitle from '@/app/(components)/header/HeaderTitle';
 import img from '@/constants/img';
-import { Col, Row } from 'antd'; 
+import { Col, Row } from 'antd';
 
 const AboutHome = () => {
     return (
         <Row className="about-home-container">
             {/* القسم الخاص بالنص */}
             <Col xl={12} lg={12} className="about-home-text">
-                <h2 className="about-title">Who We Are</h2>
+                <HeaderTitle title="Who We Are" />
                 <p>
                     A Saudi Company Specialized In The Field Of Digital Marketing And In The Management And
                     Enrichment Of Content On Social Networks, In Addition To Designing Websites, Organizing

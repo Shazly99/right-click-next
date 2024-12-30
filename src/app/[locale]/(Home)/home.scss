@@ -2,6 +2,7 @@
 
 // Slider Home
 .slider_home {
+
   position: relative;
 
   .overlay {
@@ -204,127 +205,448 @@
 }
 
 // ************************* Projects  Section
-.projects-section {
-  padding: 50px;
-  background-color: #fff;
+.app__projects-section {
+  width: 95%;
+  margin: auto;
 
-  .tabs {
+  .projects-section {
+
+    background-color: #fff;
+
+    .tabs {
       margin-bottom: 20px;
 
       .ant-btn-link {
-          color: #555;
-          font-size: 1rem;
-          margin: 0 10px;
+        color: #555;
+        font-size: 1rem;
+        margin: 0 10px;
 
-          &.active-tab {
-              color: #ff5722;
-              font-weight: bold;
-          }
+        &.active-tab {
+          color: #ff5722;
+          font-weight: bold;
+        }
       }
-  }
+    }
 
-  .projects-grid {
+    .projects-grid {
       .project-card {
-          img {
-              max-height: 200px;
-              object-fit: cover;
-          }
+        img {
+          max-height: 200px;
+          object-fit: cover;
+        }
 
-          .ant-card-meta-title {
-              font-size: 1.2rem;
-              color: #333;
-              margin-top: 10px;
-          }
+        .ant-card-meta-title {
+          font-size: 1.2rem;
+          color: #333;
+          margin-top: 10px;
+        }
 
-          .ant-card-meta-description {
-              font-size: 0.9rem;
-              color: #555;
-          }
+        .ant-card-meta-description {
+          font-size: 0.9rem;
+          color: #555;
+        }
       }
-  }
+    }
 
-  .view-more {
+    .view-more {
       margin-top: 30px;
 
       .ant-btn-primary {
-          background-color: #000;
-          border-color: #000;
+        background-color: #000;
+        border-color: #000;
 
-          &:hover {
-              background-color: #333;
-              border-color: #333;
-          }
+        &:hover {
+          background-color: #333;
+          border-color: #333;
+        }
       }
+    }
   }
 }
 
-.projects-section {
-  padding: 50px;
+.app__projects-section {
+  .projects-section {
+    padding: 50px;
 
-  .custom-card {
+    .custom-card {
       position: relative;
       background-color: #000;
       border-radius: 8px;
       overflow: hidden;
       color: #fff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
-
-      &:hover {
-          transform: scale(1.05);
-      }
 
       .card-image {
-          position: relative;
+        position: relative;
 
-          img {
-              width: 100%;
-              
-              object-fit: contain;
+        img {
+          transition: transform 0.3s;
+
+          &:hover {
+            transform: scale(1.08);
           }
 
-          .card-category {
-              position: absolute;
-              top: 10px;
-              left: 10px;
-              background: rgba(255, 255, 255, 0.2);
-              padding: 5px 10px;
-              border-radius: 4px;
-              font-size: 14px;
-              font-weight: bold;
-              color: #fff;
-          }
+        }
 
-          .card-icon {
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              background: #fff;
-              width: 30px;
-              height: 30px;
-              border-radius: 50%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              color: #000;
-              font-size: 16px;
-          }
+        .card-category {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          background: rgba(255, 255, 255, 0.2);
+          padding: 5px 10px;
+          border-radius: 4px;
+          font-size: 14px;
+          font-weight: bold;
+          color: #fff;
+        }
+
+        .card-icon {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          background: #fff;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #000;
+          font-size: 16px;
+        }
       }
 
       .card-content {
-          padding: 15px;
+        padding: 15px;
 
-          h3 {
-              font-size: 1.2rem;
-              font-weight: bold;
-              margin-bottom: 10px;
-          }
+        h3 {
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
 
-          p {
-              font-size: 0.9rem;
-              line-height: 1.4;
-              color: rgba(255, 255, 255, 0.8);
-          }
+        p {
+          font-size: 0.9rem;
+          line-height: 1.4;
+          color: rgba(255, 255, 255, 0.8);
+        }
       }
+    }
   }
 }
+
+
+// ProjectHome 
+.projectHome {
+  width: 90%;
+  margin: auto;
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+      font-family: Poppins;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 33px;
+      text-align: center;
+
+    }
+  }
+
+  // padding: 2rem;
+  .logo_Container {
+    padding: 0 20px !important;
+
+    .logoContainer {
+      background-color: #EEEEEE;
+      border-radius: 70px;
+      padding: 20px 0 !important;
+
+      .Container {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #888;
+          border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+      }
+
+      .logo {
+        margin: 0.5rem 0;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+
+        &:hover {
+          border: 1px solid $mainColor;
+        }
+
+        &.active {
+          border: 1px solid $secondColor;
+          background-color: rgba(255, 255, 255, 0.538) !important;
+        }
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+
+  .contentContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      margin: 0.5rem 0 1rem;
+      color: #888;
+    }
+
+    .projectDetails {
+      .projectName {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+
+        .highlight {
+          color: $secondColor;
+        }
+      }
+
+      .description {
+        margin-bottom: 1rem;
+        color: #666;
+      }
+
+      .button {
+
+
+        &:hover {
+          background-color: $mainColor;
+          border-color: $mainColor;
+        }
+      }
+    }
+
+    .imageWrapper {
+      margin-top: 2rem;
+
+      img {
+        width: 100%;
+        max-width: 500px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+/* Header Styling */
+.header {
+  text-align: center;
+  margin: 20px 0;
+  background: linear-gradient(to right, $secondColor, #feb47b);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: none;
+  background: white;
+  color: #333;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+  background: $secondColor;
+  color: white;
+  transform: scale(1.1);
+}
+
+.filter-btn:hover {
+  background: #feb47b;
+  color: white;
+}
+
+/* Projects Styling */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+// start services home page
+.home-services-container {
+  header {
+    background: red;
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+
+  .home-services-grid {}
+
+  .home-services-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .home-services-icon {
+    font-size: 2rem;
+    color: $secondColor;
+    margin-bottom: 1rem;
+  }
+
+  .home-services-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .home-services-description {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 1rem 0;
+  }
+
+  .home-services-order-button {
+    background-color: $secondColor;
+    border-color: $secondColor;
+    color: #fff;
+
+    &:hover {
+      background-color: #d46b08;
+      border-color: #000;
+    }
+  }
+} 
+.home-services-container {
+  padding: 2rem;
+  .container {
+    width: 80%;
+  }
+}
+
+
+.home-services-card {
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  &.home-services-card-featured {
+    background-color: #fffdf5;
+    text-align: left;
+    padding: 1.5rem;
+    backdrop-filter: blur(260.5px);
+    display: flex !important; 
+    flex-direction: row !important;
+
+     
+
+    .home-services-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .home-services-description {
+      font-size: 1rem;
+      color: #666;
+      margin: 1rem 0;
+    }
+
+    .home-services-button-featured {
+      background-color: #fa8c16;
+      border-color: #fa8c16;
+      color: #fff;
+
+      &:hover {
+        background-color: #d46b08;
+        border-color: #d46b08;
+      }
+    }
+  }
+}
+
+
+// end services home page

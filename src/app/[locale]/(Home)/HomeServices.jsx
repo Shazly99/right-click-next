@@ -1,0 +1,110 @@
+import React from 'react';
+import { Card, Button, Row, Col } from 'antd';
+import HeaderTitle from '@/app/(components)/header/HeaderTitle';
+import img from '@/constants/img';
+
+const services1 = [
+    {
+        title: "Digital Marketing",
+        description: "At Right Click, we believe that every business deserves the right tools and strategies to succeed in the fast-paced digital world. With over 10 years of experience, we’ve partnered with businesses of all sizes to help them achieve measurable growth. From boosting online visibility to generating high-quality leads, our services are designed to meet your goals effectively. ",
+        icon: img.Service1,
+    }
+]
+const services = [
+    // {
+    //     title: "Digital Marketing",
+    //     description: "At Right Click, we believe that every business deserves the right tools and strategies to succeed in the fast-paced digital world. With over 10 years of experience, we’ve partnered with businesses of all sizes to help them achieve measurable growth. From boosting online visibility to generating high-quality leads, our services are designed to meet your goals effectively. ",
+    //     icon: img.Service1,
+    // },
+    {
+        title: "Web Development",
+        description: "We Will Help You Take Advantage Of Social Media Platforms And Reach Your Audiences Like Never Before...",
+        icon: "🌐",
+    },
+    {
+        title: "Visual Production",
+        description: "At Right Click, We Strive To Uplift Your Visual Identity By Crafting Visual Content That Captures The Essence Of Your Brand...",
+        icon: "🎥",
+    },
+    {
+        title: "Content Marketing",
+        description: "At Right Click, We Understand That Content Is The Backbone Of Every Successful Digital Marketing Strategy...",
+        icon: "📝",
+    },
+    {
+        title: "Branding",
+        description: "At Right Click, We Believe That A Strong Brand Is The Foundation Of A Successful Business...",
+        icon: "🏷️",
+    },
+];
+
+const HomeServices = () => {
+    return (
+        <div className="home-services-container flex-column mt-8">
+            <div className="container">
+                <header className='bg-blue-800'>
+                    <HeaderTitle title={'Our Services'} />
+                    <p className="subtitle">
+                        We provide the integrated marketing services that help you reach your OKRs. our slogan is we help you click right away
+                    </p>
+                </header>
+                <Row gutter={[16, 16]} className="home-services-grid mt-5">
+                    {services1.map((service, index) => (
+                        <Col
+                            key={index}
+                            xs={24}
+                            sm={12}
+                            md={12}
+                            lg={index === 0 ? 24 : 12}
+                            xl={index === 0 ? 24 : 12}
+                        >
+                            <Card
+                                className={`home-services- flex flex-row ${index === 0 ? 'home-services-card-featured' : ''}`}
+                                bordered
+                            >
+                                <Row>
+                                    <Col xl={5}>
+                                        <div className="home-services-icon  flex justify-content-start"  >
+                                            <img src={service.icon} className='w-full' alt={service.title} />
+                                        </div>
+                                    </Col>
+                                    <Col xl={{ span: 17, offset: 2 }}>
+                                        <div className="content">
+                                            <h3 className="home-services-title">{service.title}</h3>
+                                            <p className="home-services-description">
+                                                {service.description}
+                                            </p>
+                                            <Button
+                                                type="primary"
+                                                className={`home-services-order-button ${index === 0 ? 'home-services-button-featured' : ''}`}
+                                            >
+                                                Order Now
+                                            </Button>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Card>
+                        </Col>
+                    ))}
+                </Row>
+
+                <Row gutter={[16, 16]} className="home-services-grid mt-5">
+                    {services.map((service, index) => (
+                        <Col key={index} xs={24} sm={12} md={12} lg={12} xl={12}>
+                            <Card className="home-services-card" bordered>
+                                <div className="home-services-icon">{service.icon}</div>
+                                <h3 className="home-services-title">{service.title}</h3>
+                                <p className="home-services-description">{service.description}</p>
+                                <Button type="primary" className="home-services-order-button">
+                                    Order Now
+                                </Button>
+                            </Card>
+                        </Col>
+                    ))}
+                </Row>
+            </div>
+        </div>
+    );
+};
+
+export default HomeServices;
