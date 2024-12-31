@@ -14,8 +14,7 @@ const Slider = () => {
                 priority
                 format="webp"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1934px"
-                placeholder="blur"
-            />
+             />
         </div>
     )
 }
