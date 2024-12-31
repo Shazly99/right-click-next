@@ -1,8 +1,11 @@
-"use client"; 
+"use client"; // Ensure you're in client mode for React hooks
 
 import { Spin } from "antd";
 
-export default function Loading() { 
+export default function Loading() {
+
+
+
     return (
         <>
             <div
