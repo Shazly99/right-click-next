@@ -8,15 +8,12 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'flagcdn.com', // Corrected hostname
+        hostname: 'flagcdn.com',
         port: '',
         pathname: '/**',
-        search: '',
-      }, 
+      },
     ],
-  },
-  images: {
-    domains: ['right-click-next-iota.vercel.app'], // أضف اسم النطاق الخاص بك هنا
+    domains: ['right-click-next-iota.vercel.app'],
     deviceSizes: [640, 768, 1024, 1280, 1600],
     imageSizes: [16, 32, 48, 64, 96],
   },
