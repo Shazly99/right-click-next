@@ -8,8 +8,8 @@ const Slider = () => {
             <Image
                 src={img.slider1}
                 alt="background"
-                width={1934}
-                height={951}
+                width={1000}
+                height={500}
                 className="w-full h-full"
                 priority
                 format="webp"
