@@ -18,11 +18,7 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96],
   },
   
-  reactStrictMode: true, 
-  swcMinify: true, 
-  experimental: {
-    optimizeCss: true,
-  },
+  reactStrictMode: true,
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
