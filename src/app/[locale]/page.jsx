@@ -1,4 +1,7 @@
 import AboutHome from "./(Home)/AboutHome";
+import HomeAddress from "./(Home)/HomeAddress";
+import HomeClients from "./(Home)/HomeClients";
+import HomeContactsUS from "./(Home)/HomeContactsUS";
 import HomeServices from "./(Home)/HomeServices";
 import ProjectHome from "./(Home)/ProjectHome";
 import ProjectsSection from "./(Home)/ProjectsSection";
@@ -14,8 +17,10 @@ export default function Home() {
       <StatsSection />
       <ProjectHome />
       <ProjectsSection />
- {/*      <HomeServices /> */}
-
+      <HomeServices />
+      <HomeClients/>
+      <HomeContactsUS/>
+      <HomeAddress/>
     </div>
   );
 }

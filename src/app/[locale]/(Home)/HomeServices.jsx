@@ -93,17 +93,24 @@ const HomeServices = () => {
                     ))}
                 </Row>
 
-                <Row gutter={[16, 16]} className="home-services-grid mt-5">
+                <Row gutter={[50, 50]} className="home-services-grid mt-6">
                     {services.map((service, index) => (
-                        <Col key={index} xs={24} sm={12} md={12} lg={12} xl={12}>
-                            <Card className="home-services-card" bordered>
-                                <div className="home-services-icon"><service.icon /></div>
-                                <h3 className="home-services-title">{service.title}</h3>
-                                <p className="home-services-description">{service.description}</p>
-                                <Button type="primary" className="home-services-order-button">
-                                    Order Now
-                                </Button>
-                            </Card>
+                        <Col className='' key={index} xs={24} sm={12} md={12} lg={12} xl={12}>
+                            <div className="blur_position">
+
+                                <Card
+                                    className={` home-services- home-services-2 flex flex-row ${index === 0 ? 'home-services-card-featured' : ''}`}
+                                    bordered>
+                                    <div className="home-services-icon"><service.icon /></div>
+                                    <h3 className="home-services-title">{service.title}</h3>
+                                    <p className="home-services-description">{service.description}</p>
+                                    <Button type="primary" className="home-services-order-button">
+                                        Order Now
+                                    </Button>
+                                </Card>
+
+                                <div className="blur_2"></div>
+                            </div>
                         </Col>
                     ))}
                 </Row>
