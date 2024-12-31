@@ -12,6 +12,9 @@ const Slider = () => {
                 height={951}
                 className="w-full h-full"
                 priority
+                format="webp"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1934px"
+
             />
         </div>
     )
