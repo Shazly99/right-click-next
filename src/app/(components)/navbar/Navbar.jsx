@@ -151,7 +151,7 @@ const Navbar = () => {
 
                 <Link href={'/contact'}>
                     <div className="quote-button">
-                        <Button shape='round' size='large' iconPosition='right'>{t('btn_nav')}</Button>
+                        <Button shape='round' size='large' icon={<Icon.ArrowRight/>} iconPosition='end'>{t('btn_nav')}</Button>
                     </div>
                 </Link>
             </motion.div>

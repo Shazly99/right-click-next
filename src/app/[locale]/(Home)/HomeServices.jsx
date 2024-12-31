@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Button, Row, Col } from 'antd';
 import HeaderTitle from '@/app/(components)/header/HeaderTitle';
 import img from '@/constants/img';
+import Icon from '@/constants/icon';
 
 const services1 = [
     {
@@ -19,22 +20,24 @@ const services = [
     {
         title: "Web Development",
         description: "We Will Help You Take Advantage Of Social Media Platforms And Reach Your Audiences Like Never Before...",
-        icon: "🌐",
+        icon: Icon.services2,
+
     },
     {
         title: "Visual Production",
         description: "At Right Click, We Strive To Uplift Your Visual Identity By Crafting Visual Content That Captures The Essence Of Your Brand...",
-        icon: "🎥",
+        icon: Icon.services3,
     },
     {
         title: "Content Marketing",
         description: "At Right Click, We Understand That Content Is The Backbone Of Every Successful Digital Marketing Strategy...",
         icon: "📝",
+        icon: Icon.services4
     },
     {
         title: "Branding",
         description: "At Right Click, We Believe That A Strong Brand Is The Foundation Of A Successful Business...",
-        icon: "🏷️",
+        icon: Icon.services5
     },
 ];
 
@@ -57,6 +60,7 @@ const HomeServices = () => {
                             md={12}
                             lg={index === 0 ? 24 : 12}
                             xl={index === 0 ? 24 : 12}
+                            className='blur_position'
                         >
                             <Card
                                 className={`home-services- flex flex-row ${index === 0 ? 'home-services-card-featured' : ''}`}
@@ -84,6 +88,7 @@ const HomeServices = () => {
                                     </Col>
                                 </Row>
                             </Card>
+                            <div className="blur_1"></div>
                         </Col>
                     ))}
                 </Row>
@@ -92,7 +97,7 @@ const HomeServices = () => {
                     {services.map((service, index) => (
                         <Col key={index} xs={24} sm={12} md={12} lg={12} xl={12}>
                             <Card className="home-services-card" bordered>
-                                <div className="home-services-icon">{service.icon}</div>
+                                <div className="home-services-icon"><service.icon /></div>
                                 <h3 className="home-services-title">{service.title}</h3>
                                 <p className="home-services-description">{service.description}</p>
                                 <Button type="primary" className="home-services-order-button">

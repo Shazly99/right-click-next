@@ -552,8 +552,6 @@
   align-items: center;
   background-color: #f9f9f9;
 
-  .home-services-grid {}
-
   .home-services-card {
     text-align: center;
     border: 1px solid #ddd;
@@ -563,6 +561,11 @@
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    svg {
+      width: 450px;
+      height: 450px;
     }
   }
 
@@ -594,9 +597,11 @@
       border-color: #000;
     }
   }
-} 
+}
+
 .home-services-container {
   padding: 2rem;
+
   .container {
     width: 80%;
   }
@@ -618,10 +623,10 @@
     text-align: left;
     padding: 1.5rem;
     backdrop-filter: blur(260.5px);
-    display: flex !important; 
+    display: flex !important;
     flex-direction: row !important;
 
-     
+
 
     .home-services-title {
       font-size: 1.5rem;
@@ -650,3 +655,39 @@
 
 
 // end services home page
+
+.blur_position {
+  position: relative;
+
+  .home-services- {
+    border: 11px solid rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.6);
+    // backdrop-filter: blur(15px);
+    z-index: 9999999 !important;
+    border-radius: 30px;
+
+  }
+}
+
+.blur_1 {
+  width: 100px;
+  height: 100px;
+  background-color: #4f4f4f;
+  border-radius: 50%;
+  box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.2);
+  filter: blur(20px);
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+
+}
+
+.blur_2 {
+  width: 141px;
+  height: 141px;
+  background-color: rgba(250, 111, 36, 1);
+  border-radius: 50%;
+  box-shadow: 0 0 50px 30px rgba($color: rgba(250, 111, 36, 1), $alpha: 0.2);
+  filter: blur(20px);
+  margin: 50px;
+}

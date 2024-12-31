@@ -6,9 +6,12 @@ const Slider = () => {
     return (
         <div>
             <Image
-                src={img.slider1} alt="background"
-                width={1934} height={951}
+                src={img.slider1}
+                alt="background"
+                width={1934}
+                height={951}
                 className="w-full h-full"
+                priority
             />
         </div>
     )
