@@ -19,9 +19,9 @@ const nextConfig = {
   },
   
   reactStrictMode: true, 
-  swcMinify: true, // تحسين JavaScript
+  swcMinify: true, 
   experimental: {
-    optimizeCss: true, // تحسين CSS
+    optimizeCss: true,
   },
   webpack(config) {
     config.module.rules.push({
