@@ -2,6 +2,7 @@
 import img from '@/constants/img';
 import { Button, Col, Dropdown, Menu, Row } from 'antd';
 import Image from 'next/image';
+import { useState } from 'react';
 
 const ProjectsSection = () => {
     const projects = [
@@ -36,27 +37,34 @@ const ProjectsSection = () => {
             description: 'اسم المشروع: تفاصيل إضافية عن المشروع هنا.'
         },
     ];
-    const menu = (
-        <Menu>
-            <Menu.Item key="1">Web Development</Menu.Item>
-            <Menu.Item key="2">Mobile Development</Menu.Item>
-            <Menu.Item key="3">UI/UX Design</Menu.Item>
-        </Menu>
-    );
+    const categories = ['All', 'Web Development', 'Mobile Development', 'UI/UX Design'];
+
+    const [selectedCategory, setSelectedCategory] = useState('All');
+
+ 
     return (
         <div className="app__projects-section">
             {/* التبويبات */}
-            <div className="header">
-                <h1 className="title">🚀 أهم مشاريعنا</h1>
-                <div className="filters">
-                    <button className="filter-btn active" onclick="filterProjects('all')">All Projects</button>
-                    <button className="filter-btn" onclick="filterProjects('web')">Web Development</button>
-                    <button className="filter-btn" onclick="filterProjects('mobile')">Mobile Development</button>
-                    <button className="filter-btn" onclick="filterProjects('uiux')">UI/UX Design</button>
-                </div>
-            </div>
- 
+            <div className="container_header">
 
+                <div className="calm-projects-display">
+                    <div className="calm-projects-display__header">
+                        <h1 className="calm-projects-display__title">Our Featured Projects</h1>
+                        <div className="calm-projects-display__filters">
+                            {categories.map((category) => (
+                                <button
+                                    key={category}
+                                    className={`filter-btn ${selectedCategory === category ? 'active' : ''}`}
+                                    onClick={() => setSelectedCategory(category)}
+                                >
+                                    {category}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             {/* الشبكة */}
             <div className="projects-section">
                 <Row gutter={[20, 20]} justify="center">

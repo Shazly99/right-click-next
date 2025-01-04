@@ -23,7 +23,7 @@ const HomeClients = () => {
 
   return (
 
-    <div style={{ backgroundColor: "#f8f9fa", padding: "20px" }}>
+    <div className='mt-6' style={{ backgroundColor: "#f8f9fa", padding: "20px" }}>
         <div className="flex justify-content-center align-items-center mb-4">
             <HeaderTitle title={'Our Clients'} />
         </div>
