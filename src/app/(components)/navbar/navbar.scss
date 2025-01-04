@@ -1,5 +1,5 @@
 @import '../../../style/varibale';
- 
+
 .navbar-container {
     background-color: #fff;
     color: $mainColor;
@@ -120,8 +120,8 @@
         }
 
         .quote-button button {
-            background-color: transparent !important;
-            border-color: #fff !important;
+            background-color: transparent ;
+            border-color: #fff ;
 
             span {
                 color: #fff;
@@ -144,7 +144,7 @@
     cursor: pointer;
 }
 
-.ant-dropdown-link { 
+.ant-dropdown-link {
     svg {
         margin: 0 5px;
         padding-top: 4px;
@@ -152,7 +152,7 @@
     }
 
     img {
-        margin-right: 8px !important; 
+        margin-right: 8px !important;
     }
 }
 
@@ -270,7 +270,7 @@
             width: 100px !important;
             height: auto !important;
             object-fit: contain;
-            display:none
+            display: none
         }
     }
 
@@ -324,6 +324,28 @@
     width: 100%;
     z-index: 1000;
     background-color: #fff !important;
+
+    .quote-button button {
+        background-color: transparent !important;
+        border-color: #000 !important;
+
+        span {
+            color: #000 !important;
+        }
+
+        svg path  {
+            margin-top: -3px;
+            padding: 0;
+            fill: #000 !important;
+            font-weight: 100 !important;
+
+        }
+
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     a {
         color: #333 !important;

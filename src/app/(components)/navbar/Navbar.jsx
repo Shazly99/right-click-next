@@ -71,9 +71,9 @@ const Navbar = () => {
                 transition={{ duration: 0.6, ease: "easeInOut" }}
             >
                 <span className="contact-info flex gap-3">
-                    <a href="mailto:info@vigtas.com" target='_blank' rel="noopener noreferrer" className='flex gap-2 justify-content-center align-items-center'>
+                    <a href="mailto:info@rightclick.com" target='_blank' rel="noopener noreferrer" className='flex gap-2 justify-content-center align-items-center'>
                         <Image width={12} height={12} src={Icon.email} alt="email" />
-                        <span>info@vigtas.com</span>
+                        <span>info@rightclick.com</span>
                     </a>
                     <span className="divider">|</span>
                     <a href="tel:+201115893336" target='_blank' rel="noopener noreferrer" className='flex gap-2 justify-content-center align-items-center'>
@@ -90,12 +90,12 @@ const Navbar = () => {
                         </a>
                     </Dropdown>
                     <div className="social-icons">
-                        <a href="https://www.facebook.com/vigtasco" target='_blank' rel="noopener noreferrer"> <FacebookFilled /> </a>
-                        <a href="https://www.linkedin.com/company/vigtas" target='_blank' rel="noopener noreferrer"> <LinkedinFilled /> </a>
-                        <a href="https://www.tiktok.com/@vigtas" target='_blank' rel="noopener noreferrer"> <TikTokFilled /> </a>
-                        <a href="https://www.instagram.com/vigtasco" target='_blank' rel="noopener noreferrer">  <InstagramFilled /></a>
-                        <a href="https://www.youtube.com/@vigtas" target='_blank' rel="noopener noreferrer"> <YoutubeFilled /> </a>
-                        <a href="https://www.x.com/vigtasco" target='_blank' rel="noopener noreferrer"> <XOutlined /></a>
+                        <a href="https://www.facebook.com/rightclickco" target='_blank' rel="noopener noreferrer"> <FacebookFilled /> </a>
+                        <a href="https://www.linkedin.com/company/rightclick" target='_blank' rel="noopener noreferrer"> <LinkedinFilled /> </a>
+                        <a href="https://www.tiktok.com/@rightclick" target='_blank' rel="noopener noreferrer"> <TikTokFilled /> </a>
+                        <a href="https://www.instagram.com/rightclickco" target='_blank' rel="noopener noreferrer">  <InstagramFilled /></a>
+                        <a href="https://www.youtube.com/@rightclick" target='_blank' rel="noopener noreferrer"> <YoutubeFilled /> </a>
+                        <a href="https://www.x.com/rightclickco" target='_blank' rel="noopener noreferrer"> <XOutlined /></a>
                     </div>
                 </div>
             </motion.div>

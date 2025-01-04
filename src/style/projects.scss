@@ -1,0 +1,154 @@
+@import './varibale';
+
+// ************************* Projects  Section
+.app__projects-section {
+    width: 95%;
+    margin: auto;
+
+    .projects-section {
+
+        background-color: #fff;
+
+        .tabs {
+            margin-bottom: 20px;
+
+            .ant-btn-link {
+                color: #555;
+                font-size: 1rem;
+                margin: 0 10px;
+
+                &.active-tab {
+                    color: #ff5722;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .projects-grid {
+            .project-card {
+                img {
+                    max-height: 200px;
+                    object-fit: cover;
+                }
+
+                .ant-card-meta-title {
+                    font-size: 1.2rem;
+                    color: #333;
+                    margin-top: 10px;
+                }
+
+                .ant-card-meta-description {
+                    font-size: 0.9rem;
+                    color: #555;
+                }
+            }
+        }
+
+        .view-more {
+            margin-top: 30px;
+
+            .ant-btn-primary {
+                background-color: #000;
+                border-color: #000;
+
+                &:hover {
+                    background-color: #333;
+                    border-color: #333;
+                }
+            }
+        }
+    }
+}
+
+.app__projects-section {
+    .projects-section {
+        padding: 50px;
+
+        .custom-card {
+            position: relative;
+            background-color: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+
+            .card-image {
+                position: relative;
+
+                img {
+                    transition: transform 0.3s;
+
+                    &:hover {
+                        transform: scale(1.08);
+                    }
+
+                }
+
+                .card-category {
+                    position: absolute;
+                    top: 30px;
+                    left: 20px;
+                    background: linear-gradient(90deg, #4a4a4a 0%, #2a2a2a 100%);
+                    padding: 7px 16px;
+                    color: #fff;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 13px;
+                    font-weight: 500;
+                    line-height: 15px;
+                    border-radius: 52px;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+
+
+                .card-icon {
+                    position: absolute;
+                    top: 30px;
+                    right: 40px;
+                    background: #fff;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #000;
+                    font-size: 16px;
+                }
+            }
+
+            .card-content {
+                padding: 15px;
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+
+                h3 {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    color: #fff;
+
+                    .highlight {
+                        background-color: rgba(0, 0, 0, 0.8); 
+                        color: #fff; 
+                        padding: 0 5px; 
+                        border-radius: 4px; 
+                        display: inline; 
+                    }
+                }
+
+                p {
+                    font-size: 0.9rem;
+                    line-height: 1.4;
+                    color: rgba(255, 255, 255, 0.8);
+                }
+            }
+        }
+    }
+}

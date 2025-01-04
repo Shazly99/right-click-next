@@ -58,7 +58,7 @@ const Footer = () => {
               transition={{ duration: 0.8, delay: 0.15, ease: 'easeOut' }}
               className="footer-title flex flex-column gap-3"
             >
-              <img src={img.logo} alt="Vigtas Logo" width={150} />
+              <img src={img.logo} alt="rightclick Logo" width={150} />
               <Text className="footer-text">{t('footer.welcome_text')}</Text>
             </motion.div>
             <motion.div
@@ -68,12 +68,12 @@ const Footer = () => {
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
               className="footer-social"
             >
-              <a href="https://www.facebook.com/vigtasco" target="_blank" rel="noopener noreferrer"> <FacebookOutlined /> </a>
-              <a href="https://www.linkedin.com/company/vigtas" target="_blank" rel="noopener noreferrer"> <LinkedinOutlined /> </a>
-              <a href="https://www.youtube.com/@vigtas" target="_blank" rel="noopener noreferrer"><YoutubeOutlined /></a>  
-              <a href="https://www.instagram.com/vigtasco" target="_blank" rel="noopener noreferrer"> <InstagramOutlined /> </a>
-              <a href="https://www.x.com/vigtasco" target="_blank" rel="noopener noreferrer"> <XOutlined /> </a>
-              <a href="https://www.tiktok.com/@vigtas" target="_blank" rel="noopener noreferrer"> <TikTokOutlined /> </a>
+              <a href="https://www.facebook.com/rightclickco" target="_blank" rel="noopener noreferrer"> <FacebookOutlined /> </a>
+              <a href="https://www.linkedin.com/company/rightclick" target="_blank" rel="noopener noreferrer"> <LinkedinOutlined /> </a>
+              <a href="https://www.youtube.com/@rightclick" target="_blank" rel="noopener noreferrer"><YoutubeOutlined /></a>  
+              <a href="https://www.instagram.com/rightclickco" target="_blank" rel="noopener noreferrer"> <InstagramOutlined /> </a>
+              <a href="https://www.x.com/rightclickco" target="_blank" rel="noopener noreferrer"> <XOutlined /> </a>
+              <a href="https://www.tiktok.com/@rightclick" target="_blank" rel="noopener noreferrer"> <TikTokOutlined /> </a>
             </motion.div>
           </Col>
 
@@ -128,7 +128,7 @@ const Footer = () => {
               <a href="tel:+201115893336" target="_blank" rel="noopener noreferrer" className="footer-contact">
                 <PhoneOutlined /> <span dir="ltr">{t('footer.phone_number_1')}</span>
               </a><br />
-              <a href="mailto:info@vigtas.com" target="_blank" rel="noopener noreferrer" className="footer-contact">
+              <a href="mailto:info@rightclick.com" target="_blank" rel="noopener noreferrer" className="footer-contact">
                 <MailOutlined /> <span>{t('footer.email')}</span>
               </a><br />
             </motion.div>
