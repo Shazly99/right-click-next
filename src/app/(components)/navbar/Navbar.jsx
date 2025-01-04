@@ -78,7 +78,7 @@ const Navbar = () => {
                     <span className="divider">|</span>
                     <a href="tel:+201115893336" target='_blank' rel="noopener noreferrer" className='flex gap-2 justify-content-center align-items-center'>
                         <Image width={12} height={12} src={Icon.phone} alt="phone" />
-                        <span dir='ltr'>+20 111 5893 336</span>
+                        <span dir='ltr'>+966 56 9090 410</span>
                     </a>
                 </span>
                 <div className="language-social flex gap-4">
