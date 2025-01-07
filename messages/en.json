@@ -29,5 +29,20 @@
     "email_text": "Info@rightclick.com",
     "call_emergency": "Call Emergency",
     "phone_number": "+966 56 9090 410  "
+  },
+  "about_us": {
+    "header": "About Us",
+    "breadcrumb_home": "Home",
+    "breadcrumb_about": "About Us"
+  },
+  "services": {
+    "header": "Our Services",
+    "breadcrumb_home": "Home",
+    "breadcrumb_about": "Services"
+  },
+  "clients": {
+    "header": "Our Clients",
+    "breadcrumb_home": "Home",
+    "breadcrumb_about": "Clients"
   }
 }

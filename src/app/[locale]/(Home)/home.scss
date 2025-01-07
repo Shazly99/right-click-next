@@ -377,32 +377,23 @@
     .filter-btn {
       padding: 6px 28px;
       font-size: 1rem;
-      border: 1px solid #dcdcdc;
-      /* لون حدود رمادي */
-      background: #ffffff;
-      /* خلفية بيضاء */
-      color: #333;
-      /* لون نص غامق */
+      border: 1px solid #dcdcdc; 
+      background: #ffffff; 
+      color: #333; 
       border-radius: 50px;
       cursor: pointer;
       transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 
       &.active {
-        background: $secondColor;
-        /* لون برتقالي هادئ */
-        color: #ffffff;
-        /* نص أبيض */
-        border-color: $secondColor;
-        /* حدود بنفس اللون */
+        background: $secondColor; 
+        color: #fff !important; 
+        border-color: $secondColor; 
       }
 
       &:hover {
-        background: #ffcc80;
-        /* لون برتقالي أفتح عند التمرير */
-        color: #333;
-        /* نص غامق */
-        border-color: #ffcc80;
-        /* حدود بنفس اللون */
+        background: #ffcc80; 
+        color: #333; 
+        border-color: #ffcc80; 
       }
     }
   }

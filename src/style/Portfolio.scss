@@ -1,0 +1,68 @@
+$primary-color: #ff7f50;
+$hover-color: darken($primary-color, 10%);
+$text-color: #333;
+$subtitle-color: #666;
+
+.portfolio-container {
+
+    text-align: center;
+
+    .portfolio-header {
+        h1 {
+            font-size: 3rem;
+            color: $text-color;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-subtitle {
+            font-size: 1.2rem;
+            color: $subtitle-color;
+            margin: 10px 0;
+        }
+
+        .portfolio-description {
+            font-size: 1rem;
+            color: $subtitle-color;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-button {
+            background-color: $primary-color;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $hover-color;
+            }
+        }
+    }
+
+    .portfolio-grid {
+        margin-top: 50px;
+
+        .portfolio-item {
+            text-align: center;
+
+            .portfolio-image {
+                width: 100%;
+                border-radius: 10px 10px 0 0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease;
+
+                /*     &:hover {
+          transform: scale(1.05);
+        } */
+            }
+        }
+    }
+}
+
+.portfolio_img { 
+    transform: scale(1.05); 
+
+}
+ 

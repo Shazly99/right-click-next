@@ -14,7 +14,7 @@ const Navbar = () => {
     const pathname = usePathname();
     const router = useRouter();
     const locale = useLocale();
-    console.log(locale);
+    
     useEffect(() => {
         document.documentElement.dir = locale === "en" ? "ltr" : "rtl";
     }, [locale]);
@@ -151,7 +151,7 @@ const Navbar = () => {
 
                 <Link href={'/contact'}>
                     <div className="quote-button">
-                        <Button shape='round' size='large' icon={<Icon.ArrowRight/>} iconPosition='end'>{t('btn_nav')}</Button>
+                        <Button shape='round' size='large' className='px-4' >{t('btn_nav')}</Button>
                     </div>
                 </Link>
             </motion.div>

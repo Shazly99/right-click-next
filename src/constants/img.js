@@ -1,6 +1,12 @@
 
 const img = {
     logo: "/assets/Images/logo.png",
+    aboutHeader: "/assets/Images/Header/about.png",
+    HeaderServices: "/assets/Images/Header/HeaderServices.png",
+    HeaderClients: "/assets/Images/Header/clients.png",
+    coverTest: "/assets/Images/project/coverTest.png",
+
+    
     map: "/assets/Images/location.png",
     slider1: "/assets/Images/slider2.png",
     slider2: "/assets/Images/slider1.jpg",

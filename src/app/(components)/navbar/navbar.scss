@@ -120,7 +120,7 @@
         }
 
         .quote-button button {
-            background-color: transparent ;
+            background-color: transparent !important;
             border-color: #fff ;
 
             span {
@@ -179,11 +179,10 @@
     }
 }
 
-.navbar-links {
+ 
     .active {
         color: $secondColor !important;
-    }
-}
+    } 
 
 .path_sm {
     display: none;

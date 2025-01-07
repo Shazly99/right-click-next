@@ -29,5 +29,20 @@
     "phone_number_1": "+201115893336",
     "phone_number_2": "01115893336",
     "email": "info@rightclick.com"
+  },
+  "about_us": {
+    "header": "من نحن",
+    "breadcrumb_home": "الرئيسية",
+    "breadcrumb_about": "من نحن"
+  },
+  "services": {
+    "header": "خدماتنا",
+    "breadcrumb_home": "الرئيسية",
+    "breadcrumb_about": "الخدمات"
+  },
+  "clients": {
+    "header": "عملاؤنا",
+    "breadcrumb_home": "الرئيسية",
+    "breadcrumb_about": "العملاء"
   }
 }

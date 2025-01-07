@@ -124,3 +124,53 @@ strong,
     }
 }
 
+
+.app_header_page {
+    position: relative;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        @media screen and (width < 900px) {
+            height: 150px;
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        left:150px;
+        
+        h2 {
+            background-color: transparent !important;
+            color: #fff;
+            z-index: 1;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .breadcrumb {
+            color: #fff;
+            font-size: 1rem;
+            z-index: 1;
+        }
+        
+        .breadcrumb a {
+            margin: 0 5px;
+            color: #fff;
+            font-size: 1rem; 
+            text-decoration: none;
+            
+            &:last-child{
+                opacity: 0.6;
+                
+            }
+        }
+    }
+}
