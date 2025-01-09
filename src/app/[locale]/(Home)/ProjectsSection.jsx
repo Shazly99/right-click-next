@@ -98,7 +98,7 @@ const ProjectsSection = () => {
             <div className="container_header">
                 <div className="calm-projects-display">
                     <div className="calm-projects-display__header">
-                        <h1 className="calm-projects-display__title">Our Featured Projects</h1>
+                        <h1 className="calm-projects-display__title">مشاريعنا المميزة</h1>
                         <FilterButtons
                             selectedCategory={selectedCategory}
                             setSelectedCategory={setSelectedCategory}

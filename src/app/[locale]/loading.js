@@ -1,8 +1,8 @@
-"use client"; 
+"use client";
 
 import { Spin } from "antd";
 
-export default function Loading() { 
+export default function Loading() {
     return (
         <>
             <div
@@ -20,7 +20,9 @@ export default function Loading() {
                     zIndex: "9999999999999999999999999"
                 }}
             >
-                <Spin size="large" />
+                <div className="p-5 " style={{ background: "red" }}>
+                    <Spin size="large" />
+                </div>
             </div>
         </>
     );

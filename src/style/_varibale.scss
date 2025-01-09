@@ -1,10 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rajdhani:wght@300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');  
+ 
 $mainColor: #162A2B;
 $secondColor: #FA6409; 
 $textColor : rgba(68, 83, 117, 1);
@@ -30,11 +25,9 @@ $fontSize-21: 21px;
 $fontSize-22: 22px;
 $fontSize-23: 23px;
 $fontSize-24: 24px;
-$fontSize-25: 25px;
-$fontPlus: "DM Sans", sans-serif;
+$fontSize-25: 25px; 
 $fontArabic: 'Cairo', sans-serif;
-$fontBase: "Rajdhani", sans-serif;
-$fontBase2: "Inter", sans-serif;
+$fontBase: 'Cairo', sans-serif; 
 
 
 // Responsive Variables
