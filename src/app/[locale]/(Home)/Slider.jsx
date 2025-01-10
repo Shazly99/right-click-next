@@ -11,9 +11,7 @@ const Slider = () => {
                 width={1000}
                 height={500}
                 className="w-full h-full"
-                priority
-                placeholder="blur"
-                blurDataURL="/path-to-low-res-image"
+                priority 
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1000px"
             />
         </div>
