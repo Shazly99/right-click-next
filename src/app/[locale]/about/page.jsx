@@ -2,7 +2,7 @@ import img from '@/constants/img';
 import Image from 'next/image';
 import AboutHome from '../(Home)/AboutHome';
 import StatsSection from '../(Home)/StatsSection';
-import '../(Home)/home.scss'
+import '../(Home)/home.css'
 import { Cover } from '@/app/(components)/Cover/Cover';
 import { useTranslations } from 'next-intl';
 export default function About() {

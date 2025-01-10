@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Row, Col } from "antd";
-import "@style/Portfolio.scss"; // Use SCSS for styling
+import "@style/Portfolio.css"; // Use SCSS for styling
 import img from "@/constants/img";
 
 const Portfolio = () => {

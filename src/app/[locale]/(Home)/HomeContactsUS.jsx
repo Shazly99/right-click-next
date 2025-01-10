@@ -3,7 +3,7 @@
 import React from "react";
 import { Form, Input, Button } from "antd";
 import HeaderTitle from "@/app/(components)/header/HeaderTitle";
-import '@style/HomeContactsUS.scss'
+import '@style/HomeContactsUS.css'
 const HomeContactsUS = () => {
     const onFinish = (values) => {
         console.log("Form Values:", values);

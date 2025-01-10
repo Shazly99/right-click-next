@@ -6,7 +6,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useTranslations } from 'next-intl'; // Replace with next-intl for translations
 import Link from 'next/link'; // Use Next.js' Link component
 import { useEffect, useRef } from 'react';
-import './footer.scss';
+import './footer.css';
 
 const { Text } = Typography;
 

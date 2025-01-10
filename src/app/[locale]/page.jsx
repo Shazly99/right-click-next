@@ -7,7 +7,7 @@ import ProjectHome from "./(Home)/ProjectHome";
 import ProjectsSection from "./(Home)/ProjectsSection";
 import Slider from "./(Home)/Slider";
 import StatsSection from "./(Home)/StatsSection";
-import './(Home)/home.scss'
+import './(Home)/home.css'
 
 export default function Home() {
   return (

@@ -2,8 +2,9 @@ import React from "react";
 import { Cover } from "@/app/(components)/Cover/Cover";
 import img from "@/constants/img";
 import { useTranslations } from "next-intl";
-import '../../../style/clients.scss'
+import '../../../style/clients.css'
 import Icon from "@/constants/icon";
+import Image from "next/image";
 
 const Clients = () => {
   const t = useTranslations();
@@ -74,7 +75,10 @@ const Clients = () => {
       <Cover headerData={headerData} />
       <div className="clients-section">
         <div className="right_page">
-          <Icon.rightclient />
+          <Image
+            src={Icon.rightclient}
+         
+          />
         </div>
         <div className="clients-grid">
           {clientLogos.map((logo) => (

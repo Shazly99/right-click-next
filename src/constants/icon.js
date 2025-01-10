@@ -5,7 +5,7 @@ import ServiceContent from "../../public/assets/Images/Service/4.svg";
 import ServiceBranding from "../../public/assets/Images/Service/5.svg";
 import ArrowRight from "../../public/assets/svg/ArrowRight.svg";
 import arrow from "../../public/assets/svg/arrow.svg";
-import rightclient from "../../public/assets/Images/position/client.svg";
+import rightclient from "../../public/assets/Images/position/client.png";
 
 const Icon = {
     logo: "/assets/svg/2.svg",

@@ -12,8 +12,8 @@ import Loading from "./loading";
 
 
 
-import "@/style/App.scss";
-import "@/style/index.scss";
+import "@/style/App.css";
+import "@/style/index.css";
 
 const mainFont = Cairo({
   subsets: ['arabic','latin'],

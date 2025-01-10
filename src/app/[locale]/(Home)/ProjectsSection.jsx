@@ -5,7 +5,7 @@ import { ArrowRightOutlined } from '@ant-design/icons';
 import { Button, Col, Row } from 'antd';
 import Image from 'next/image';
 import { useState } from 'react';
-import '@style/projects.scss';
+import '@style/projects.css';
 
 const categories = [
     'All',

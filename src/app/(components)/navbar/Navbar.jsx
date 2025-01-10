@@ -7,14 +7,14 @@ import { Button, Dropdown, Menu } from 'antd';
 import { motion } from 'framer-motion';
 import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
-import './navbar.scss';
+import './navbar.css';
 import Image from 'next/image';
 
 const Navbar = () => {
     const pathname = usePathname();
     const router = useRouter();
     const locale = useLocale();
-    
+
     useEffect(() => {
         document.documentElement.dir = locale === "en" ? "ltr" : "rtl";
     }, [locale]);
@@ -45,21 +45,27 @@ const Navbar = () => {
     };
 
 
-    const languageMenu = (
-        <Menu>
-            <Menu.Item key="en" onClick={() => changeLanguage('en')} className='lang_title'>
-                <Image width={15} height={15} className='mt-' src="https://flagcdn.com/16x12/gb.png" alt="English" />
-                <span >English</span>
-            </Menu.Item>
-            <Menu.Item key="ar" onClick={() => changeLanguage('ar')} className='lang_title'>
-                <Image width={15} height={15} className='mt-' src="https://flagcdn.com/16x12/sa.png" alt="Arabic" />
-                
-                <span  >عــربي</span>
-
-            </Menu.Item>
-        </Menu>
-    );
-
+ 
+    const languageItems = [
+        {
+            key: 'en',
+            label: (
+                <div onClick={() => changeLanguage('en')} className="lang_title">
+                    <Image width={15} height={15} src="https://flagcdn.com/16x12/gb.png" alt="English" />
+                    <span>English</span>
+                </div>
+            ),
+        },
+        {
+            key: 'ar',
+            label: (
+                <div onClick={() => changeLanguage('ar')} className="lang_title">
+                    <Image width={15} height={15} src="https://flagcdn.com/16x12/sa.png" alt="Arabic" />
+                    <span>عــربي</span>
+                </div>
+            ),
+        },
+    ];
 
 
     return (
@@ -82,10 +88,18 @@ const Navbar = () => {
                     </a>
                 </span>
                 <div className="language-social flex gap-4">
-                    <Dropdown overlay={languageMenu} trigger={['hover']}>
+                    <Dropdown
+                        menu={{ items: languageItems }} // تمرير العناصر كقائمة
+                        trigger={['hover']}
+                    >
                         <a onClick={(e) => e.preventDefault()} className="ant-dropdown-link">
-                            <Image width={15} height={11} src={`https://flagcdn.com/16x12/${locale === 'ar' ? 'sa' : 'gb'}.png`} alt="flag" className='h-auto mt-1' />
-                            
+                            <Image
+                                width={15}
+                                height={11}
+                                src={`https://flagcdn.com/16x12/${locale === 'ar' ? 'sa' : 'gb'}.png`}
+                                alt="flag"
+                                className="h-auto mt-1"
+                            />
                             <span>{locale === 'ar' ? 'عــربي' : 'English'}</span> <DownOutlined />
                         </a>
                     </Dropdown>
