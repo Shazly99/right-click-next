@@ -16,10 +16,8 @@ const nextConfig = {
     domains: ['right-click-next-iota.vercel.app'],
     deviceSizes: [640, 768, 1024, 1280, 1600],
     imageSizes: [16, 32, 48, 64, 96],
-    formats: ['image/webp'], // تحسين تحميل الصور
-    minimumCacheTTL: 60, // الكاش
+    minimumCacheTTL: 60,
   },
-  
   
   reactStrictMode: true,
   webpack(config) {
