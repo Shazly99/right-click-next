@@ -13,11 +13,11 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
-    domains: ['right-click-next-iota.vercel.app'],
+    formats: ['image/webp'], // دعم صيغة WebP لتحميل أسرع
     deviceSizes: [640, 768, 1024, 1280, 1600],
     imageSizes: [16, 32, 48, 64, 96],
-    formats: ['image/webp'], // تحسين التحميل
-    minimumCacheTTL: 60, // الكاش
+    minimumCacheTTL: 3600, // تحسين التخزين المؤقت
+    domains: ['right-click-next-iota.vercel.app'], 
   },
   
   reactStrictMode: true,
