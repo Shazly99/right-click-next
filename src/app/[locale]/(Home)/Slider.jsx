@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import img from '@/constants/img';
 import Image from 'next/image';
 
 const Slider = () => {
     return (
-        <div>
+        <div className="relative overflow-hidden">
             <Image
                 src={img.slider1}
                 alt="background"
@@ -12,11 +12,13 @@ const Slider = () => {
                 height={500}
                 className="w-full h-full"
                 priority
-                // format="webp"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1934px"
-             />
+                placeholder="blur" // إضافة بلور لتحسين التحميل
+                blurDataURL="/path-to-low-res-image" // رابط للصورة المخففة
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1000px"
+                quality={75} // تقليل الجودة قليلاً لتسريع التحميل
+            />
         </div>
-    )
-}
+    );
+};
 
-export default Slider
+export default Slider;
