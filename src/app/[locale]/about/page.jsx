@@ -42,7 +42,10 @@ export default function About() {
           </div>
         </div>
 
-        <div className="values-section">
+
+
+      </div>
+        <div className="values-section pb-8">
           <div className="values-header">
             <h3 className="custom-title flex justify-content-center align-items-center">
               <span className="highlight border-border-round-3xl"></span> Our Values
@@ -75,9 +78,6 @@ export default function About() {
             </div>
           </div>
         </div>
-
-
-      </div>
     </>
   );
 }
