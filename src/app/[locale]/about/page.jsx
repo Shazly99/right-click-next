@@ -1,10 +1,12 @@
+import { Cover } from '@/app/(components)/Cover/Cover';
 import img from '@/constants/img';
-import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import AboutHome from '../(Home)/AboutHome';
 import StatsSection from '../(Home)/StatsSection';
-import '../(Home)/home.css'
-import { Cover } from '@/app/(components)/Cover/Cover';
-import { useTranslations } from 'next-intl';
+import '../../../style/about.css';
+import Icon from '@/constants/icon';
+import HeaderTitle from '@/app/(components)/header/HeaderTitle';
+
 export default function About() {
   const t = useTranslations();
 
@@ -20,18 +22,62 @@ export default function About() {
   return (
     <>
       <Cover headerData={headerData} />
-
-      {/* <Image
-        src={img.aboutHeader}
-        alt="background"
-        width={1000}
-        height={500}
-        className="w-full h-full"
-        priority
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1934px"
-      /> */}
       <AboutHome />
       <StatsSection />
+      <div className="app_about_our">
+        <div className="goals-strategies-section">
+          <div className="design-section">
+            <div className="design-item">
+              <div className="design-title">Our goals</div>
+              <div className="design-description">
+                Achieving The Highest Quality For Our Partners, Excellence And Creativity In Our Work And Continuous Development Of Our Services.
+              </div>
+            </div>
+            <div className="design-item">
+              <div className="design-title">Our strategies</div>
+              <div className="design-description">
+                Building Continuous Successful And Strong Business And Partnerships As Well As Attracting The Best Talents In A Stimulating Business Environment.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="values-section">
+          <div className="values-header">
+            <h3 className="custom-title flex justify-content-center align-items-center">
+              <span className="highlight border-border-round-3xl"></span> Our Values
+            </h3>
+            <p>
+              A Saudi Company Specialized In The Field Of Digital Marketing And In The
+              Management And Enrichment Of Content On Social Networks.
+            </p>
+          </div>
+          <div className="values-cards">
+            <div className="card">
+              <div className="icon"><Icon.value1 /> </div>
+              <h3>Innovation And Creativity</h3>
+            </div>
+            <div className="card">
+              <div className="icon"><Icon.value2 /></div>
+              <h3>Integrity And Transparency</h3>
+            </div>
+            <div className="card">
+              <div className="icon"><Icon.value3 /></div>
+              <h3>Quality And Integration</h3>
+            </div>
+            <div className="card">
+              <div className="icon"><Icon.value4 /></div>
+              <h3>Passion</h3>
+            </div>
+            <div className="card">
+              <div className="icon"><Icon.value5 /></div>
+              <h3>Team Spirit</h3>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
     </>
   );
 }

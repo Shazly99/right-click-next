@@ -22,17 +22,7 @@ const nextConfig = {
   
   reactStrictMode: true,
   webpack(config, { isServer }) {
-    if (!isServer) {
-      config.optimization.splitChunks.cacheGroups = {
-        ...config.optimization.splitChunks.cacheGroups,
-        images: {
-          test: /\.(png|jpe?g|webp|gif|svg)$/i,
-          chunks: 'all',
-          enforce: true,
-          reuseExistingChunk: true,
-        },
-      };
-    }
+ 
 
     config.module.rules.push({
       test: /\.svg$/,

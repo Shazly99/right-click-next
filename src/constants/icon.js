@@ -7,6 +7,11 @@ import ArrowRight from "../../public/assets/svg/ArrowRight.svg";
 import arrow from "../../public/assets/svg/arrow.svg";
 import rightclient from "../../public/assets/Images/position/client.png";
 
+import value1 from "../../public/assets/svg/ourvalue/1.svg";
+import value2 from "../../public/assets/svg/ourvalue/2.svg";
+import value3 from "../../public/assets/svg/ourvalue/3.svg";
+import value4 from "../../public/assets/svg/ourvalue/4.svg";
+import value5 from "../../public/assets/svg/ourvalue/5.svg";
 const Icon = {
     logo: "/assets/svg/2.svg",
     email: "/assets/svg/email.svg",
@@ -18,7 +23,11 @@ const Icon = {
     services3: ServiceVisual,
     services4: ServiceContent,
     services5: ServiceBranding,
-    arrow: arrow,
+    value1: value1,
+    value2: value2,
+    value3: value3,
+    value4: value4,
+    value5: value5,
     rightclient: rightclient,
 };
 
