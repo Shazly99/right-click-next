@@ -2,10 +2,7 @@
 
 import { Spin } from "antd";
 
-export default function Loading() {
-
-
-
+export default function Loading() { 
     return (
         <>
             <div
@@ -15,7 +12,7 @@ export default function Loading() {
                     left: 0,
                     width: "100%",
                     height: "100%",
-                    background: "#000",
+                    background: "#fff",
                     zIndex: 1000,
                     display: "flex",
                     justifyContent: "center",

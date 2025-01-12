@@ -1,8 +1,8 @@
-"use client";
+"use client"; // Ensure you're in client mode for React hooks
 
 import { Spin } from "antd";
 
-export default function Loading() {
+export default function Loading() { 
     return (
         <>
             <div
@@ -12,7 +12,7 @@ export default function Loading() {
                     left: 0,
                     width: "100%",
                     height: "100%",
-                    background: "#000",
+                    background: "#fff",
                     zIndex: 1000,
                     display: "flex",
                     justifyContent: "center",
@@ -20,9 +20,7 @@ export default function Loading() {
                     zIndex: "9999999999999999999999999"
                 }}
             >
-                <div className="p-5 " style={{ background: "red" }}>
-                    <Spin size="large" />
-                </div>
+                <Spin size="large" />
             </div>
         </>
     );

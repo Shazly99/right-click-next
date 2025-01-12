@@ -55,6 +55,9 @@ export default async function RootLayout({ children, params }) {
       Button: {
         fontFamily: locale === "en" ? fontEn.style.fontFamily : fontAr.style.fontFamily,
       },
+      Spin: {
+        customColor: "#FA6409", // Custom property for spin color
+      },
     },
   };
   
