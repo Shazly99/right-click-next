@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap");
-.slider_home {
+ .slider_home {
   position: relative;
 }
 .slider_home .overlay {
@@ -21,7 +20,7 @@
   font-weight: 700;
   line-height: 84.69px;
   color: #fff;
-  font-family: "Cairo", sans-serif;
+  
 }
 @media screen and (width < 767px) {
   .slider_home .overlay h1 {
@@ -164,7 +163,7 @@
   align-items: center;
   color: #333;
   margin-bottom: 10px;
-  font-family: Poppins;
+  
   font-size: 30px !important;
   font-weight: 700;
   line-height: 60px;
@@ -188,7 +187,7 @@
   flex-direction: column;
 }
 .projectHome header p {
-  font-family: Poppins;
+  
   font-size: 22px;
   font-weight: 500;
   line-height: 33px;
@@ -457,7 +456,7 @@
   aspect-ratio: 90/131;
 }
 .home-services-2 .home-services-title {
-  font-family: Poppins;
+  
   font-size: 32px;
   font-weight: 700;
   line-height: 48px;
@@ -468,7 +467,7 @@
   color: rgb(64, 64, 64);
 }
 .home-services-2 .home-services-description {
-  font-family: Poppins;
+  
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;

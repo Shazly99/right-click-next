@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap");
-.clients-section {
+ .clients-section {
   padding: 2rem;
   padding-top: 5rem;
   background-color: #f9f9f9;

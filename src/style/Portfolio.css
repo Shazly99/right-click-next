@@ -1,21 +1,37 @@
 .portfolio-container {
   text-align: center;
+  margin-top: 100px
 }
+
 .portfolio-container .portfolio-header h1 {
   font-size: 3rem;
   color: #333;
   margin-bottom: 20px;
 }
+
 .portfolio-container .portfolio-header .portfolio-subtitle {
-  font-size: 1.2rem;
+  
   color: #666;
   margin: 10px 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0.10000000149011612px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(31, 31, 31, 1);
+
+
 }
+
 .portfolio-container .portfolio-header .portfolio-description {
   font-size: 1rem;
   color: #666;
   margin-bottom: 20px;
 }
+
 .portfolio-container .portfolio-header .portfolio-button {
   background-color: #ff7f50;
   border: none;
@@ -25,19 +41,22 @@
   font-size: 1rem;
   cursor: pointer;
 }
+
 .portfolio-container .portfolio-header .portfolio-button:hover {
   background-color: #ff5a1d;
 }
+
 .portfolio-container .portfolio-grid {
   margin-top: 50px;
 }
+
 .portfolio-container .portfolio-grid .portfolio-item {
   text-align: center;
 }
+
 .portfolio-container .portfolio-grid .portfolio-item .portfolio-image {
   width: 100%;
-  border-radius: 10px 10px 0 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px 10px 0 0; 
   transition: transform 0.3s ease;
   /*     &:hover {
     transform: scale(1.05);
@@ -46,4 +65,46 @@
 
 .portfolio_img {
   transform: scale(1.05);
-}/*# sourceMappingURL=Portfolio.css.map */
+}
+
+/*# sourceMappingURL=Portfolio.css.map */
+
+
+.portfolio-container .portfolio-header h1 {
+  background-image: url('../../public/assets/Images/project/bg_projects_center.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 200px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 72px;
+
+}
+
+.portfolio-container {
+  position: relative;
+}
+
+
+.portfolio-container .icon_bg_projects_right {
+  position: absolute;
+  width: 300px;
+  right: -80px;
+  bottom: 200px
+}
+
+.portfolio-container .icon_bg_projects_left {
+  position: absolute;
+  left: -0px;
+  width: 200px;
+  bottom: 200px
+
+}
+
+.portfolio-container .icon_bg_projects_right img {
+  width: 100%;
+}
+
+.portfolio-container .icon_bg_projects_left img {
+  width: 100%;
+}

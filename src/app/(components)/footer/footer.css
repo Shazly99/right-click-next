@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap");
-.footer {
+ .footer {
   background-color: #0D0715;
   color: #fff;
   padding: 50px 0;
@@ -17,7 +16,7 @@
   color: #FFD700;
 }
 .footer .footer-text {
-  font-family: Plus Jakarta Sans;
+  
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
@@ -97,13 +96,13 @@
 }
 .footer-top .footer-label {
   display: block;
-  font-family: Plus Jakarta Sans;
+  
   font-size: 14px;
   font-weight: 600;
   line-height: 26px;
 }
 .footer-top .footer-text {
-  font-family: "Cairo", sans-serif;
+  
   font-size: 24px;
   font-weight: 600;
   line-height: 34px;
@@ -119,7 +118,7 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 28px;
-  font-family: "Cairo", sans-serif;
+  
 }
 .footer_title .Divider {
   width: 80px;
@@ -135,7 +134,7 @@
   flex-direction: column;
 }
 .footer_links a {
-  font-family: Plus Jakarta Sans;
+  
   font-size: 14px;
   font-weight: 400;
   line-height: 28px;
@@ -146,7 +145,7 @@
   gap: 10px;
 }
 .footer_links_socil .footer-contact span {
-  font-family: Plus Jakarta Sans;
+  
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;

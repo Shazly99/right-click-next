@@ -1,7 +1,6 @@
 'use client'
-import Icon from '@/constants/icon';
+import { Link } from "@/navigation";
 import { motion } from 'framer-motion';
-import { Link, usePathname, useRouter } from "@/navigation";
 
 export const Cover = ({ headerData }) => {
     return (

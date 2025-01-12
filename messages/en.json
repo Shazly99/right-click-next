@@ -5,7 +5,7 @@
   "nav_home": "Home",
   "nav_service": "Services ",
   "nav_Products": "Products",
-  "nav_Projects": "Portfolio",
+  "nav_Projects": "Projects",
   "OUR_CLIENTS": "Clients",
   "nav_about": "About  ",
   "nav_blogs": "Blogs  ",
@@ -44,5 +44,10 @@
     "header": "Our Clients",
     "breadcrumb_home": "Home",
     "breadcrumb_about": "Clients"
+  },
+  "contact_us": {
+    "header": "Contact Us",
+    "breadcrumb_home": "Home",
+    "breadcrumb_contact": "Contact Us"
   }
 }

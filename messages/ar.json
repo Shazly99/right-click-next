@@ -44,5 +44,11 @@
     "header": "عملاؤنا",
     "breadcrumb_home": "الرئيسية",
     "breadcrumb_about": "العملاء"
-  }
+  },
+  "contact_us": {
+  "header": "تواصل معنا",
+  "breadcrumb_home": "الصفحة الرئيسية",
+  "breadcrumb_contact": "تواصل معنا"
+}
+
 }

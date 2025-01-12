@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap");
-.contact_us {
+ .contact_us {
   background-color: #1b2838;
   color: #fff;
   padding: 50px 20px;
@@ -10,7 +9,7 @@
 }
 .contact_us .container h2 {
   color: #fff;
-  font-family: Poppins;
+   
   font-size: 50px;
   font-weight: 700;
   line-height: 96px;
@@ -43,7 +42,7 @@
 }
 
 .label label {
-  font-family: Poppins;
+   
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;

@@ -1,11 +1,11 @@
 'use client';
 
 import img from '@/constants/img';
-import { ArrowRightOutlined } from '@ant-design/icons';
+import '@style/projects.css';
 import { Button, Col, Row } from 'antd';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import '@style/projects.css';
 
 const categories = [
     'All',
@@ -71,7 +71,7 @@ const ProjectCard = ({ project }) => (
 );
 
 const FilterButtons = ({ selectedCategory, setSelectedCategory }) => (
-    <div className="calm-projects-display__filters">
+    <div className="calm-projects-display__filters  ">
         {categories.map((category) => (
             <button
                 key={category}
@@ -91,6 +91,9 @@ const ProjectsSection = () => {
         selectedCategory === 'All'
             ? projects
             : projects.filter((project) => project.title === selectedCategory);
+    const pathname = usePathname(); // Get the current pathname
+    const isPortfolioRoute = pathname.includes("portfolio"); // Check if the path includes "portfolio"
+
 
     return (
         <div className="app__projects-section">
@@ -117,13 +120,33 @@ const ProjectsSection = () => {
             </div>
 
             {/* View All Button */}
-            <Row justify="center" className="view-more">
-                <Button type="primary" shape="round" size="large">
-                    See All Projects
-                </Button>
-            </Row>
+            {
+                !isPortfolioRoute  && (
+                    <Row justify="center" className="view-more">
+                        <Button type="primary" shape="round" size="large">
+                            See All Projects
+                        </Button>
+                    </Row>
+                )
+            }
         </div>
     );
 };
 
 export default ProjectsSection;
+
+// NOTE : SSR
+/**
+ * import { headers } from "next/headers";
+ * const headersList = headers();
+   const currentUrl = headersList.get("x-invoke-path") || "";
+   const isPortfolioRoute = currentUrl.includes("portfolio");
+ */
+
+
+// FIXME : CSR
+/**
+ * import { usePathname } from "next/navigation";
+ * const pathname = usePathname(); 
+   const isPortfolioRoute = pathname.includes("portfolio");  
+ */

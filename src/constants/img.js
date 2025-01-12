@@ -2,11 +2,12 @@
 const img = {
     logo: "/assets/Images/logo.png",
     aboutHeader: "/assets/Images/Header/about.png",
+    contactHeader: "/assets/Images/Header/HeaderContactUs.png",
     HeaderServices: "/assets/Images/Header/HeaderServices.png",
     HeaderClients: "/assets/Images/Header/clients.png",
     coverTest: "/assets/Images/project/coverTest.png",
 
-    
+
     map: "/assets/Images/location.png",
     slider1: "/assets/Images/slider2.png",
     slider2: "/assets/Images/slider1.jpg",
@@ -20,6 +21,9 @@ const img = {
     cmp4: "/assets/Images/cmp/4.png",
     cmp5: "/assets/Images/cmp/5.png",
 
+    bg_projects_center: "../../assets/Images/project/bg_projects_center.png",
+    bg_projects_left: "../../assets/Images/project/bg_projects_left.png",
+    bg_projects_right: "../../assets/Images/project/bg_projects_right.png",
 
     ourClicnts1: "/assets/Images/ourClicnts/1.png",
     ourClicnts2: "/assets/Images/ourClicnts/2.png",

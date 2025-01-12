@@ -3,35 +3,39 @@ import React, { useState } from "react";
 import { Row, Col, Button } from "antd";
 import img from "@/constants/img";
 import HeaderTitle from "@/app/(components)/header/HeaderTitle";
+import { usePathname } from "next/navigation";
 
 const logos = [
   { id: 1, name: "Moon Light", img: img.cmp1, content: "Project description for Kafalah." },
   { id: 2, name: "Logo 2", img: img.cmp2, content: "Project description for Logo 2." },
   { id: 3, name: "Logo 3", img: img.cmp3, content: "Project description for Logo 3." },
   { id: 4, name: "Logo 4", img: img.cmp4, content: "Project description for Logo 4." },
-  { id: 5, name: "Logo 5", img: img.cmp5, content: "Project description for Logo 4." },
-  // { id: 5, name: "Logo 5", img: img.cmp5, content: "Project description for Logo 4." },
-  // { id: 5, name: "Logo 5", img: img.cmp5, content: "Project description for Logo 4." },
-  // { id: 5, name: "Logo 5", img: img.cmp5, content: "Project description for Logo 4." },
+  { id: 5, name: "Logo 5", img: img.cmp5, content: "Project description for Logo 4." }, 
 ];
 
 const ProjectHome = () => {
   const [selectedLogo, setSelectedLogo] = useState(logos[0]);
+  const pathname = usePathname(); // Get the current pathname
+  const isPortfolioRoute = pathname.includes("portfolio"); // Check if the path includes "portfolio"
 
   return (
     <div className="projectHome">
-      <header>
-        <HeaderTitle title="Our Projects" />
-        <p className="subtitle">
-          We Work Closely With Our Clients, To Ensure Their Complete Satisfaction.
-        </p>
-      </header>
-      
-      <Row gutter={[25, 25]} className="mt-5" >
+      {
+        !isPortfolioRoute && (
+          <header>
+            <HeaderTitle title="Our Projects" />
+            <p className="subtitle">
+              We Work Closely With Our Clients, To Ensure Their Complete Satisfaction.
+            </p>
+          </header>
+        )
+      }
+
+      <Row gutter={[25, 25]} className="mt-6" >
 
         {/* Left Section */}
         <Col
-          xl={{ span: 3 }} 
+          xl={{ span: 3 }}
           className="logo_Container">
           <div className="logoContainer">
             <div className="Container" style={{
@@ -65,7 +69,7 @@ const ProjectHome = () => {
           <div className="imageWrapper">
             <img src={img.cover1} alt="Project Preview" />
           </div>
-        </Col> 
+        </Col>
       </Row>
     </div>
   );

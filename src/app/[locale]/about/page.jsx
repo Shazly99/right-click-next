@@ -1,11 +1,10 @@
 import { Cover } from '@/app/(components)/Cover/Cover';
+import Icon from '@/constants/icon';
 import img from '@/constants/img';
 import { useTranslations } from 'next-intl';
 import AboutHome from '../(Home)/AboutHome';
 import StatsSection from '../(Home)/StatsSection';
 import '../../../style/about.css';
-import Icon from '@/constants/icon';
-import HeaderTitle from '@/app/(components)/header/HeaderTitle';
 
 export default function About() {
   const t = useTranslations();

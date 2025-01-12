@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap");
-.navbar-container {
+ .navbar-container {
   background-color: #fff;
   color: #162A2B;
 }
 .navbar-container .ant-dropdown-trigger {
-  font-family: Plus Jakarta Sans;
+  
   font-size: 12px;
   font-weight: 400;
   line-height: 26px;
@@ -46,7 +45,7 @@
   }
 }
 .navbar-container .navbar-top .contact-info span {
-  font-family: "Cairo", sans-serif;
+  
   font-size: 14px;
   font-weight: 600;
   line-height: 26px;
@@ -168,10 +167,10 @@
     margin-top: 40px;
   }
   .navbar-main .navbar-links a {
-    font-family: "Cairo", sans-serif;
+    
   }
   .navbar-main .navbar-links .active {
-    font-family: "Cairo", sans-serif;
+    
   }
   .navbar-main .show-links {
     display: flex;
