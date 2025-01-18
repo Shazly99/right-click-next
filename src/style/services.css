@@ -1,0 +1,309 @@
+@import "./variables.css";
+
+:root {
+  --primary-color: #ff7a59;
+  --secondary-color: #333;
+  --dark-bg-color: #1C292D;
+  --accent-color: #FA6409;
+  --light-bg-color: #f4f4f9;
+  --text-light-color: #ddd;
+  --border-radius: 16px;
+}
+
+.website-development-modern {
+  line-height: 1.6;
+  color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero-section-modern {
+  height: calc(100vh - 127.9px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10% 0px 10%;
+  gap: 20px;
+  background: linear-gradient(120deg, #fdfcfb 0%, #e2d1c3 100%);
+  overflow: hidden;
+}
+
+.content-modern {
+  flex: 1;
+  padding-right: 30px;
+  text-align: left;
+}
+
+.title-modern {
+  font-size: 56px;
+
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ff7a59, #ff3c3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.description-modern {
+  font-size: 18px;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.request-button-modern {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.request-button-modern:hover {
+  background: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.image-container-modern {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-image-modern {
+  width: 86%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+/* Dark Section */
+.dark-section-modern_container {
+  width: 85%;
+  margin: auto;
+}
+
+.dark-section-modern {
+  background-color: var(--dark-bg-color);
+  color: var(--text-light-color);
+  padding: 60px 80px;
+  border-radius: 11px;
+}
+
+.dark-title-modern {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.dark-description-modern {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #c1c1c1;
+}
+
+/* NOTE WhoWeAre  */
+
+:root {
+  --primary-color: #ff7849;
+  --secondary-color: #333;
+  --card-bg-color: #fff;
+  --card-shadow-color: rgba(0, 0, 0, 0.1);
+  --accent-bg: linear-gradient(135deg, #fef3ec, #fdfaf6);
+  --border-radius: 16px;
+  --text-light-color: #666;
+}
+
+.who-we-are-modern {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 60px 10%;
+  border-radius: var(--border-radius);
+}
+
+.modern-card {
+  background: var(--card-bg-color);
+  border-radius: var(--border-radius);
+  padding: 40px 20px;
+  box-shadow: 0px 8px 20px var(--card-shadow-color);
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modern-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modern-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.modern-card-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light-color);
+}
+
+@media (max-width: 768px) {
+  .who-we-are-modern {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/******************DigitalMarketing **************************/
+/* Main Container */
+.horizontal-process-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  /* خلفية متدرجة */
+}
+
+/* Card Design */
+.horizontal-process-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  /* ظل ناعم */
+  width: 86%;
+  padding: 30px 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.horizontal-process-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  /* تحسين الظل */
+}
+
+/* Icon Design */
+.horizontal-process-icon {
+  background: linear-gradient(135deg, #ff7a45, #ffcc80);
+  /* لون متدرج للأيقونة */
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 40px;
+  margin-right: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.horizontal-process-card:hover .horizontal-process-icon {
+  transform: scale(1.1);
+  /* تكبير الأيقونة عند التمرير */
+}
+
+/* Content Design */
+.horizontal-process-content {
+  flex: 1;
+}
+
+.horizontal-process-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.horizontal-process-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .horizontal-process-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .horizontal-process-icon {
+    margin: 0 0 20px;
+  }
+
+  .horizontal-process-title {
+    font-size: 22px;
+  }
+
+  .horizontal-process-description {
+    font-size: 14px;
+  }
+}
+
+.services-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  width: 80%;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.service-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.service-list li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.service-list strong {
+  color: #ff7a45;
+}
+
+.service-image {
+  width: 60%
+}

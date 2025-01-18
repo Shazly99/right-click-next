@@ -11,6 +11,10 @@
   "nav_blogs": "مدونات",
   "nav_contact": "اتصل بنا",
   "btn_nav": "احصل على عرض",
+  "period": "المدة",
+  "year": "السنة",
+  "scope": "النطاق",
+  "projectdetails": "تفاصيل المشروع",
   "footer": {
     "address": "العنوان",
     "address_text": "٣ مكرم عبيد - مدينة نصر",
@@ -46,9 +50,12 @@
     "breadcrumb_about": "العملاء"
   },
   "contact_us": {
-  "header": "تواصل معنا",
-  "breadcrumb_home": "الصفحة الرئيسية",
-  "breadcrumb_contact": "تواصل معنا"
-}
-
+    "header": "تواصل معنا",
+    "breadcrumb_home": "الصفحة الرئيسية",
+    "breadcrumb_contact": "تواصل معنا"
+  },
+  "header": "المدونة",
+  "breadcrumb_home": "الرئيسية",
+  "breadcrumb_about": "المدونة",
+  "read_more": "اقرأ المزيد"
 }

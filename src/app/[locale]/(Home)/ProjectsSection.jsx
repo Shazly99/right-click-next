@@ -1,6 +1,7 @@
 'use client';
 
 import img from '@/constants/img';
+import { Link } from '@/navigation';
 import '@style/projects.css';
 import { Button, Col, Row } from 'antd';
 import Image from 'next/image';
@@ -53,7 +54,9 @@ const ProjectCard = ({ project }) => (
     <Col xs={24} sm={12} md={8} className="overflow-hidden">
         <div className="custom-card">
             <div className="card-image">
-                <Image width={434} height={425} src={project.image} alt={project.title} />
+                <Link href={`/portfolio/120`}>
+                    <Image width={434} height={425} src={project.image} alt={project.title} />
+                </Link>
                 <span className="card-category">{project.title}</span>
                 {/*        <span className="card-icon">
           <ArrowRightOutlined />
@@ -121,7 +124,7 @@ const ProjectsSection = () => {
 
             {/* View All Button */}
             {
-                !isPortfolioRoute  && (
+                !isPortfolioRoute && (
                     <Row justify="center" className="view-more">
                         <Button type="primary" shape="round" size="large">
                             See All Projects

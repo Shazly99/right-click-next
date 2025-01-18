@@ -20,9 +20,7 @@ const Navbar = () => {
     }, [locale]);
 
 
-    const t = useTranslations();
-
-    const [placement, setPlacement] = useState('left');
+    const t = useTranslations(); 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 

@@ -11,6 +11,10 @@
   "nav_blogs": "Blogs  ",
   "nav_contact": "Contacts Us",
   "btn_nav": "let’s Talk",
+  "period": "Period",
+  "year": "Year",
+  "scope": "Scope",
+  "projectdetails": "Project Details",
   "footer": {
     "welcome_text": "Welcome to rightclick, a leading software development company at the forefront of the digital revolution.",
     "quick_links": "Quick Links",
@@ -35,6 +39,12 @@
     "breadcrumb_home": "Home",
     "breadcrumb_about": "About Us"
   },
+  "blog": {
+    "header": "Blogs",
+    "breadcrumb_home": "Home",
+    "breadcrumb_about": "Blogs",
+    "read_more": "Read More"
+  },
   "services": {
     "header": "Our Services",
     "breadcrumb_home": "Home",
@@ -49,5 +59,8 @@
     "header": "Contact Us",
     "breadcrumb_home": "Home",
     "breadcrumb_contact": "Contact Us"
-  }
+  },
+  "header": "Blog",
+  "breadcrumb_home": "Home",
+  "breadcrumb_about": "Blog"
 }
