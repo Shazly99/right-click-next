@@ -1,6 +1,7 @@
 
 import img from '@/constants/img';
 import { useLocale } from 'next-intl';
+import Image from 'next/image';
 
 import '@style/seo.css';
 import { Col, Row } from 'antd';
@@ -54,7 +55,7 @@ export const CustomCMS = () => {
 
                 <Col md={14} lg={10} sm={24}>
                     <div className="image-container">
-                        <img src={img.crm} alt="Custom CMS Image" className="w-100" />
+                        <Image width={500} height={50} src={img.crm} alt="Custom CMS Image" className="w-100" />
                     </div>
                 </Col>
                 <Col md={24} lg={24} sm={24} >

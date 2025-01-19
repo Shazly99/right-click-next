@@ -3,6 +3,7 @@
 import HeaderTitle from "@/app/(components)/header/HeaderTitle";
 import img from "@/constants/img";
 import { Button, Col, Row } from "antd";
+import Image from "next/image";
 import React from "react";
 
 const HomeAddress = () => {
@@ -24,7 +25,7 @@ const HomeAddress = () => {
                     </Col>
                     <Col xl={12} lg={12} xxl={12} md={24} xs={24}>
                         <div className="map-image">
-                            <img src={img.map} alt="Map Location" />
+                            <Image width={500} height={50} src={img.map} alt="Map Location" />
                         </div>
                     </Col>
                 </Row>

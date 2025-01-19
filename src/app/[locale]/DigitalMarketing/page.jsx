@@ -4,6 +4,10 @@ import "@style/services.css";
 import ServicesSlider from "../(seo)/ServicesSlider";
 import { SolutionOutlined } from '@ant-design/icons';
 import { Col ,Row } from 'antd';
+import Image from 'next/image';
+import SocialMediaSection from './SocialMediaSection';
+import WhyChooseRightClick from './WhyChooseRightClick';
+import ContactForm from '../contact/ContactForm';
 
 const Page = () => {
     let data = {
@@ -57,7 +61,7 @@ const Page = () => {
                         </ul>
                     </Col>
                     <Col xs={24} md={12} className="flex justify-content-center align-items-center">
-                        <img
+                        <Image width={500} height={50}
                             src={img.Dicon4}
                             alt="SEO illustration"
                             className="service-image"
@@ -66,7 +70,7 @@ const Page = () => {
 
                     {/* PPC Section */}
                     <Col xs={24} md={12} className="flex justify-content-start align-items-start">
-                        <img
+                        <Image width={500} height={50}
                             src={img.Dicon1}
                             alt="PPC illustration"
                             className="service-image"
@@ -99,7 +103,13 @@ const Page = () => {
                         </ul>
                     </Col>
                 </Row>
+
             </div>
+            <SocialMediaSection/>
+            <WhyChooseRightClick/>
+            <div className="mb-5">
+        <ContactForm />
+      </div>
         </div>
     )
 }

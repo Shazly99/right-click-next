@@ -3,6 +3,7 @@ import { Card, Button, Row, Col } from 'antd';
 import HeaderTitle from '@/app/(components)/header/HeaderTitle';
 import img from '@/constants/img';
 import Icon from '@/constants/icon';
+import Image from 'next/image';
 
 const services1 = [
     {
@@ -69,7 +70,7 @@ const HomeServices = () => {
                                 <Row>
                                     <Col xl={5}>
                                         <div className="home-services-icon  flex justify-content-start"  >
-                                            <img src={service.icon} className='w-full' alt={service.title} />
+                                            <Image width={50} height={50} src={service.icon} className='w-full' alt={service.title} />
                                         </div>
                                     </Col>
                                     <Col xl={{ span: 17, offset: 2 }}>

@@ -1,6 +1,7 @@
 
 const img = {
     logo: "/assets/Images/logo.png",
+    seoBG: "/assets/Images/seoBG.png",
     aboutHeader: "/assets/Images/Header/about.png",
     blogHeader: "/assets/Images/Header/blog.png",
     blog1: "/assets/Images/blog/1.png",

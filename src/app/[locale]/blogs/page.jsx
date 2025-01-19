@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import img from '@/constants/img';
 import { Col, Row ,Button} from 'antd';
 import '@/style/blog.css';
+import Image from 'next/image';
 
 const Blogs = () => {
   const t = useTranslations();
@@ -84,7 +85,7 @@ const Blogs = () => {
             >
               {/* Image Section */}
               <div className="blog__image-container">
-                <img src={post.image} alt={post.title} className="blog__image" />
+                <Image width={500} height={50} src={post.image} alt={post.title} className="blog__image" />
                 <div className="blog__date" dir='ltr' >{post.date}</div>
                 <div className="blog__title">{post.title}</div>
               </div>

@@ -77,13 +77,13 @@ const Clients = () => {
         <div className="right_page">
           <Image
             src={Icon.rightclient}
-         
+            width={800} height={50}
           />
         </div>
         <div className="clients-grid">
           {clientLogos.map((logo) => (
             <div key={logo.id} className="client-card">
-              <img src={logo.src} alt={logo.alt} />
+              <Image width={800} height={50} src={logo.src} alt={logo.alt} />
             </div>
           ))}
         </div>

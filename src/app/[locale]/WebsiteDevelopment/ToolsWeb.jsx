@@ -1,6 +1,7 @@
 import img from '@/constants/img';
 import { useLocale } from 'next-intl';
- 
+import Image from 'next/image';
+
 const ToolsWeb = () => {
     const locale = useLocale();
 
@@ -33,19 +34,19 @@ const ToolsWeb = () => {
 
             <div className="tools-icons">
                 <div className="tool">
-                    <img src={img.tools2} alt="React Logo" />
+                    <Image width={500} height={50} src={img.tools2} alt="React Logo" />
                 </div>
                 <div className="tool">
-                    <img src={img.tools1} alt="PHP Logo" />
+                    <Image width={500} height={50} src={img.tools1} alt="PHP Logo" />
                 </div>
                 <div className="tool">
-                    <img src={img.tools3} alt="WPCode Logo" />
+                    <Image width={500} height={50} src={img.tools3} alt="WPCode Logo" />
                 </div>
                 <div className="tool">
-                    <img src={img.tools4} alt="Google Analytics Logo" />
+                    <Image width={500} height={50} src={img.tools4} alt="Google Analytics Logo" />
                 </div>
                 <div className="tool">
-                    <img src={img.tools5} alt="Google Search Console Logo" />
+                    <Image width={500} height={50} src={img.tools5} alt="Google Search Console Logo" />
                 </div>
             </div>
         </div>

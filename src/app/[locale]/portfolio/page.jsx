@@ -33,10 +33,10 @@ const Portfolio = () => {
     <div className="app_project">
       <div className="portfolio-container">
         <div className="icon_bg_projects_left">
-          <img src={img.bg_projects_left} alt="Project 1" className="w-fuk" />
+          <Image width={500} height={50} src={img.bg_projects_left} alt="Project 1" className="w-fuk" />
         </div>
         <div className="icon_bg_projects_right">
-          <img src={img.bg_projects_right} alt="Project 1" />
+          <Image width={500} height={50} src={img.bg_projects_right} alt="Project 1" />
         </div>
         <div className="portfolio-header">
           <h1>Our Projects</h1>
@@ -59,7 +59,7 @@ const Portfolio = () => {
             className="flex justify-content-center align-items-end  "
           >
             <div className="portfolio-item flex  ">
-              <img
+              <Image width={500} height={50}
                 src={img.coverTest} // Replace with actual image paths
                 alt="Project 1"
                 className="portfolio-image"
@@ -68,7 +68,7 @@ const Portfolio = () => {
           </Col>
           <Col xs={24} sm={12} md={10}>
             <div className="portfolio-item portfolio_img">
-              <img
+              <Image width={500} height={50}
                 src={img.coverTest}
                 alt="Project 2"
                 className="portfolio-image    "
@@ -82,7 +82,7 @@ const Portfolio = () => {
             className="flex justify-content-center align-items-end"
           >
             <div className="portfolio-item flex">
-              <img
+              <Image width={500} height={50}
                 src={img.coverTest}
                 alt="Project 3"
                 className="portfolio-image"

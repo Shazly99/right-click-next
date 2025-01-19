@@ -75,7 +75,7 @@ const ProjectDetails = () => {
                             <Col xl={4} lg={4} xxl={4} md={24} sm={24} ></Col>
                             <Col xl={10} lg={10} xxl={10} md={24} sm={24} >
                                 <div className="cover">
-                                    <img src={img?.mainDetails} alt="" srcset="" />
+                                    <Image width={500} height={50} src={img?.mainDetails} alt="" srcset="" />
                                 </div>
                             </Col>
                         </Row>

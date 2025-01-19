@@ -1,6 +1,7 @@
 import img from '@/constants/img';
 import { useLocale } from 'next-intl'; 
 import { Row ,Col} from 'antd';
+import Image from 'next/image';
 
 const Languages = () => {
     const locale = useLocale(); 
@@ -84,7 +85,7 @@ const Languages = () => {
                             <Col key={index} xl={8} lg={8} md={12} sm={24} className={`${index + 1 > 3 ? 'p-2' : 'mt-2 '} border service_${index + 1}`} dir={locale == "ar" ? 'rtl' : 'ltr'}>
                                 <div className="services_content flex flex-column justify-content-between h-100 p-4 py-6">
                                     <div className="icons">
-                                        <img src={item.image} className='w-100' alt="" />
+                                        <Image width={500} height={50} src={item.image} className='w-100' alt="" />
                                     </div>
                                     <span>{locale === 'ar' ? item.short_title_Ar : item.short_title}</span>
                                     <div className={`${locale === "en" ? 'list' : 'list_ar'}`}>

@@ -4,6 +4,7 @@ import { Row, Col, Button } from "antd";
 import img from "@/constants/img";
 import HeaderTitle from "@/app/(components)/header/HeaderTitle";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const logos = [
   { id: 1, name: "Moon Light", img: img.cmp1, content: "Project description for Kafalah." },
@@ -48,7 +49,7 @@ const ProjectHome = () => {
                   className={`logo ${selectedLogo.id === logo.id ? "active" : ""}`}
                   onClick={() => setSelectedLogo(logo)}
                 >
-                  <img src={logo.img} alt={logo.name} />
+                  <Image width={50} height={50} src={logo.img} alt={logo.name} />
                 </div>
               ))}
             </div>
@@ -67,7 +68,7 @@ const ProjectHome = () => {
             </Button>
           </div>
           <div className="imageWrapper">
-            <img src={img.cover1} alt="Project Preview" />
+            <Image width={500} height={50} src={img.cover1} alt="Project Preview" />
           </div>
         </Col>
       </Row>

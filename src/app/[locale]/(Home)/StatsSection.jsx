@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import img from '@/constants/img';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 // استيراد ClientCountUp بشكل ديناميكي
 const ClientCountUp = dynamic(() => import('./ClientCountUp'), { ssr: false });
@@ -14,7 +15,7 @@ const StatsSection = () => {
         {/* الصورة */}
         <Col xs={24} md={10}>
           <div className="stats-image">
-            <img src={img.Stats} width={400} alt="Laptop and Mobile" />
+            <Image width={500} height={50} src={img.Stats}   alt="Laptop and Mobile" />
           </div>
         </Col>
         <Col xs={24} md={2}></Col>

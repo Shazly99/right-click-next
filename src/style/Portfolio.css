@@ -57,6 +57,7 @@
 .portfolio-container .portfolio-grid .portfolio-item .portfolio-image {
   width: 100%;
   border-radius: 10px 10px 0 0; 
+  height: auto;
   transition: transform 0.3s ease;
   /*     &:hover {
     transform: scale(1.05);
@@ -89,6 +90,7 @@
 .portfolio-container .icon_bg_projects_right {
   position: absolute;
   width: 300px;
+  height: auto;
   right: -80px;
   bottom: 200px
 }
@@ -97,14 +99,17 @@
   position: absolute;
   left: -0px;
   width: 200px;
+  height: auto;
   bottom: 200px
 
 }
 
 .portfolio-container .icon_bg_projects_right img {
   width: 100%;
+  height: auto;
 }
 
 .portfolio-container .icon_bg_projects_left img {
   width: 100%;
+  height: auto;
 }

@@ -305,5 +305,194 @@
 }
 
 .service-image {
-  width: 60%
+  width: 60%;
+  height: auto;
 }
+
+/* ****FIXME -  */
+.social-media-section {
+  padding: 40px;
+
+  background: rgba(20, 30, 33, 1);
+
+  color: #ffffff;
+}
+
+.card {
+  background: rgba(52, 72, 89, 0.15);
+
+
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  height: 100%;
+}
+
+.card h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 54px;
+  color: #ffffff;
+}
+
+.card h3 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 54px;
+  color: #ffffff;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #aaaaaa;
+}
+
+.card ul {
+  /* list-style: none; */
+  padding: 0;
+}
+
+.card ul li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card ul li b {
+  color: #ffffff;
+  /* النصوص الرئيسية باللون الأبيض */
+}
+
+.full-width-card {
+  padding: 20px 40px;
+}
+
+.horizontal-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.horizontal-list li {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.6;
+  max-width: 22%;
+  /* لتنسيق العناصر */
+}
+
+.horizontal-list li b {
+  color: #ffffff;
+}
+
+/****REVIEW - WhyChooseRightClick */
+.why-choose-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px 0 20px;
+  background-color: #ffffff;
+}
+ 
+
+.content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333333;
+  text-align: center;
+
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666666;
+  text-align: center;
+  width:70%;
+} 
+.img_right_click {
+  width: 100% !important;
+  height: auto !important;
+  
+}
+
+.why-choose-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666666;
+  max-width: 800px;
+} 
+
+.img_right_click {
+  border-radius: 8px;
+}
+.section_{
+  background-color: #000000;
+}
+.benefits-section {
+  width:60%;
+  margin:auto;
+  color: #ffffff;
+  padding: 40px 20px;
+  margin-top: -40px; /* لجعل القسم يندمج مع التصميم */
+  border-radius: 0 0 16px 16px;
+  text-align: left;
+}
+
+.benefits-section h3 { 
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 72px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  
+  margin-bottom: 40px;
+}
+
+.benefits-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits-section ul li {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  
+  padding:20px;
+  background: linear-gradient(-87.11deg, rgba(239, 239, 239, 0) 6.87%, rgba(232, 185, 143, 0.1961) 97.6%);
+
+}
+
+.benefits-section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  color:#FA6409; /* لون النقطة */
+  font-size: 24px;
+  line-height: 16px;
+}
+ 

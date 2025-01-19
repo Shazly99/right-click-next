@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import './navbar.css';
-import Image from 'next/image';
+import Image from 'next/image'; 
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -120,7 +120,7 @@ const Navbar = () => {
             >
                 <div className="navbar_main_responsive">
                     <Link href={'/'} className="logo">
-                        <img src={img.logo} alt="logo" />
+                        <Image width={500} height={50} src={img.logo} alt="logo" />
                     </Link>
                     <div className="hamburger-menu" onClick={toggleMenu}>
                         <Button icon={<MenuOutlined />} shape='circle' size='large' type='primary' />
