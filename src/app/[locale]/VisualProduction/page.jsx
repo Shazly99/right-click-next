@@ -1,12 +1,9 @@
-import React from 'react'
-import ServicesSlider from '../(seo)/ServicesSlider'
 import img from "@/constants/img";
 import "@style/services.css";
 import { Col, Row } from 'antd';
 import Image from 'next/image';
-import SocialMediaSection from '../DigitalMarketing/SocialMediaSection';
+import ServicesSlider from '../(seo)/ServicesSlider';
 import WhyChooseRightClick from '../DigitalMarketing/WhyChooseRightClick';
-import ContactForm from '../contact/ContactForm';
 import SocialMediaSection2 from './SocialMediaSection2';
 
 const Page = () => {
@@ -61,8 +58,7 @@ const Page = () => {
                     </div>
                 </div>
             </div>
-            <div className="services-section">
-{/*  */}
+            <div className="services-section"> 
                 <Row gutter={[32, 32]} align="middle">
                     {/* Events Coverage Section */}
                     <Col xs={24} md={12} className="flex justify-content-start align-items-start">

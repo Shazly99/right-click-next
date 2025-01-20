@@ -32,6 +32,10 @@ const img = {
     cmp3: "/assets/Images/cmp/3.png",
     cmp4: "/assets/Images/cmp/4.png",
     cmp5: "/assets/Images/cmp/5.png",
+
+    Branding: "/assets/Images/Service/Branding/slider.png",
+    Branding1: "/assets/Images/Service/Branding/1.png",
+
     ContentMarketing: "/assets/Images/Service/ContentMarketing/slider.png",
     ContentMarketing1: "/assets/Images/Service/ContentMarketing/1.png",
     ContentMarketingBg: "/assets/Images/Service/ContentMarketing/bg.png",
