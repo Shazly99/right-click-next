@@ -42,7 +42,7 @@ const Page = () => {
                     <div className="documentary-features">
                         <div className="feature">
                             <p>
-                                <b>Share Authentic Stories:</b> Capture your brand's journey in a genuine and captivating manner.
+                                <b>Share Authentic Stories:</b> Capture your brand&apos;s journey in a genuine and captivating manner.
                             </p>
                         </div>
                         <div className="feature">
