@@ -1,19 +1,18 @@
 import { Row, Col } from 'antd';
 import React from 'react';
 import img from "@/constants/img";
-
 import Image from 'next/image';
 
 const SocialMediaSection3 = () => {
     return (
         <div className="social-media-section social-media-section2 flex flex-column pb-8">
-            <div className='flex justify-content-center align-items-center bg w-full'   >
+            <div className="flex justify-content-center align-items-center bg w-full">
                 <Image
                     width={1000}
                     height={100}
-                    src={img.ContentMarketingBg} // استخدم صورة مناسبة
+                    src={img.ContentMarketingBg}
                     alt="Copywriting illustration"
-                    className="  h-auto  "
+                    className="h-auto"
                 />
             </div>
             <Row gutter={[32, 32]} justify="center" style={{ marginTop: '-350px' }}>
@@ -37,7 +36,7 @@ const SocialMediaSection3 = () => {
                 <Col xl={8} lg={8} md={24} sm={24} xs={24}>
                     <div className="card">
                         <h3>CRO Services (Conversion Rate Optimization)</h3>
-                        <p>Is your website traffic not converting into revenue? We'll fix that.</p>
+                        <p>Is your website traffic not converting into revenue? We&apos;ll fix that.</p>
                         <ul>
                             <li>
                                 <b>User Behavior Insights:</b> Understand how your visitors interact with your website and identify friction points.

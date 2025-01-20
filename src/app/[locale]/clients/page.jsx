@@ -78,6 +78,7 @@ const Clients = () => {
           <Image
             src={Icon.rightclient}
             width={800} height={50}
+            alt={Icon.alt}
           />
         </div>
         <div className="clients-grid">

@@ -1,7 +1,6 @@
 import { Row, Col } from 'antd';
 import React from 'react';
 
-
 const SocialMediaSection = () => {
   return (
     <div className="social-media-section pb-8">
@@ -9,13 +8,13 @@ const SocialMediaSection = () => {
         <Col xl={12} lg={12} md={24} sm={24} xs={24}>
           <div className="card">
             <h2>Social Media Marketing</h2>
-            <p>Looking to connect with your audience? Social media is where they’re at.</p>
+            <p>Looking to connect with your audience? Social media is where they&apos;re at.</p>
             <ul>
               <li>
                 <b>Social Media Management:</b> We handle everything—from content creation to scheduling and engagement.
               </li>
               <li>
-                <b>Brand Building:</b> Strengthen your brand’s identity with campaigns designed to foster trust and loyalty.
+                <b>Brand Building:</b> Strengthen your brand&apos;s identity with campaigns designed to foster trust and loyalty.
               </li>
               <li>
                 <b>Enterprise Social Media:</b> Manage large-scale accounts with strategies tailored to maximize impact.
@@ -41,7 +40,7 @@ const SocialMediaSection = () => {
                 <b>Instagram Ads:</b> Stunning visuals and creative campaigns to captivate and inspire your audience.
               </li>
               <li>
-                <b>Twitter Ads:</b> Engage in trending conversations to drive traffic and amplify your brand’s voice.
+                <b>Twitter Ads:</b> Engage in trending conversations to drive traffic and amplify your brand&apos;s voice.
               </li>
               <li>
                 <b>TikTok Campaigns:</b> Leverage influencer marketing and video ads to capture attention in one of the fastest-growing platforms.
@@ -69,7 +68,7 @@ const SocialMediaSection = () => {
         <Col xl={8} lg={8} md={24} sm={24} xs={24}>
           <div className="card">
             <h3>CRO Services (Conversion Rate Optimization)</h3>
-            <p>Is your website traffic not converting into revenue? We'll fix that.</p>
+            <p>Is your website traffic not converting into revenue? We&apos;ll fix that.</p>
             <ul>
               <li>
                 <b>User Behavior Insights:</b> Understand how your visitors interact with your website and identify friction points.
@@ -96,27 +95,6 @@ const SocialMediaSection = () => {
               </li>
               <li>
                 <b>Guest Posts:</b> Build backlinks and drive referral traffic through strategic blogging on industry-relevant websites.
-              </li>
-            </ul>
-          </div>
-        </Col>
-      </Row>
-      <Row gutter={[32, 32]} justify="center">
-        <Col span={24}>
-          <div className="card full-width-card mt-6">
-            <h2>Online Marketplace Marketing</h2>
-            <ul className="horizontal-list ">
-              <li>
-                <b>Amazon SEO:</b> Optimize your product listings for better visibility and increased sales.
-              </li>
-              <li>
-                <b>Amazon Ads:</b> Run high-performing ad campaigns that put your products in front of the right audience.
-              </li>
-              <li>
-                <b>Walmart Marketing:</b> Get your products noticed on one of the largest retail platforms.
-              </li>
-              <li>
-                <b>Target Plus Campaigns:</b> Drive engagement and sales on Target’s e-commerce platform with tailored campaigns.
               </li>
             </ul>
           </div>

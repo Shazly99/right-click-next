@@ -1,3 +1,4 @@
+import Image from "next/image"
 
 const ServicesSlider = ({ data }) => {
     return (
@@ -11,7 +12,9 @@ const ServicesSlider = ({ data }) => {
                         <button className="request-button-modern">Get Started</button>
                     </div>
                     <div className="image-container-modern">
-                        <img
+                        <Image
+                            width={1000}
+                            height={450}
                             src={data.img} // Update with your actual image
                             alt="Web Development"
                             className="hero-image-modern"

@@ -23,7 +23,7 @@ const WhoWeAre = () => {
                 </div>
                 <h2 className="modern-card-title">Why Right Click</h2>
                 <p className="modern-card-description">
-                    We just don't build websites. Our approach ensures your website is
+                    We just don&apos;t build websites. Our approach ensures your website is
                     optimized for search engines, user experience, and conversions. We stay
                     ahead of the curve with the latest web development trends and
                     technologies to deliver future-proof solutions. Our development process
