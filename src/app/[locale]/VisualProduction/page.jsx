@@ -9,7 +9,7 @@ import SocialMediaSection2 from './SocialMediaSection2';
 const Page = () => {
     let data = {
         title: "Visual Production ",
-        dec: 'At Right Click, we bring your vision to life by crafting visual content that captures the essence of your brand. Our diverse range of services is tailored to meet your unique needs, ensuring a memorable impact on your target audience.',
+        dec: "At Right Click, we bring your vision to life by crafting visual content that captures the essence of your brand. Our diverse range of services is tailored to meet your unique needs, ensuring a memorable impact on your target audience.",
         img: img.VisualProduction,
         title2: "Promo Video Production",
         dec2: "Engage Your Audience: We create promotional videos that highlight what sets your brand apart. Custom Storytelling: Collaborate with our team to develop a compelling narrative that resonates with your audience. Build Brand Awareness: Increase visibility and foster lasting engagement with strategic video content."
@@ -30,7 +30,7 @@ const Page = () => {
         },
         {
             title: "Your Growth Partners:",
-            description: "We're here to guide you every step of the way, ensuring your success in a competitive market.",
+            description: "We&apos;re here to guide you every step of the way, ensuring your success in a competitive market.",
         },
     ];
     return (
@@ -120,4 +120,4 @@ const Page = () => {
     )
 }
 
-export default Page
+export default Page;
