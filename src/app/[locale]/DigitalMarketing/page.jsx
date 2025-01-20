@@ -1,13 +1,11 @@
-import React from 'react'
 import img from "@/constants/img";
 import "@style/services.css";
-import ServicesSlider from "../(seo)/ServicesSlider";
-import { SolutionOutlined } from '@ant-design/icons';
-import { Col ,Row } from 'antd';
+import { Col, Row } from 'antd';
 import Image from 'next/image';
+import ServicesSlider from "../(seo)/ServicesSlider";
+import ContactForm from '../contact/ContactForm';
 import SocialMediaSection from './SocialMediaSection';
 import WhyChooseRightClick from './WhyChooseRightClick';
-import ContactForm from '../contact/ContactForm';
 
 const Page = () => {
     let data = {
@@ -17,12 +15,30 @@ const Page = () => {
         title2: "SEO Content Writing",
         dec2: "Our team specializes in creating custom digital strategies tailored to your business goals and target audience. We analyze your industry, competitors, and audience to develop plans that drive long-term growth. From setting measurable KPIs to executing campaigns, we are with you every step of the way to deliver impactful results."
     }
+    
+const benefits = [
+    {
+      title: "Experience You Can Trust:",
+      description: "Over 10 years of helping businesses like yours succeed online.",
+    },
+    {
+      title: "Tailored Solutions:",
+      description: "Every strategy is customized to fit your business needs and goals.",
+    },
+    {
+      title: "Real Results:",
+      description: "We focus on driving measurable growth, from traffic to revenue.",
+    },
+    {
+      title: "Your Growth Partners:",
+      description: "We're here to guide you every step of the way, ensuring your success in a competitive market.",
+    },
+  ];
     return (
         <div>
             <ServicesSlider data={data} />
             <div className="horizontal-process-container">
                 <div className="horizontal-process-card">
-
                     <div className="horizontal-process-content">
                         <h2 className="horizontal-process-title">Our Process</h2>
                         <p className="horizontal-process-description">
@@ -105,11 +121,9 @@ const Page = () => {
                 </Row>
 
             </div>
-            <SocialMediaSection/>
-            <WhyChooseRightClick/>
-            <div className="mb-5">
-        <ContactForm />
-      </div>
+            <SocialMediaSection />
+            <WhyChooseRightClick />
+   
         </div>
     )
 }

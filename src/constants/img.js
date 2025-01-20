@@ -32,6 +32,15 @@ const img = {
     cmp3: "/assets/Images/cmp/3.png",
     cmp4: "/assets/Images/cmp/4.png",
     cmp5: "/assets/Images/cmp/5.png",
+    ContentMarketing: "/assets/Images/Service/ContentMarketing/slider.png",
+    ContentMarketing1: "/assets/Images/Service/ContentMarketing/1.png",
+    ContentMarketingBg: "/assets/Images/Service/ContentMarketing/bg.png",
+  
+  
+    VisualProduction: "/assets/Images/Service/VisualProduction/slider1.png",
+    VisualProductionservice: "/assets/Images/Service/VisualProduction/1.png",
+    VisualProductionbg: "/assets/Images/Service/VisualProduction/bg.png",
+
     DigitalMarketingSlider: "/assets/Images/Service/DigitalMarketing/slider2.png",
     Dicon1: "/assets/Images/Service/DigitalMarketing/icon1.png",
     Dicon2: "/assets/Images/Service/DigitalMarketing/icon2.png",
