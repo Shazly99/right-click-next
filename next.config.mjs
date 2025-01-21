@@ -4,8 +4,7 @@ const withNextIntl = createNextIntlPlugin();
  
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  //output: "export",
+const nextConfig = { 
 
   images: {
     remotePatterns: [
@@ -16,24 +15,12 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
-    formats: ['image/webp'], // دعم صيغة WebP لتحميل أسرع
+    formats: ['image/webp'], 
     deviceSizes: [640, 768, 1024, 1280, 1600],
     imageSizes: [16, 32, 48, 64, 96],
-    minimumCacheTTL: 3600, // تحسين التخزين المؤقت
+    minimumCacheTTL: 3600,
     domains: ['right-click-next-iota.vercel.app'],
-  },
-
-  reactStrictMode: true,
-  webpack(config, { isServer }) {
-
-
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: [{ loader: '@svgr/webpack', options: { icon: true } }],
-    });
-
-    return config;
-  },
+  }, 
 };
 
 export default withNextIntl(nextConfig);
