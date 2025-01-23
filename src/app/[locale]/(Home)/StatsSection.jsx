@@ -3,11 +3,13 @@ import { Row, Col } from 'antd';
 import img from '@/constants/img';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 // استيراد ClientCountUp بشكل ديناميكي
 const ClientCountUp = dynamic(() => import('./ClientCountUp'), { ssr: false });
 
 const StatsSection = () => {
+  const t = useTranslations();
   return (
     <div className="stats-section">
       {/* القسم الأول: الصورة والمحتوى */}
@@ -15,7 +17,7 @@ const StatsSection = () => {
         {/* الصورة */}
         <Col xs={24} md={10}>
           <div className="stats-image">
-            <Image width={500} height={50} src={img.Stats}   alt="Laptop and Mobile" />
+            <Image width={500} height={50} src={img.Stats} alt="Laptop and Mobile" />
           </div>
         </Col>
         <Col xs={24} md={2}></Col>
@@ -24,7 +26,7 @@ const StatsSection = () => {
           <div className="stats-text">
             <div className="mission">
               <h3 className="custom-title">
-                <span className="highlight"></span> Our Mission
+                <span className="highlight"></span>  {t('OurMission')}
               </h3>
               <p>
                 A Saudi Company Specialized In The Field Of Digital Marketing And In The Management
@@ -34,7 +36,7 @@ const StatsSection = () => {
 
             <div className="vision">
               <h3 className="custom-title">
-                <span className="highlight"></span> Our Vision
+                <span className="highlight"></span> {t('OurVision')}
               </h3>
               <p>
                 A Saudi Company Specialized In The Field Of Digital Marketing And In The Management
@@ -54,7 +56,7 @@ const StatsSection = () => {
               <h2>
                 <ClientCountUp start={0} end={8000} duration={5} separator="," />
               </h2>
-              <p>Projects</p>
+              <p>{t('nav_Projects')}</p>
             </div>
           </Col>
 
@@ -64,7 +66,7 @@ const StatsSection = () => {
               <h2>
                 <ClientCountUp start={0} end={45} duration={5} separator="," />
               </h2>
-              <p>Clients</p>
+              <p> {t('OUR_CLIENTS')} </p>
             </div>
           </Col>
 
@@ -72,9 +74,9 @@ const StatsSection = () => {
           <Col xs={24} sm={8}>
             <div className="stat-item">
               <h2>
-                <ClientCountUp start={0} end={10} duration={5} suffix=" Years" />
+                <ClientCountUp start={0} end={10} duration={5} suffix={t('Years')} />
               </h2>
-              <p>Experience</p>
+              <p>{t('Experience')}</p>
             </div>
           </Col>
         </Row>

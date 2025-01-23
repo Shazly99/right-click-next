@@ -15,6 +15,23 @@
   "year": "Year",
   "scope": "Scope",
   "projectdetails": "Project Details",
+  "whoWeAre": "Who We Are",
+  "OurMission": "Our Mission",
+  "OurVision": "Our Vision",
+  "Experience": "Experience",
+  "Years": "Years",
+  "OurProjects": "Our Projects",
+  "Project": "  Project",
+  "SeeProject": "  See Project", 
+  "FeaturedProjects": "Our Featured Projects",
+  "categories": [
+    "All",
+    "Web Development",
+    "Visual Production",
+    "Digital Marketing",
+    "Branding",
+    "Social media management"
+  ],
   "footer": {
     "welcome_text": "Welcome to rightclick, a leading software development company at the forefront of the digital revolution.",
     "quick_links": "Quick Links",

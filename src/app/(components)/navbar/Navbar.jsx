@@ -87,7 +87,7 @@ const Navbar = () => {
                 </span>
                 <div className="language-social flex gap-4">
                     <Dropdown
-                        menu={{ items: languageItems }} // تمرير العناصر كقائمة
+                        menu={{ items: languageItems }} 
                         trigger={['hover']}
                     >
                         <a onClick={(e) => e.preventDefault()} className="ant-dropdown-link">
@@ -113,14 +113,14 @@ const Navbar = () => {
             </motion.div>
 
             <motion.div
-                className={`navbar-main ${isScrolled ? 'fixed-navbar' : 'navbar-main-scroll'}`}
+                className={`navbar-main ${isScrolled ? 'fixed-navbar shadow-3' : 'navbar-main-scroll'}`}
                 initial={{ backgroundColor: "#1F1F1F" }}
                 animate={isScrolled ? { backgroundColor: "#1F1F1F", padding: "15px 70px" } : { backgroundColor: "#1F1F1F", padding: "14px 80px" }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
             >
                 <div className="navbar_main_responsive">
-                    <Link href={'/'} className="logo">
-                        <Image width={500} height={50} src={img.logo} alt="logo" />
+                    <Link href={'/'} className=" ">
+                        <Image width={500} height={50} src={img.logo} alt="logo" className='logo_object_fit' />
                     </Link>
                     <div className="hamburger-menu" onClick={toggleMenu}>
                         <Button icon={<MenuOutlined />} shape='circle' size='large' type='primary' />

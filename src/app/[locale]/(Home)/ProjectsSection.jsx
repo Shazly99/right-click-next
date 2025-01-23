@@ -3,10 +3,12 @@
 import img from '@/constants/img';
 import { Link } from '@/navigation';
 import '@style/projects.css';
-import { Button, Col, Row } from 'antd';
+import { Button, Col, Row, Select } from 'antd';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+const { Option } = Select;
 
 const categories = [
     'All',
@@ -16,6 +18,7 @@ const categories = [
     'Branding',
     'Social media management',
 ];
+
 
 const projects = [
     {
@@ -55,12 +58,9 @@ const ProjectCard = ({ project }) => (
         <div className="custom-card">
             <div className="card-image">
                 <Link href={`/portfolio/120`}>
-                    <Image width={434} height={425} src={project.image} alt={project.title} />
+                    <Image width={434} height={500} src={project.image} alt={project.title} className='card_img' />
                 </Link>
                 <span className="card-category">{project.title}</span>
-                {/*        <span className="card-icon">
-          <ArrowRightOutlined />
-        </span> */}
             </div>
             <div className="card-content">
                 <h3>
@@ -74,7 +74,7 @@ const ProjectCard = ({ project }) => (
 );
 
 const FilterButtons = ({ selectedCategory, setSelectedCategory }) => (
-    <div className="calm-projects-display__filters  ">
+    <div className="calm-projects-display__filters  display__filters_lg ">
         {categories.map((category) => (
             <button
                 key={category}
@@ -87,7 +87,22 @@ const FilterButtons = ({ selectedCategory, setSelectedCategory }) => (
     </div>
 );
 
+const FilterButtonsSm = ({ selectedCategory, setSelectedCategory }) => (
+    <Select
+        defaultValue={selectedCategory || "All"}
+        style={{ width: 200 }}
+        onChange={(value) => setSelectedCategory(value)}
+    >
+        {categories.map((category) => (
+            <Option key={category} value={category}>
+                {category}
+            </Option>
+        ))}
+    </Select>
+);
+
 const ProjectsSection = () => {
+    let t = useTranslations();
     const [selectedCategory, setSelectedCategory] = useState('All');
 
     const filteredProjects =
@@ -101,14 +116,27 @@ const ProjectsSection = () => {
     return (
         <div className="app__projects-section">
             {/* Header Section */}
-            <div className="container_header">
-                <div className="calm-projects-display">
-                    <div className="calm-projects-display__header">
-                        <h1 className="calm-projects-display__title">مشاريعنا المميزة</h1>
-                        <FilterButtons
+            <div className='display__filters_lg'>
+                <div className="container_header">
+                    <div className="calm-projects-display">
+                        <div className="calm-projects-display__header">
+                            <h1 className="calm-projects-display__title"> {t('FeaturedProjects')}  </h1>
+                            <FilterButtons
+                                selectedCategory={selectedCategory}
+                                setSelectedCategory={setSelectedCategory}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="display__filters_sm">
+                <div class="case-studies-container flex flex-column justify-content-center align-content-center gap-3 mt-8">
+                    <div class="case-studies-btn">{t('FeaturedProjects')}</div>
+                    <div class="dropdown-container">
+                        <FilterButtonsSm
                             selectedCategory={selectedCategory}
                             setSelectedCategory={setSelectedCategory}
-                        />
+                        /> 
                     </div>
                 </div>
             </div>
