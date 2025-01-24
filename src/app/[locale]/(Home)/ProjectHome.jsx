@@ -62,7 +62,7 @@ const ProjectHome = () => {
         <Col xl={{ span: 20, offset: 1 }} className="contentContainer">
           <div className="projectDetails">
             <h3 className="projectName flex gap-2 align-items-baseline "  >
-              <span className="highlight">{t('Project')}</span> <h3 className="projectName" >{selectedLogo.name}</h3>
+              <span className="highlight">{t('Project')}</span> <div className="projectName" >{selectedLogo.name}</div>
             </h3>
             <p className="description">{selectedLogo.content}</p>
             <div className="button_dir     " >
