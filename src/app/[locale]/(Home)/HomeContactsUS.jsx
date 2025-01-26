@@ -4,7 +4,10 @@ import React from "react";
 import { Form, Input, Button } from "antd";
 import HeaderTitle from "@/app/(components)/header/HeaderTitle";
 import '@style/HomeContactsUS.css'
+import { useTranslations } from "next-intl";
 const HomeContactsUS = () => {
+    let t = useTranslations();
+
     const onFinish = (values) => {
         console.log("Form Values:", values);
     };
@@ -13,7 +16,7 @@ const HomeContactsUS = () => {
         <div className="contact_us mt-8">
             <div className="container">
                 <div className="flex justify-content-center align-items-center">
-                    <HeaderTitle title={'Contact Us '} />
+                    <HeaderTitle title={t('nav_contact')} />
                 </div>
                 {/* Contact Form */}
                 <Form

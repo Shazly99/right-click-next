@@ -14,7 +14,7 @@ const HomeAddress = () => {
                     <Col xl={12} lg={12} xxl={12} md={24} xs={24}>
                         <HeaderTitle title={'The Address'} />
                         <br/>
-                        <strong className="location-text">
+                        <strong className="location-text mt-7">
                             (Saudi Arabia - Mecca - Imam Muslim - Al Zaher District)
                         </strong> 
                         <p className="location-link">Takhassusi StAlthuniyan, South Building, Office #12 Riyadh 12363</p>

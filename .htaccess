@@ -6,5 +6,5 @@
 
 # Redirect non-www URLs to www URLs 
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^rowadtechnology.com [NC]
-RewriteRule ^(.*)$ http://www.rowadtechnology.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^rightclick.sa/ [NC]
+RewriteRule ^(.*)$ http://www.rightclick.sa/$1 [L,R=301]

@@ -480,10 +480,6 @@
    background-color: #f9f9f9;
  }
 
- .home-services-container header {
-   background: red;
- }
-
  .home-services-container .home-services-card {
    text-align: center;
    border: 1px solid #ddd;
@@ -554,10 +550,9 @@
 
  .home-services-2 .home-services-title {
 
-   font-size: 32px;
+   font-size: 28px;
    font-weight: 700;
    line-height: 48px;
-   text-align: left;
    text-underline-position: from-font;
    -webkit-text-decoration-skip-ink: none;
    text-decoration-skip-ink: none;
@@ -569,7 +564,6 @@
    font-size: 16px;
    font-weight: 300;
    line-height: 24px;
-   text-align: left;
    text-underline-position: from-font;
    -webkit-text-decoration-skip-ink: none;
    text-decoration-skip-ink: none;
@@ -911,9 +905,11 @@
    border-radius: 4px;
    z-index: -1;
  }
-.ant-select-item-option-active{
-  background: rgba(250, 100, 9, 0.2) !important;
-} 
+
+ .ant-select-item-option-active {
+   background: rgba(250, 100, 9, 0.2) !important;
+ }
+
  /* القائمة المنسدلة */
  .dropdown-container {
    position: relative;
@@ -939,4 +935,66 @@
 
  .dropdown-select:active {
    border-color: #e25906;
+ }
+
+ @media screen and (width < 900px) {
+   .home-services-container .container {
+     width: 100%;
+   }
+
+   .blur_2,
+   .blur_1 {
+     display: none;
+   }
+
+   .home-services-grid .ant-card-body {
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+   }
+
+   .home-services-title {
+     text-align: center;
+   }
+
+   .home-services-description {
+     text-align: center;
+   }
+   .home_first_services .home_first_services_img{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;  
+   }
+   .home_first_services .content {
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+   }
+
+   .home_first_services img {
+     width: 90px !important;
+     height: 90px !important;
+   }
+   .home_first_services  .content .home-services-title{
+    font-size:24px; 
+   }
+   .home-services-container .container header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
+
+   .home-services-container .container header .subtitle{
+    text-align: center;
+   }
+
+   .about-title { 
+    font-size: 1.7rem !important;  
+  } 
+ 
  }

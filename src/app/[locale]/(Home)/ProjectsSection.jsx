@@ -63,10 +63,7 @@ const ProjectCard = ({ project }) => (
                 <span className="card-category">{project.title}</span>
             </div>
             <div className="card-content">
-                <h3>
-                    <span className="highlight">{project.title.split(' ')[0]}</span>
-                    {project.title.split(' ')[1]}{' '}
-                </h3>
+                <h3> {project.title}   </h3>
                 <p>{project.description}</p>
             </div>
         </div>
@@ -130,13 +127,13 @@ const ProjectsSection = () => {
                 </div>
             </div>
             <div className="display__filters_sm">
-                <div class="case-studies-container flex flex-column justify-content-center align-content-center gap-3 mt-8">
-                    <div class="case-studies-btn">{t('FeaturedProjects')}</div>
-                    <div class="dropdown-container">
+                <div className="case-studies-container flex flex-column justify-content-center align-content-center gap-3 mt-8">
+                    <div className="case-studies-btn">{t('FeaturedProjects')}</div>
+                    <div className="dropdown-container">
                         <FilterButtonsSm
                             selectedCategory={selectedCategory}
                             setSelectedCategory={setSelectedCategory}
-                        /> 
+                        />
                     </div>
                 </div>
             </div>

@@ -17,10 +17,10 @@ export default function Home() {
       <StatsSection />
       <ProjectHome />
       <ProjectsSection />
-       {/*<HomeServices />
-       <HomeClients/>
-      <HomeContactsUS/>
-      <HomeAddress/> */}
+      <HomeServices />
+      <HomeClients />
+      <HomeContactsUS />
+      <HomeAddress />
     </div>
   );
 }

@@ -4,6 +4,7 @@ import HeaderTitle from '@/app/(components)/header/HeaderTitle';
 import img from '@/constants/img';
 import Icon from '@/constants/icon';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 const services1 = [
     {
@@ -43,11 +44,13 @@ const services = [
 ];
 
 const HomeServices = () => {
+    let t = useTranslations();
+
     return (
         <div className="home-services-container flex-column mt-8">
             <div className="container">
                 <header className='bg-blue-800'>
-                    <HeaderTitle title={'Our Services'} />
+                    <HeaderTitle title={t('OurServices')} />
                     <p className="subtitle">
                         We provide the integrated marketing services that help you reach your OKRs. our slogan is we help you click right away
                     </p>
@@ -56,29 +59,29 @@ const HomeServices = () => {
                     {services1.map((service, index) => (
                         <Col
                             key={index}
-                            xs={24}
-                            sm={12}
+                            xs={24} sm={24}
                             md={12}
                             lg={index === 0 ? 24 : 12}
                             xl={index === 0 ? 24 : 12}
                             className='blur_position'
                         >
                             <Card
-                                className={`home-services- flex flex-row ${index === 0 ? 'home-services-card-featured' : ''}`}
+                                className={`home-services- flex flex-row home_first_services  ${index === 0 ? 'home-services-card-featured' : ''} `}
                                 bordered
                             >
-                                <Row>
-                                    <Col xl={5}>
-                                        <div className="home-services-icon  flex justify-content-start"  >
-                                            <Image width={50} height={50} src={service.icon} className='w-full' alt={service.title} />
+                                <Row  >
+                                    <Col xs={24} sm={24} md={12} lg={5} xl={5} className='home_first_services_img'>
+                                        <div className="home-services-icon flex justify-content-start"  >
+                                            <Image width={50} height={50} src={service.icon} className='w-full h-full' alt={service.title} />
                                         </div>
                                     </Col>
-                                    <Col xl={{ span: 17, offset: 2 }}>
+                                    <Col
+                                        xs={24} sm={24} md={{ span: 17, offset: 2 }} lg={{ span: 17, offset: 2 }}
+                                        xl={{ span: 17, offset: 2 }}>
                                         <div className="content">
-                                            <h3 className="home-services-title">{service.title}</h3>
-                                            <p className="home-services-description">
-                                                {service.description}
-                                            </p>
+                                            <h3 className="home-services-title">{service.title}</h3> 
+                                            <p className="home-services-description">{service.description.split(' ').slice(0, 15).join(' ')}</p>
+
                                             <Button
                                                 type="primary"
                                                 className={`home-services-order-button ${index === 0 ? 'home-services-button-featured' : ''}`}
@@ -96,15 +99,16 @@ const HomeServices = () => {
 
                 <Row gutter={[50, 50]} className="home-services-grid mt-6">
                     {services.map((service, index) => (
-                        <Col className='' key={index} xs={24} sm={12} md={12} lg={12} xl={12}>
+                        <Col className='' key={index} xs={24} sm={24} md={12} lg={12} xl={12}>
                             <div className="blur_position">
-
                                 <Card
                                     className={` home-services- home-services-2 flex flex-row ${index === 0 ? 'home-services-card-featured' : ''}`}
                                     bordered>
-                                    <div className="home-services-icon"><service.icon /></div>
-                                    <h3 className="home-services-title">{service.title}</h3>
-                                    <p className="home-services-description">{service.description}</p>
+                                    <div className="flex home_services_images justify-content-start"  >
+                                        <Image width={90} height={90} src={service.icon} className=' ' alt={service.title} />
+                                    </div>
+                                    <h3 className="home-services-title mt-3">{service.title}</h3>
+                                    <p className="home-services-description">{service.description.split(' ').slice(0, 15).join(' ')}</p>
                                     <Button type="primary" className="home-services-order-button">
                                         Order Now
                                     </Button>
