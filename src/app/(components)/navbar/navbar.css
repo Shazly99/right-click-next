@@ -27,7 +27,7 @@
 
  @media screen and (width < 767px) {
    .navbar-container .navbar-main {
-     padding: 20px 40px;
+     padding: 8px 40px !important;
    }
  }
 
