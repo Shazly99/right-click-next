@@ -625,6 +625,7 @@
    display: flex;
    flex-direction: column;
    direction: rtl;
+
  }
 
  :lang(en) .button_dir {
@@ -1004,8 +1005,34 @@
    .home-services-container .container {
      width: 95%;
    }
-   .container_header {
-    width: 95%; 
-  }
 
+   .container_header {
+     width: 95%;
+   }
+
+   .about-home-container {
+     padding: 20px 0 !important;
+
+   }
+
+   .about-home-container .about-home-image img {
+     width: 88%;
+     margin-top: 20px;
+   }
+
+   .stats-section {
+     padding: 50px 20px;
+   }
+
+   .stats-section .stats-numbers .stat-item h2 {
+     font-size: 2rem;
+   }
+
+   .projectHome .contentContainer .projectDetails .description {
+     text-align: end;
+   }
+
+   .projectHome .contentContainer .projectDetails {
+     width: 100%;
+   }
  }

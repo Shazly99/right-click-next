@@ -73,8 +73,9 @@ const StatsSection = () => {
           {/* الرقم الثالث */}
           <Col xs={24} sm={8}>
             <div className="stat-item">
-              <h2>
-                <ClientCountUp start={0} end={10} duration={5} suffix={t('Years')} />
+              <h2 className='flex gap-2 justify-content-center'>
+                <ClientCountUp start={0} end={10} duration={5} />
+                {t('Years')}
               </h2>
               <p>{t('Experience')}</p>
             </div>

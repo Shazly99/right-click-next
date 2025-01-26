@@ -166,3 +166,13 @@
  }
 
  /*# sourceMappingURL=projects.css.map */
+ @media screen and (width < 900px) {
+   .projects-section {
+     padding: 50px 20px;
+   }
+
+   .app__projects-section .projects-section {
+     padding: 30px 20px 50px 20px;
+
+   }
+ }
