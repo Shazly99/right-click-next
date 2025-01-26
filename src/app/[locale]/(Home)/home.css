@@ -962,11 +962,13 @@
    .home-services-description {
      text-align: center;
    }
-   .home_first_services .home_first_services_img{
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;  
+
+   .home_first_services .home_first_services_img {
+     display: flex !important;
+     justify-content: center !important;
+     align-items: center !important;
    }
+
    .home_first_services .content {
 
      display: flex;
@@ -979,22 +981,31 @@
      width: 90px !important;
      height: 90px !important;
    }
-   .home_first_services  .content .home-services-title{
-    font-size:24px; 
-   }
-   .home-services-container .container header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
+   .home_first_services .content .home-services-title {
+     font-size: 24px;
    }
 
-   .home-services-container .container header .subtitle{
-    text-align: center;
+   .home-services-container .container header {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
    }
 
-   .about-title { 
-    font-size: 1.7rem !important;  
-  } 
- 
+   .home-services-container .container header .subtitle {
+     text-align: center;
+   }
+
+   .about-title {
+     font-size: 1.7rem !important;
+   }
+
+   .home-services-container .container {
+     width: 95%;
+   }
+   .container_header {
+    width: 95%; 
+  }
+
  }

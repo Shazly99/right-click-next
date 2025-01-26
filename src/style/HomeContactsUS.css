@@ -256,6 +256,11 @@
    .address__section .map-image {
      margin-top: 20px;
    }
+   .address__section .container ,
+   .contact_us .container {
+    width: 95%;
+    margin: 0 auto;
+  }
  }
 
  /*# sourceMappingURL=HomeContactsUS.css.map */

@@ -822,3 +822,9 @@
   color: #d3d3d3;
   margin-bottom: 8px;
 }
+
+@media screen and (width < 900px) {
+  .copywriting-container .container {
+    width: 95%; 
+  }
+}
