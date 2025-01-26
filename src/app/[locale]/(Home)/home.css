@@ -1035,4 +1035,29 @@
    .projectHome .contentContainer .projectDetails {
      width: 100%;
    }
+   .stats-section .stats-text .mission h3, .stats-section .stats-text .vision h3{
+    font-size: 1.5rem !important;
+   }
+   .custom-title .highlight {
+    width: 40px;
+    height: 37px; 
+   }
+   .projectHome header p{
+    font-size: 0.9rem;
+    
+   }
+   .stats-section .stats-text .mission p, .stats-section .stats-text .vision p,
+   .about-home-container .about-home-text p {
+    font-size: 0.9rem;
+   }
+   .home-services-container .home-services-description,
+   .home-services-container .container header .subtitle {
+    font-size: 0.9rem;
+
+   }
+   .home-services-2 .home-services-title,
+   .home_first_services .content .home-services-title{
+    font-size: 1.3rem !important;
+    
+   }
  }

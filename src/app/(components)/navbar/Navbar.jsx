@@ -80,9 +80,9 @@ const Navbar = () => {
                         <span>info@rightclick.com</span>
                     </a>
                     <span className="divider">|</span>
-                    <a href="tel:+201115893336" target='_blank' rel="noopener noreferrer" className='flex gap-2 justify-content-center align-items-center'>
+                    <a href="tel:+966569090410" target='_blank' rel="noopener noreferrer" className='flex gap-2 justify-content-center align-items-center'>
                         <Image width={12} height={12} src={Icon.phone} alt="phone" />
-                        <span dir='ltr'>56 9090 410</span>
+                        <span dir='ltr'>+966569090410</span>
                     </a>
                 </span>
                 <div className="language-social flex gap-4">
