@@ -579,6 +579,10 @@
    position: relative;
  }
 
+ .blur_position button {
+  box-shadow: 0 2px 0 rgba(3, 7, 12, 0.65) !important;
+ }
+
  .blur_position .home-services- {
    border: 11px solid rgb(255, 255, 255);
    background: rgba(255, 255, 255, 0.6);
@@ -1035,29 +1039,46 @@
    .projectHome .contentContainer .projectDetails {
      width: 100%;
    }
-   .stats-section .stats-text .mission h3, .stats-section .stats-text .vision h3{
-    font-size: 1.5rem !important;
+
+   .stats-section .stats-text .mission h3,
+   .stats-section .stats-text .vision h3 {
+     font-size: 1.5rem !important;
    }
+
    .custom-title .highlight {
-    width: 40px;
-    height: 37px; 
+     width: 40px;
+     height: 37px;
    }
-   .projectHome header p{
-    font-size: 0.9rem;
-    
-   }
-   .stats-section .stats-text .mission p, .stats-section .stats-text .vision p,
-   .about-home-container .about-home-text p {
-    font-size: 0.9rem;
-   }
-   .home-services-container .home-services-description,
-   .home-services-container .container header .subtitle {
-    font-size: 0.9rem;
+
+   .projectHome header p {
+     font-size: 0.9rem;
 
    }
+
+   .stats-section .stats-text .mission p,
+   .stats-section .stats-text .vision p,
+   .about-home-container .about-home-text p {
+     font-size: 0.9rem;
+   }
+
+   .home-services-container .home-services-description,
+   .home-services-container .container header .subtitle {
+     font-size: 0.9rem;
+
+   }
+
    .home-services-2 .home-services-title,
-   .home_first_services .content .home-services-title{
-    font-size: 1.3rem !important;
-    
+   .home_first_services .content .home-services-title {
+     font-size: 1.3rem !important;
+
+   }
+
+   .blur_position button {
+     font-size: 12px;
+     padding: 0 15px;
+     height: 25px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
    }
  }
