@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import React from "react";
 import { Cover } from "@/app/(components)/Cover/Cover";
 import img from "@/constants/img";
@@ -23,7 +24,7 @@ async function fetchData(locale) {
         "Content-Type": "application/json",
         "Accept-Language": locale || "en", // Default to English if no locale is provided
       },
-      cache: "no-store", // Ensure fresh data
+      cache: "force-cache", // Ensure fresh data
     });
 
     if (!response.ok) {
