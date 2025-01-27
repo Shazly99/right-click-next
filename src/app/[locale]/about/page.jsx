@@ -70,12 +70,13 @@ export default async function About({ params }) {
           <div className="design-section">
             {
               data.about_data.slice(2, 4).map((item, index) => (
-                <Row className="design-item"  >
-                  <Col xl={5} lg={5} md={24} sm={24} xs={24} className="design-title"> {item.title} </Col>
-                  <Col xl={18} lg={18} md={24} sm={24} xs={24} className="design-description"> {item.description}</Col>
+                <Row className="design-item" key={item.title || index}>
+                  <Col xl={5} lg={5} md={24} sm={24} xs={24} className="design-title">{item.title}</Col>
+                  <Col xl={18} lg={18} md={24} sm={24} xs={24} className="design-description">{item.description}</Col>
                 </Row>
               ))
             }
+
           </div>
         </div>
       </div>
@@ -83,9 +84,9 @@ export default async function About({ params }) {
       <div className="values-section pb-8">
         {
           data.about_data.slice(-1).map((item, index) => (
-            <div className="values-header" key={index} >
-              <h3 className="custom-title  text-center">{item.title}</h3>
-              <p> {item.description} </p>
+            <div className="values-header" key={item.title || index}>
+              <h3 className="custom-title text-center">{item.title}</h3>
+              <p>{item.description}</p>
             </div>
           ))
         }
@@ -93,12 +94,12 @@ export default async function About({ params }) {
           {
             data.values.map((item, index) => (
               <div className="card">
-                <div className="icon"> 
+                <div className="icon">
                   <Image
                     src={item.icon}
-                    alt={item.title || `item-${index}`} 
+                    alt={item.title || `item-${index}`}
                     width={1000}
-                    height={500} 
+                    height={500}
                     priority
                   />
                 </div>
