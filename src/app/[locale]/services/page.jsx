@@ -1,14 +1,12 @@
+export const dynamic = "force-dynamic";
 
-import Image from 'next/image';
-import AboutHome from '../(Home)/AboutHome';
-import StatsSection from '../(Home)/StatsSection';
-import '../(Home)/home.css'
 import { Cover } from '@/app/(components)/Cover/Cover';
-import { createTranslator } from 'next-intl';
 import img from '@/constants/img';
-import Icon from '@/constants/icon';
-import { Card, Button, Row, Col } from 'antd';
+import { Button, Card, Col, Row } from 'antd';
+import { createTranslator } from 'next-intl';
+import Image from 'next/image';
 import Link from 'next/link';
+import '../(Home)/home.css';
 
 
 

@@ -1,3 +1,5 @@
+
+export const dynamic = "force-dynamic";
 import AboutHome from "./(Home)/AboutHome";
 import HomeAddress from "./(Home)/HomeAddress";
 import HomeClients from "./(Home)/HomeClients";
