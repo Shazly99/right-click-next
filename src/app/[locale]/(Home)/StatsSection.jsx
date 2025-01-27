@@ -23,7 +23,7 @@ const StatsSection = ({ stats }) => {
           <div className="stats-text">
             {
               stats.about_data.slice(0, 2)?.map((item, index) => (
-                <div className="mission">
+                <div className="mission" key={index} >
                   <h3 className="custom-title">
                     <span className="highlight"></span>  {item.title}
                   </h3>

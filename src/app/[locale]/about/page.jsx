@@ -70,7 +70,7 @@ export default async function About({ params }) {
           <div className="design-section">
             {
               data.about_data.slice(2, 4).map((item, index) => (
-                <Row className="design-item" key={index} >
+                <Row className="design-item"  >
                   <Col xl={5} lg={5} md={24} sm={24} xs={24} className="design-title"> {item.title} </Col>
                   <Col xl={18} lg={18} md={24} sm={24} xs={24} className="design-description"> {item.description}</Col>
                 </Row>
