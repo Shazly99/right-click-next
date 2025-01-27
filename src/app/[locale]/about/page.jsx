@@ -93,7 +93,7 @@ export default async function About({ params }) {
         <div className="values-cards">
           {
             data.values.map((item, index) => (
-              <div className="card">
+              <div className="card" key={item.title || index}>
                 <div className="icon">
                   <Image
                     src={item.icon}
