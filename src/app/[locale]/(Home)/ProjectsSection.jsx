@@ -151,9 +151,7 @@ const ProjectsSection = () => {
             {
                 !isPortfolioRoute && (
                     <Row justify="center" className="view-more">
-                        <Button type="primary" shape="round" size="large">
-                            See All Projects
-                        </Button>
+                        <Button type="primary" shape="round" size="large">{t('SeeAllProjects')}</Button>
                     </Row>
                 )
             }

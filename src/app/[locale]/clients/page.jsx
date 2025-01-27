@@ -1,13 +1,52 @@
 import React from "react";
 import { Cover } from "@/app/(components)/Cover/Cover";
 import img from "@/constants/img";
-import { useTranslations } from "next-intl";
-import '../../../style/clients.css'
+import { createTranslator } from "next-intl";
+import '@style/clients.css'
 import Icon from "@/constants/icon";
 import Image from "next/image";
 
-const Clients = () => {
-  const t = useTranslations();
+// Fetch translations
+async function getTranslations(locale) {
+  const messages = (await import(`../.././../../messages/${locale}.json`)).default;
+  const t = createTranslator({ locale, messages });
+  return t;
+}
+
+// Fetch data function
+async function fetchData(locale) {
+  const apiUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL}/home/clients`;
+  try {
+    const response = await fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept-Language": locale || "en", // Default to English if no locale is provided
+      },
+      cache: "no-store", // Ensure fresh data
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch data: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+
+    return data?.data || null;
+  } catch (error) {
+    console.error("Error fetching data:", error.message);
+    return null;
+  }
+}
+
+export default async function Clients({ params }) {
+  const locale = params?.locale || "en"; // Retrieve the current locale from route params
+  const t = await getTranslations(locale); // Get translations
+  const data = await fetchData(locale);
+
+  if (!data) {
+    return <div>Error loading data. Please try again later.</div>;
+  }
 
   const headerData = {
     image: img.HeaderClients,
@@ -17,58 +56,6 @@ const Clients = () => {
       { label: t("clients.breadcrumb_about"), link: "/clients" },
     ],
   };
-
-  const clientLogos = [
-    { id: 1, src: img.ourClicnts1, alt: "Sports Hub" },
-    { id: 1, src: img.ourClicnts1, alt: "Sports Hub" },
-    { id: 2, src: img.ourClicnts2, alt: "Sports Hub" },
-    { id: 3, src: img.ourClicnts3, alt: "Sports Hub" },
-    { id: 4, src: img.ourClicnts4, alt: "Sports Hub" },
-    { id: 5, src: img.ourClicnts5, alt: "Sports Hub" },
-    { id: 6, src: img.ourClicnts6, alt: "Sports Hub" },
-    { id: 1, src: img.ourClicnts1, alt: "Sports Hub" },
-    { id: 2, src: img.ourClicnts2, alt: "Sports Hub" },
-    { id: 3, src: img.ourClicnts3, alt: "Sports Hub" },
-    { id: 4, src: img.ourClicnts4, alt: "Sports Hub" },
-    { id: 5, src: img.ourClicnts5, alt: "Sports Hub" },
-    { id: 6, src: img.ourClicnts6, alt: "Sports Hub" },
-    { id: 1, src: img.ourClicnts1, alt: "Sports Hub" },
-    { id: 2, src: img.ourClicnts2, alt: "Sports Hub" },
-    { id: 3, src: img.ourClicnts3, alt: "Sports Hub" },
-    { id: 4, src: img.ourClicnts4, alt: "Sports Hub" },
-    { id: 5, src: img.ourClicnts5, alt: "Sports Hub" },
-    { id: 6, src: img.ourClicnts6, alt: "Sports Hub" },
-    { id: 1, src: img.ourClicnts1, alt: "Sports Hub" },
-    { id: 2, src: img.ourClicnts2, alt: "Sports Hub" },
-    { id: 3, src: img.ourClicnts3, alt: "Sports Hub" },
-    { id: 4, src: img.ourClicnts4, alt: "Sports Hub" },
-    { id: 5, src: img.ourClicnts5, alt: "Sports Hub" },
-    { id: 6, src: img.ourClicnts6, alt: "Sports Hub" },
-    { id: 2, src: img.ourClicnts2, alt: "Sports Hub" },
-    { id: 3, src: img.ourClicnts3, alt: "Sports Hub" },
-    { id: 4, src: img.ourClicnts4, alt: "Sports Hub" },
-    { id: 5, src: img.ourClicnts5, alt: "Sports Hub" },
-    { id: 6, src: img.ourClicnts6, alt: "Sports Hub" },
-    { id: 1, src: img.ourClicnts1, alt: "Sports Hub" },
-    { id: 2, src: img.ourClicnts2, alt: "Sports Hub" },
-    { id: 3, src: img.ourClicnts3, alt: "Sports Hub" },
-    { id: 4, src: img.ourClicnts4, alt: "Sports Hub" },
-    { id: 5, src: img.ourClicnts5, alt: "Sports Hub" },
-    { id: 6, src: img.ourClicnts6, alt: "Sports Hub" },
-    { id: 1, src: img.ourClicnts1, alt: "Sports Hub" },
-    { id: 2, src: img.ourClicnts2, alt: "Sports Hub" },
-    { id: 3, src: img.ourClicnts3, alt: "Sports Hub" },
-    { id: 4, src: img.ourClicnts4, alt: "Sports Hub" },
-    { id: 5, src: img.ourClicnts5, alt: "Sports Hub" },
-    { id: 6, src: img.ourClicnts6, alt: "Sports Hub" },
-    { id: 1, src: img.ourClicnts1, alt: "Sports Hub" },
-    { id: 2, src: img.ourClicnts2, alt: "Sports Hub" },
-    { id: 3, src: img.ourClicnts3, alt: "Sports Hub" },
-    { id: 4, src: img.ourClicnts4, alt: "Sports Hub" },
-    { id: 5, src: img.ourClicnts5, alt: "Sports Hub" },
-    { id: 6, src: img.ourClicnts6, alt: "Sports Hub" },
-    // Add more logos as needed
-  ];
 
   return (
     <div>
@@ -82,9 +69,31 @@ const Clients = () => {
           />
         </div>
         <div className="clients-grid">
-          {clientLogos.map((logo) => (
-            <div key={logo.id} className="client-card">
-              <Image width={800} height={50} src={logo.src} alt={logo.alt} />
+          {data.clients.map((logo) => (
+            <div key={logo.id} className="client-card"
+              style={{
+                width: "160px",
+                height: "120px",
+                border: "1px solid #000",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                margin: "0 15px",
+                padding: "15px 10px",
+                border: "1px solid #000",
+                borderRadius: '10px'
+
+              }}
+            >
+              <Image
+                width={80} // عرض الصورة
+                height={80} // ارتفاع الصورة
+                style={{
+                  objectFit: "contain", // يجعل الصورة تناسب الحاوية دون تمدد
+                  maxHeight: "100%", // التحكم في ارتفاع الصورة
+                  maxWidth: "100%", // التحكم في عرض الصورة
+                }}
+                src={logo.image} alt={logo.title} />
             </div>
           ))}
         </div>
@@ -94,4 +103,10 @@ const Clients = () => {
   );
 };
 
-export default Clients;
+
+export async function generateStaticParams() {
+  return [
+    { locale: "en" },
+    { locale: "ar" }, // Add other supported locales here
+  ];
+}

@@ -109,8 +109,14 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: column; 
+}
+:lang(en) .app_header_page .overlay { 
   left: 150px;
+}
+
+:lang(ar) .app_header_page .overlay { 
+  right: 150px;
 }
 .app_header_page .overlay h2 {
   background-color: transparent !important;

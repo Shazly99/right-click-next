@@ -542,7 +542,7 @@
    align-items: flex-start;
  }
 
- .home-services-2 .home-services-icon svg {
+ .home-services-2 .home-services-icon img {
    width: 90px;
    height: 131px;
    aspect-ratio: 90/131;
@@ -580,7 +580,7 @@
  }
 
  .blur_position button {
-  box-shadow: 0 2px 0 rgba(3, 7, 12, 0.65) !important;
+   box-shadow: 0 2px 0 rgba(3, 7, 12, 0.65) !important;
  }
 
  .blur_position .home-services- {
@@ -1082,3 +1082,36 @@
      align-items: center;
    }
  }
+
+ /* **NOTE -  */
+
+ @media (max-width: 768px) {
+   .logo-container {
+     width: 100px;
+     /* تقليل العرض على الشاشات الصغيرة */
+     height: 100px;
+   }
+ }
+
+ @media (max-width: 480px) {
+   .logo-container {
+     width: 80px;
+     /* تقليل العرض أكثر على الهواتف */
+     height: 80px;
+   }
+ }
+
+ .home_services_images img {
+   width: 107px;
+   height: 97px;
+   object-fit: contain !important;
+
+ }
+
+ .home_services_image {
+   width: 150px !important;
+   height: 150px !important;
+   object-fit: contain
+ }
+
+ 

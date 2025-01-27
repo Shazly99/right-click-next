@@ -13,7 +13,7 @@ const services1 = [
         icon: img.Service1,
     }
 ]
-const services = [
+const services2 = [
     // {
     //     title: "Digital Marketing",
     //     description: "At Right Click, we believe that every business deserves the right tools and strategies to succeed in the fast-paced digital world. With over 10 years of experience, we’ve partnered with businesses of all sizes to help them achieve measurable growth. From boosting online visibility to generating high-quality leads, our services are designed to meet your goals effectively. ",
@@ -43,7 +43,7 @@ const services = [
     },
 ];
 
-const HomeServices = () => {
+const HomeServices = ({ services }) => {
     let t = useTranslations();
 
     return (
@@ -51,12 +51,10 @@ const HomeServices = () => {
             <div className="container">
                 <header className='bg-blue-800'>
                     <HeaderTitle title={t('OurServices')} />
-                    <p className="subtitle">
-                        We provide the integrated marketing services that help you reach your OKRs. our slogan is we help you click right away
-                    </p>
+                    <p className="subtitle">  {services.section_content} </p>
                 </header>
                 <Row gutter={[16, 16]} className="home-services-grid mt-5">
-                    {services1.map((service, index) => (
+                    { services.data.slice(0, 1).map((service, index) => (
                         <Col
                             key={index}
                             xs={24} sm={24}
@@ -72,22 +70,16 @@ const HomeServices = () => {
                                 <Row  >
                                     <Col xs={24} sm={24} md={12} lg={5} xl={5} className='home_first_services_img'>
                                         <div className="home-services-icon flex justify-content-start"  >
-                                            <Image width={50} height={50} src={service.icon} className='w-full h-full' alt={service.title} />
+                                            <Image width={1000} height={1000} src={service.image} className='w-full h-full' alt={service.title} />
                                         </div>
                                     </Col>
                                     <Col
                                         xs={24} sm={24} md={{ span: 17, offset: 2 }} lg={{ span: 17, offset: 2 }}
                                         xl={{ span: 17, offset: 2 }}>
                                         <div className="content">
-                                            <h3 className="home-services-title">{service.title}</h3> 
-                                            <p className="home-services-description">{service.description.split(' ').slice(0, 15).join(' ')}</p>
-
-                                            <Button
-                                                type="primary"
-                                                className={`home-services-order-button ${index === 0 ? 'home-services-button-featured' : ''}`}
-                                            >
-                                                Order Now
-                                            </Button>
+                                            <h3 className="home-services-title">{service.title}</h3>
+                                            <p className="home-services-description">{service.description.split(' ').slice(0, 40).join(' ')}</p> 
+                                            <Button type="primary" className={`home-services-order-button ${index === 0 ? 'home-services-button-featured' : ''}`}  > {t('Order')} </Button>
                                         </div>
                                     </Col>
                                 </Row>
@@ -98,20 +90,18 @@ const HomeServices = () => {
                 </Row>
 
                 <Row gutter={[50, 50]} className="home-services-grid mt-6">
-                    {services.map((service, index) => (
-                        <Col className='' key={index} xs={24} sm={24} md={12} lg={12} xl={12}>
+                    {services.data.slice(1, 5).map((service, index) => (
+                        <Col key={index} xs={24} sm={24} md={12} lg={12} xl={12}>
                             <div className="blur_position">
                                 <Card
                                     className={` home-services- home-services-2 flex flex-row ${index === 0 ? 'home-services-card-featured' : ''}`}
                                     bordered>
                                     <div className="flex home_services_images justify-content-start"  >
-                                        <Image width={90} height={90} src={service.icon} className=' ' alt={service.title} />
+                                        <Image width={500} height={500} src={service.image} className=' ' alt={service.title} />
                                     </div>
                                     <h3 className="home-services-title mt-3">{service.title}</h3>
                                     <p className="home-services-description">{service.description.split(' ').slice(0, 15).join(' ')}</p>
-                                    <Button type="primary" className="home-services-order-button">
-                                        Order Now
-                                    </Button>
+                                    <Button type="primary" className="home-services-order-button">{t('Order')}   </Button>
                                 </Card>
 
                                 <div className="blur_2"></div>

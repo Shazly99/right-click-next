@@ -1,13 +1,54 @@
 import { Cover } from '@/app/(components)/Cover/Cover';
-import Icon from '@/constants/icon';
 import img from '@/constants/img';
-import { useTranslations } from 'next-intl';
+import '@style/about.css';
+import { Col, Row } from 'antd';
+import { createTranslator } from 'next-intl';
 import AboutHome from '../(Home)/AboutHome';
 import StatsSection from '../(Home)/StatsSection';
-import '../../../style/about.css';
+import Image from 'next/image';
 
-export default function About() {
-  const t = useTranslations();
+// Fetch translations
+async function getTranslations(locale) {
+  const messages = (await import(`../.././../../messages/${locale}.json`)).default;
+  const t = createTranslator({ locale, messages });
+  return t;
+}
+
+// Fetch data function
+async function fetchData(locale) {
+  const apiUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL}/home/about-us?limit=-1`;
+  try {
+    const response = await fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept-Language": locale || "en", // Default to English if no locale is provided
+      },
+      cache: "no-store", // Ensure fresh data
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch data: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+
+    return data?.data || null;
+  } catch (error) {
+    console.error("Error fetching data:", error.message);
+    return null;
+  }
+}
+
+export default async function About({ params }) {
+  const locale = params?.locale || "en"; // Retrieve the current locale from route params
+  const t = await getTranslations(locale); // Get translations
+  const data = await fetchData(locale);
+
+  if (!data) {
+    return <div>Error loading data. Please try again later.</div>;
+  }
+
 
   const headerData = {
     image: img.aboutHeader,
@@ -21,62 +62,59 @@ export default function About() {
   return (
     <>
       <Cover headerData={headerData} />
-      <AboutHome />
-      <StatsSection />
+      <AboutHome aboutUs={data} />
+      <StatsSection stats={data} />
+
       <div className="app_about_our">
         <div className="goals-strategies-section">
           <div className="design-section">
-            <div className="design-item">
-              <div className="design-title">Our goals</div>
-              <div className="design-description">
-                Achieving The Highest Quality For Our Partners, Excellence And Creativity In Our Work And Continuous Development Of Our Services.
-              </div>
-            </div>
-            <div className="design-item">
-              <div className="design-title">Our strategies</div>
-              <div className="design-description">
-                Building Continuous Successful And Strong Business And Partnerships As Well As Attracting The Best Talents In A Stimulating Business Environment.
-              </div>
-            </div>
+            {
+              data.about_data.slice(2, 4).map((item, index) => (
+                <Row className="design-item" key={index} >
+                  <Col xl={5} lg={5} md={24} sm={24} xs={24} className="design-title"> {item.title} </Col>
+                  <Col xl={18} lg={18} md={24} sm={24} xs={24} className="design-description"> {item.description}</Col>
+                </Row>
+              ))
+            }
           </div>
         </div>
-
-
-
       </div>
-        <div className="values-section pb-8">
-          <div className="values-header">
-            <h3 className="custom-title flex justify-content-center align-items-center">
-              <span className="highlight border-border-round-3xl"></span> Our Values
-            </h3>
-            <p>
-              A Saudi Company Specialized In The Field Of Digital Marketing And In The
-              Management And Enrichment Of Content On Social Networks.
-            </p>
-          </div>
-          <div className="values-cards">
-            <div className="card">
-              <div className="icon"><Icon.value1 /> </div>
-              <h3>Innovation And Creativity</h3>
+
+      <div className="values-section pb-8">
+        {
+          data.about_data.slice(-1).map((item, index) => (
+            <div className="values-header" key={index} >
+              <h3 className="custom-title  text-center">{item.title}</h3>
+              <p> {item.description} </p>
             </div>
-            <div className="card">
-              <div className="icon"><Icon.value2 /></div>
-              <h3>Integrity And Transparency</h3>
-            </div>
-            <div className="card">
-              <div className="icon"><Icon.value3 /></div>
-              <h3>Quality And Integration</h3>
-            </div>
-            <div className="card">
-              <div className="icon"><Icon.value4 /></div>
-              <h3>Passion</h3>
-            </div>
-            <div className="card">
-              <div className="icon"><Icon.value5 /></div>
-              <h3>Team Spirit</h3>
-            </div>
-          </div>
+          ))
+        }
+        <div className="values-cards">
+          {
+            data.values.map((item, index) => (
+              <div className="card">
+                <div className="icon"> 
+                  <Image
+                    src={item.icon}
+                    alt={item.title || `item-${index}`} 
+                    width={1000}
+                    height={500} 
+                    priority
+                  />
+                </div>
+                <h3>{item.title}</h3>
+              </div>
+            ))
+          }
         </div>
+      </div>
     </>
   );
+}
+
+export async function generateStaticParams() {
+  return [
+    { locale: "en" },
+    { locale: "ar" }, // Add other supported locales here
+  ];
 }

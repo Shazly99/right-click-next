@@ -4,51 +4,55 @@ import AboutHome from '../(Home)/AboutHome';
 import StatsSection from '../(Home)/StatsSection';
 import '../(Home)/home.css'
 import { Cover } from '@/app/(components)/Cover/Cover';
-import { useTranslations } from 'next-intl';
+import { createTranslator } from 'next-intl';
 import img from '@/constants/img';
 import Icon from '@/constants/icon';
 import { Card, Button, Row, Col } from 'antd';
 import Link from 'next/link';
 
-const services = [
 
-  {
-    title: "Digital Marketing",
-    description: "At Right Click, we believe that every business deserves the right tools and strategies to succeed in the fast-paced digital world. With over 10 years of experience, we’ve partnered with businesses of all sizes to help them achieve measurable growth. From boosting online visibility to generating high-quality leads, our services are designed to meet your goals effectively. ",
-    icon: Icon.services1,
-    path: "DigitalMarketing"
 
-  },
-  {
-    title: "Web Development",
-    description: "We Will Help You Take Advantage Of Social Media Platforms And Reach Your Audiences Like Never Before...",
-    icon: Icon.services2,
-    path: "WebsiteDevelopment"
-  },
-  {
-    title: "Visual Production",
-    description: "At Right Click, We Strive To Uplift Your Visual Identity By Crafting Visual Content That Captures The Essence Of Your Brand...",
-    icon: Icon.services3,
-    path: "VisualProduction"
+// Fetch translations
+async function getTranslations(locale) {
+  const messages = (await import(`../.././../../messages/${locale}.json`)).default;
+  const t = createTranslator({ locale, messages });
+  return t;
+}
 
-  },
-  {
-    title: "Content Marketing",
-    description: "At Right Click, We Understand That Content Is The Backbone Of Every Successful Digital Marketing Strategy...",
-    icon: Icon.services4,
-    path: "ContentMarketing"
+// Fetch data function
+async function fetchData(locale) {
+  const apiUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL}/home/services`;
+  try {
+    const response = await fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept-Language": locale || "en", // Default to English if no locale is provided
+      },
+      cache: "no-store", // Ensure fresh data
+    });
 
-  },
-  {
-    title: "Branding",
-    description: "At Right Click, We Believe That A Strong Brand Is The Foundation Of A Successful Business...",
-    icon: Icon.services5,
-    path:"Branding"
+    if (!response.ok) {
+      throw new Error(`Failed to fetch data: ${response.statusText}`);
+    }
 
-  },
-];
-const Services = () => {
-  const t = useTranslations();
+    const data = await response.json();
+
+    return data?.data || null;
+  } catch (error) {
+    console.error("Error fetching data:", error.message);
+    return null;
+  }
+}
+
+export default async function Services({ params }) {
+  const locale = params?.locale || "en"; // Retrieve the current locale from route params
+  const t = await getTranslations(locale); // Get translations
+  const data = await fetchData(locale);
+
+  if (!data) {
+    return <div>Error loading data. Please try again later.</div>;
+  }
 
   const headerData = {
     image: img.HeaderServices,
@@ -64,21 +68,34 @@ const Services = () => {
       <div className="home-services-container flex-column mt-8 pb-8">
         <div className="container">
           <Row gutter={[50, 50]} className="home-services-grid mt-6">
-            {services.map((service, index) => (
+            {data.services.map((service, index) => (
               <Col className='' key={index} xs={24} sm={24} md={24} lg={24} xl={24}>
                 <div className="blur_position">
 
                   <Card
                     className={` home-services- home-services-2 flex flex-row ${index === 0 ? 'home-services-card-featured' : ''}`}
                     bordered>
-                    <div className="home-services-icon"><service.icon /></div>
-                    <h3 className="home-services-title">{service.title}</h3>
-                    <p className="home-services-description">{service.description}</p>
-                    <Link href={service.path}>
-                    <Button type="primary" className="home-services-order-button">
-                      Order Now
-                    </Button>
-                    </Link>
+                    <Row gutter={[30,30]} >
+                      <Col xl={5} lg={5} md={24} xs={24} sm={24} className='w-full'   >
+                        <div className="home-services-icon flex justify-content-center align-items-center">
+                          <Image
+                            src={service.image}
+                            alt={service.title || `service-${index}`}
+                            width={1000}
+                            height={500}
+                            className="w-full h-full home_services_image"
+                            priority
+                          />
+                        </div>
+                      </Col>
+                      <Col xl={19} lg={19} md={24} xs={24} sm={24} className='w-full'  >
+                        <h3 className="home-services-title">{service.title}</h3>
+                        <p className="home-services-description">{service.description.split(' ').slice(0, 40).join(' ')}</p>
+                        <Link href={'DigitalMarketing'}>
+                          <Button type="primary" className="home-services-order-button"> {t('Order')} </Button>
+                        </Link>
+                      </Col>
+                    </Row> 
                   </Card>
                   {
                     index % 2 == 0 ?
@@ -95,4 +112,9 @@ const Services = () => {
   )
 }
 
-export default Services
+export async function generateStaticParams() {
+  return [
+    { locale: "en" },
+    { locale: "ar" }, // Add other supported locales here
+  ];
+}

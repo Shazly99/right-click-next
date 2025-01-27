@@ -23,7 +23,7 @@ const fontAr = Cairo({
 
 const fontEn = Poppins({
   subsets: ["latin","latin-ext"],
-  weight: ["400", "100", "200", "300"],
+  weight: ["400", "100", "200", "300","400","500","600","700","800"],
 })
 
 
