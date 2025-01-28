@@ -116,7 +116,7 @@
 }
 
 :lang(ar) .app_header_page .overlay { 
-  right: 150px;
+  right: 150px; 
 }
 .app_header_page .overlay h2 {
   background-color: transparent !important;
@@ -139,3 +139,18 @@
 .app_header_page .overlay .breadcrumb a:last-child {
   opacity: 0.6;
 }/*# sourceMappingURL=App.css.map */
+
+@media screen and (width < 900px) {
+  :lang(ar) .app_header_page .overlay { 
+    right: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .app_header_page .overlay h2 { 
+    font-size: 2rem; 
+  }
+  .app_header_page .overlay .breadcrumb a{
+    font-size:0.8rem 
+  }
+}
