@@ -74,7 +74,7 @@ export default async function Services({ params }) {
                     className={` home-services- home-services-2 flex flex-row ${index === 0 ? 'home-services-card-featured' : ''}`}
                     bordered>
                     <Row gutter={[30,30]} >
-                      <Col xl={5} lg={5} md={24} xs={24} sm={24} className='w-full'   >
+                      <Col xl={5} lg={5} md={24} xs={24} sm={24} className='w-full flex justify-content-center '   >
                         <div className="home-services-icon flex justify-content-center align-items-center">
                           <Image
                             src={service.image}
@@ -86,7 +86,7 @@ export default async function Services({ params }) {
                           />
                         </div>
                       </Col>
-                      <Col xl={19} lg={19} md={24} xs={24} sm={24} className='w-full'  >
+                      <Col xl={19} lg={19} md={24} xs={24} sm={24} className='w-full  '  >
                         <h3 className="home-services-title">{service.title}</h3>
                         <p className="home-services-description">{service.description.split(' ').slice(0, 40).join(' ')}</p>
                         <Link href={'DigitalMarketing'}>

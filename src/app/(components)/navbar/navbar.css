@@ -351,10 +351,16 @@
  }
 
  @media screen and (width <1040px) {
-   .quote-button {
-     display: none;
-   }
- }
+  .quote-button {
+    display: none;
+  }
+}
+
+@media screen and (width <500px) {
+  .navbar-container .navbar-top .contact-info {
+    gap: 5px !important;
+  }
+}
 
  .logo_object_fit {
    object-fit: contain;

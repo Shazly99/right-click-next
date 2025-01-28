@@ -1010,6 +1010,32 @@
      width: 95%;
    }
 
+
+   .home-services-container .home-services-2 img {
+     width: 100px !important;
+   }
+
+   .home-services-container {
+     padding: 0;
+   }
+
+   .home-services-container .home-services-order-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto
+   }
+
+
+   .home-services-container .home-services-2 .ant-row {
+    row-gap: 0 !important
+  }
+
+  .home-services-container .home-services-2 .ant-col  {
+    padding:0 !important;
+    margin: 0 !important;
+  }
+
    .container_header {
      width: 95%;
    }
@@ -1113,5 +1139,3 @@
    height: 150px !important;
    object-fit: contain
  }
-
- 
