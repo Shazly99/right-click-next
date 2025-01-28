@@ -66,7 +66,7 @@ export default async function RootLayout({ children, params }) {
       <head>
         <link rel="icon" type="image/png" href="/favicon.ico" />
       </head>
-      <body className="overflow-hidden" style={{ fontFamily: locale == "en" ? fontEn.style.fontFamily : fontAr.style.fontFamily }}>
+      <body  style={{ fontFamily: locale == "en" ? fontEn.style.fontFamily : fontAr.style.fontFamily }}>
         <ConfigProvider theme={theme}>
           <NextIntlClientProvider messages={messages}>
             <Suspense fallback={<Loading />} >

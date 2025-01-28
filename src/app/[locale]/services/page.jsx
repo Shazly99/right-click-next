@@ -63,7 +63,7 @@ export default async function Services({ params }) {
   return (
     <div>
       <Cover headerData={headerData} />
-      <div className="home-services-container flex-column mt-8 pb-8">
+      <div className="home-services-container flex-column mt-8 pb-8 overflow-x-hidden">
         <div className="container">
           <Row gutter={[50, 50]} className="home-services-grid mt-6">
             {data.services.map((service, index) => (
@@ -73,7 +73,7 @@ export default async function Services({ params }) {
                   <Card
                     className={` home-services- home-services-2 flex flex-row ${index === 0 ? 'home-services-card-featured' : ''}`}
                     bordered>
-                    <Row gutter={[30,30]} >
+                    <Row gutter={[30, 30]} >
                       <Col xl={5} lg={5} md={24} xs={24} sm={24} className='w-full flex justify-content-center '   >
                         <div className="home-services-icon flex justify-content-center align-items-center">
                           <Image
@@ -93,7 +93,7 @@ export default async function Services({ params }) {
                           <Button type="primary" className="home-services-order-button"> {t('Order')} </Button>
                         </Link>
                       </Col>
-                    </Row> 
+                    </Row>
                   </Card>
                   {
                     index % 2 == 0 ?

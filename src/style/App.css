@@ -141,16 +141,27 @@
 }/*# sourceMappingURL=App.css.map */
 
 @media screen and (width < 900px) {
-  :lang(ar) .app_header_page .overlay { 
-    right: 0; 
+   .app_header_page .overlay { 
+    
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .app_header_page .overlay h2 { 
+  :lang(ar) .app_header_page .overlay { 
+    right: 0;  
+  }
+  :lang(en) .app_header_page .overlay { 
+    left: 0;  
+  }
+ :lang(ar) .app_header_page .overlay h2 { 
     font-size: 2rem; 
   }
   .app_header_page .overlay .breadcrumb a{
     font-size:0.8rem 
+  }
+
+  :lang(en) .app_header_page .overlay h2 { 
+    font-size: 1.5rem;
+     
   }
 }

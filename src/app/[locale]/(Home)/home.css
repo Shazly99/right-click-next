@@ -1020,21 +1020,21 @@
    }
 
    .home-services-container .home-services-order-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:auto
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: auto
    }
 
 
    .home-services-container .home-services-2 .ant-row {
-    row-gap: 0 !important
-  }
+     row-gap: 0 !important
+   }
 
-  .home-services-container .home-services-2 .ant-col  {
-    padding:0 !important;
-    margin: 0 !important;
-  }
+   .home-services-container .home-services-2 .ant-col {
+     padding: 0 !important;
+     margin: 0 !important;
+   }
 
    .container_header {
      width: 95%;
@@ -1085,6 +1085,18 @@
    .stats-section .stats-text .vision p,
    .about-home-container .about-home-text p {
      font-size: 0.9rem;
+   }
+
+   .home-services-container .home-services-description {
+     padding: 5px
+   }
+
+   .blur_position .home-services- {
+     border: 0px solid transparent;
+     padding: 15px 30px;
+     z-index: 1 !important;
+     border-radius: 30px;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 8px;
    }
 
    .home-services-container .home-services-description,
