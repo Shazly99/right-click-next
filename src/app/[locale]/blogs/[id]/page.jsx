@@ -4,6 +4,7 @@ import { Cover } from '@/app/(components)/Cover/Cover';
 import img from '@/constants/img';
 import '@/style/blogdetails.css';
 import { createTranslator } from 'next-intl';
+import Image from 'next/image';
 
 async function getTranslations(locale) {
   const messages = (await import(`../../../../../messages/${locale}.json`)).default;
@@ -50,11 +51,12 @@ export default async function BlogsDetails({ params }) {
     <>
       <Cover headerData={headerData} />
       <div className='app_blogs_details'>
-        {/* Cover Section */} 
+        {/* Cover Section */}
         {/* Blog Content */}
-        <div className="blog-content"> 
+        <div className="blog-content">
           <div className="blog-description" dangerouslySetInnerHTML={{ __html: blogData.description }} />
-          <img src={blogData.image} alt={blogData.title} />
+          <Image src={blogData.image} alt={blogData.title} width={1000}
+            height={500} priority />
         </div>
 
       </div>
