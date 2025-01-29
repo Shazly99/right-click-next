@@ -91,7 +91,7 @@
 /* Blog Image */
 .blog-content img {
     width: 100%;
-    max-width: 800px;
+    max-width: 800px !important;
     height: auto !important;
     display: block;
     margin: 20px auto;
