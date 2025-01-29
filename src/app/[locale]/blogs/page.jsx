@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { Cover } from '@/app/(components)/Cover/Cover';
 import React from 'react';
 import { createTranslator } from 'next-intl';

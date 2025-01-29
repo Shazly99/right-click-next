@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { Cover } from '@/app/(components)/Cover/Cover';
 import img from '@/constants/img';
 import '@/style/blogdetails.css';
