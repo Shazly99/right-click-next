@@ -26,10 +26,43 @@
   position: relative;
 }
 
+.blog__image-container .image_overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.blog__image-container .image_overlay .overlay {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  height: 350px;
+  background: linear-gradient(90deg, rgba(34, 34, 34, 0.581) 0%, rgba(34, 34, 34, 0) 107.03%);
+
+}
+
 .blog__image {
   width: 100%;
   height: 350px;
   object-fit: cover;
+}
+
+@media screen and (width < 767px) {
+  .app__blogs {
+    width: 90%; 
+  }
+
+  .blog__image-container .image_overlay .overlay {
+    height: 250px;
+    border-radius: 10px 10px 0 0 !important;
+
+  }
+
+  .blog__image {
+    height: 250px;
+    border-radius: 10px 10px 0 0 !important;
+    
+  }
 }
 
 .blog__date {
@@ -53,7 +86,7 @@
   padding: 5px 15px;
   font-size: 14px;
   font-weight: bold;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .blog__title::before {
@@ -63,10 +96,22 @@
   top: 0;
   left: 0;
   width: 60%;
-  height: 100%; 
+  height: 100%;
   border-radius: 0px;
   z-index: -1;
 }
+
+:lang(ar) .blog__title { 
+  right: 30px; 
+  width:fit-content
+}
+
+:lang(ar) .blog__title::before { 
+  top: 0;
+  right: 0;
+  width: 40%;
+}
+
 
 
 .blog__content {
@@ -81,8 +126,8 @@
 }
 
 .blog__button {
-  
-  background-color:  var(--secondary-color);
+
+  background-color: var(--secondary-color);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -93,4 +138,27 @@
 
 .blog__button:hover {
   background-color: #E36B2C;
+}
+
+.custom-button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button:hover {
+  background-color: #357abd;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.custom-button:active {
+  transform: translateY(0);
 }

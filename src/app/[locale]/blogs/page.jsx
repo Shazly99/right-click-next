@@ -1,14 +1,54 @@
-'use client';
 import { Cover } from '@/app/(components)/Cover/Cover';
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { createTranslator } from 'next-intl';
 import img from '@/constants/img';
-import { Col, Row ,Button} from 'antd';
+import { Col, Row, Button } from 'antd';
 import '@/style/blog.css';
 import Image from 'next/image';
+import { Link } from '@/navigation';
 
-const Blogs = () => {
-  const t = useTranslations();
+// Fetch translations
+async function getTranslations(locale) {
+  const messages = (await import(`../.././../../messages/${locale}.json`)).default;
+  const t = createTranslator({ locale, messages });
+  return t;
+}
+// Fetch data function
+async function fetchData(locale) {
+  const apiUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL}/home/blogs`;
+  try {
+    const response = await fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept-Language": locale || "en", // Default to English if no locale is provided
+      },
+      cache: "no-store", // Ensure fresh data
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch data: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+
+    return data?.data || null;
+  } catch (error) {
+    console.error("Error fetching data:", error.message);
+    return null;
+  }
+}
+
+
+export default async function Blogs({ params }) {
+
+  const locale = params?.locale || "en"; // Retrieve the current locale from route params
+  const t = await getTranslations(locale); // Get translations
+  const data = await fetchData(locale);
+
+  if (!data) {
+    return <div>Error loading data. Please try again later.</div>;
+  }
 
   const headerData = {
     image: img.blogHeader,
@@ -19,52 +59,6 @@ const Blogs = () => {
     ],
   };
 
-  const blogPosts = [
-
-    {
-      id: 1,
-      image: img.blog1,
-      date: '2024 - أبريل 2',
-      title: 'عنوان مناسب',
-      description: 'نقدّم في ثقة حلولًا ذكية متكاملة مستمدة من سنوات الخبرة في تطبيق أحدث التقنيات. يثق الشركاء بحلول ثقة الذكية ذات الكفاءة والفعالية، بدءاً بالتحوّل الرقمي',
-    },
-    {
-      id: 2,
-      image: img.blog2,
-      date: '2024 - أبريل 2',
-      title: 'عنوان مناسب',
-      description: 'استعرض تطبيقات مبتكرة باستخدام تقنيات الذكاء الاصطناعي.',
-    },
-    {
-      id: 3,
-      image: img.blog3,
-      date: '2024 - أبريل 2',
-      title: 'عنوان مناسب',
-      description: 'استكشف المستقبل المشرق لتقنيات الذكاء الاصطناعي الحديثة.',
-    },
-    {
-      id: 1,
-      image: img.blog1,
-      date: '2024 - أبريل 2',
-      title: 'عنوان مناسب',
-      description: 'نقدّم في هذه المقالة حلولًا ذكية متقدمة من تقنيات الذكاء الاصطناعي.',
-    },
-    {
-      id: 2,
-      image: img.blog2,
-      date: '2024 - أبريل 2',
-      title: 'عنوان مناسب',
-      description: 'استعرض تطبيقات مبتكرة باستخدام تقنيات الذكاء الاصطناعي.',
-    },
-    {
-      id: 3,
-      image: img.blog3,
-      date: '2024 - أبريل 2',
-      title: 'عنوان مناسب',
-      description: 'استكشف المستقبل المشرق لتقنيات الذكاء الاصطناعي الحديثة.',
-    },
-  ];
-
   return (
     <div>
       {/* Cover Section */}
@@ -73,7 +67,7 @@ const Blogs = () => {
       {/* Blog Cards Section */}
       <div className="app__blogs mb-8 mt-8">
         <Row gutter={[32, 32]}>
-          {blogPosts.map((post) => (
+          {data.clients.map((post) => (
             <Col
               xl={8}
               lg={8}
@@ -85,17 +79,22 @@ const Blogs = () => {
             >
               {/* Image Section */}
               <div className="blog__image-container">
-                <Image width={500} height={50} src={post.image} alt={post.title} className="blog__image" />
-                <div className="blog__date" dir='ltr' >{post.date}</div>
-                <div className="blog__title">{post.title}</div>
+                <div className="image_overlay">
+                  <Image width={500} height={50} src={post.image} alt={post.title} className="blog__image" />
+                  <div className="overlay"></div>
+                </div>
+                <div className="blog__date" dir='ltr' >2024 - أبريل 2</div>
+                <div className="blog__title">{post.short_title.split(' ').slice(0, 4).join(' ')}</div>
               </div>
 
               {/* Text Section */}
               <div className="blog__content">
-                <p className="blog__description">{post.description}</p>
-                <Button className="blog__button">
-                  {t('blog.read_more')}
-                </Button>
+                <p className="blog__description">{post.short_description.split(' ').slice(0, 10).join(' ')}</p>
+                <Link href={`/blogs/${post.key_word}`}>
+                  <Button className="blog__button">
+                    {t('blog.read_more')}
+                  </Button>
+                </Link>
               </div>
             </Col>
           ))}
@@ -105,4 +104,10 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+
+export async function generateStaticParams() {
+  return [
+    { locale: "en" },
+    { locale: "ar" }, // Add other supported locales here
+  ];
+}

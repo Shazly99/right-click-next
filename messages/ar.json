@@ -38,12 +38,12 @@
   "title_message_placeholder": "اكتب نوع الرسالة التي تريد التواصل بها",
   "message_text_optional": "نص الرسالة (اختياري)",
   "message_placeholder": "اكتب رسالتك",
-  "submit_button": "إرسال", 
-  "full_name_required": "الاسم الكامل مطلوب", 
+  "submit_button": "إرسال",
+  "full_name_required": "الاسم الكامل مطلوب",
   "email_required": "البريد الإلكتروني مطلوب",
   "email_invalid": "يرجى إدخال بريد إلكتروني صالح",
-  "phone_required": "رقم الهاتف مطلوب", 
-  "title_required": "سبب الاتصال مطلوب", 
+  "phone_required": "رقم الهاتف مطلوب",
+  "title_required": "سبب الاتصال مطلوب",
   "form_success": "تم إرسال رسالتك بنجاح!",
   "form_error": "فشل في إرسال رسالتك. يرجى المحاولة مرة أخرى.",
   "categories": [
@@ -92,6 +92,12 @@
     "header": "تواصل معنا",
     "breadcrumb_home": "الصفحة الرئيسية",
     "breadcrumb_contact": "تواصل معنا"
+  },
+  "blog": {
+    "header": "المدونات",
+    "breadcrumb_home": "الرئيسية",
+    "breadcrumb_about": "المدونات",
+    "read_more": "اقرأ المزيد"
   },
   "header": "المدونة",
   "breadcrumb_home": "الرئيسية",

@@ -1151,3 +1151,9 @@
    height: 150px !important;
    object-fit: contain
  }
+ @media screen and (width < 500px) {
+  .home-services-container .home-services-description {
+    padding: 0 5px;
+    font-size:13px !important
+  }
+ }
