@@ -20,6 +20,8 @@
   "OurMission": "مهمـتـنــا",
   "OurVision": "رؤيـتـنــا",
   "Experience": "الخـبـرة",
+  "Sending": "إرســـال",
+
   "Years": "  سنوات  ",
   "OurServices": "خدمـاتـنـا",
   "OurProjects": "مشـاريـعنــا",
@@ -88,16 +90,30 @@
     "breadcrumb_home": "الرئيسية",
     "breadcrumb_about": "العملاء"
   },
-  "contact_us": {
-    "header": "تواصل معنا",
-    "breadcrumb_home": "الصفحة الرئيسية",
-    "breadcrumb_contact": "تواصل معنا"
+  "contact_us": { 
+    "header": "اتصل بنا",
+    "breadcrumb_home": "الرئيسية",
+    "breadcrumb_contact": "اتصل بنا",
+    "location_title": "موقعنا",
+    "location_text": "المملكة العربية السعودية",
+    "location_button": "شارع التخصصي ، الرياض",
+    "email_title": "البريد الإلكتروني",
+    "email_text": "نرحب باستفساراتكم",
+    "email_button": "info@rightclick.sa",
+    "phone_title": "تواصل معنا",
+    "phone_text": "يمكنكم التواصل معنا على مدار 24 ساعة",
+    "phone_button": "+966-56-909-0410"
   },
   "blog": {
     "header": "المدونات",
     "breadcrumb_home": "الرئيسية",
     "breadcrumb_about": "المدونات",
     "read_more": "اقرأ المزيد"
+  },
+  "ContactUs": {
+    "title": "  بــنـــا",
+    "spanText": "اتصــل" 
+
   },
   "header": "المدونة",
   "breadcrumb_home": "الرئيسية",

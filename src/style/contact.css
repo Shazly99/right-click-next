@@ -1,11 +1,12 @@
 @import './variables.css';
+.content_container{
+    width: 80% ;
+    margin: auto;
 
-.contact-info-section {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+}
+.contact-info-section { 
     padding: 40px 20px;
-    background-color: #f9f9f9;
+ 
 }
 
 .contact-card {
@@ -137,4 +138,17 @@
 .contact-form-section textarea:focus,
 .contact-form-section input:focus {
     background-color: transparent !important;
+}
+
+.contact-form-section .form-title{
+    font-size: 36px;
+}
+
+@media screen and (width < 767px) {
+    .content_container{
+        
+        width: 99% ;
+        margin: auto;
+    
+    }
 }

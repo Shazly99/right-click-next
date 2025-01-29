@@ -2,9 +2,13 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, message, Col, Row } from 'antd';
 import '@style/contact.css'
+import { useTranslations } from 'next-intl';
 
 const ContactForm = () => {
+    let t = useTranslations(); // Load translations
+
     const [loading, setLoading] = useState(false); // State for button loading
+    const [form] = Form.useForm(); // Ant Design form instance
 
     const onFinish = async (values) => {
         setLoading(true); // Start loading
@@ -39,13 +43,12 @@ const ContactForm = () => {
         }
     };
 
-    const [form] = Form.useForm(); // Ant Design form instance
 
     return (
         <div className="contact-form-section  ">
-            <h1 className="form-title">
-                <span>Contact</span> Us
-            </h1>
+            <h2 className="form-title">
+                <span>{t('ContactUs.spanText')}</span> {t('ContactUs.title')}
+            </h2>
             <Form
                 layout="vertical"
                 onFinish={onFinish}
@@ -56,59 +59,58 @@ const ContactForm = () => {
                     <Col xl={12} lg={12} md={12} sm={24} xs={24}>
                         <Form.Item
                             name="fullName"
-                            label="Full Name *"
-                            rules={[{ required: true, message: 'Please enter your name' }]}
+                            label={t('full_name')} // Full Name
+                            rules={[{ required: true, message: t('full_name_required') }]}
 
                         >
-                            <Input placeholder="Write your name" />
+                            <Input size="large" placeholder={t('full_name_placeholder')} />
                         </Form.Item>
                     </Col>
                     <Col xl={12} lg={12} md={12} sm={24} xs={24}>
                         <Form.Item
+                            label={t('your_email')} // Your Email
                             name="email"
-                            label="Your Mail *"
                             rules={[
-                                { required: true, message: 'Please enter your email' },
-                                { type: 'email', message: 'Please enter a valid email' },
+                                { required: true, message: t('email_required') },
+                                { type: "email", message: t('email_invalid') },
                             ]}
-                            className="form-item"
                         >
-                            <Input placeholder="Write your email" />
+                            <Input size="large" placeholder={t('email_placeholder')} />
                         </Form.Item>
                     </Col>
                     <Col xl={12} lg={12} md={12} sm={24} xs={24}>
                         <Form.Item
+                            label={t('your_phone')} // Your Phone
                             name="phone"
-                            label="Your Phone *"
-                            rules={[{ required: true, message: 'Please enter your phone number' }]}
-                            className="form-item"
+                            rules={[{ required: true, message: t('phone_required') }]}
                         >
-                            <Input placeholder="+966 ********" />
+                            <Input size="large" placeholder={t('phone_placeholder')} />
                         </Form.Item>
+
                     </Col>
                     <Col xl={12} lg={12} md={12} sm={24} xs={24}>
                         <Form.Item
+                            label={t('title_message')} // Title Message
                             name="title"
-                            label="Title Message"
-                            rules={[{ required: true, message: 'Please enter a message title' }]}
-                            className="form-item"
+                            rules={[{ required: true, message: t('title_required') }]}
                         >
-                            <Input placeholder="Type the type of message you want to communicate" />
+                            <Input size="large" placeholder={t('title_message_placeholder')} />
                         </Form.Item>
                     </Col>
                     <Col xl={24} lg={24} md={24} sm={24} xs={24}>
-                        <Form.Item name="message" label="Message Text (Optional)"
-                            rules={[{ required: true, message: 'Please enter a message  ' }]}
-                            className="form-item">
-                            <Input.TextArea rows={4} placeholder="Write your message" />
+                        <Form.Item
+                            label={t('message_text_optional')} // Message Text (Optional)
+                            name="message"
+                        >
+                            <Input.TextArea size="large" placeholder={t('message_placeholder')} rows={4} />
                         </Form.Item>
                     </Col>
 
                 </Row>
                 <div className="  submit-button">
                     <Form.Item >
-                        <Button type="primary" htmlType="submit"  loading={loading}>
-                            {loading ? 'Sending...' : 'Submit'}
+                        <Button type="primary" htmlType="submit" loading={loading}>
+                            {loading ? t('Sending') : t('submit_button')}
                         </Button>
                     </Form.Item>
                 </div>

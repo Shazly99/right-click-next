@@ -22,6 +22,7 @@
   "OurVision": "Our Vision",
   "Experience": "Experience",
   "Years": "Years",
+  "Sending": "Sending.....",
   "OurProjects": "Our Projects",
   "OurServices": "Our Services",
   "Project": "  Project",
@@ -96,10 +97,23 @@
     "breadcrumb_home": "Home",
     "breadcrumb_about": "Clients"
   },
-  "contact_us": {
+  "contact_us": { 
     "header": "Contact Us",
     "breadcrumb_home": "Home",
-    "breadcrumb_contact": "Contact Us"
+    "breadcrumb_contact": "Contact Us",
+    "location_title": "Our location",
+    "location_text": "Kingdom of Saudi Arabia",
+    "location_button": "Takhassusi St , Riyadh",
+    "email_title": "Email",
+    "email_text": "We welcome your requests",
+    "email_button": "info@rightclick.sa",
+    "phone_title": "Contact us",
+    "phone_text": "Contact us anytime within 24 hours",
+    "phone_button": "+966-56-909-0410"
+  },
+  "ContactUs": {
+    "title": "  Us",
+    "spanText": "Contact"
   },
   "header": "Blog",
   "breadcrumb_home": "Home",
