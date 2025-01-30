@@ -8,18 +8,30 @@ import ToolsWeb from "./ToolsWeb";
 import Languages from "./Languages";
 import ContactForm from "../contact/ContactForm";
 import ServicesSlider from "../(seo)/ServicesSlider";
+import { createTranslator } from "next-intl";
 
-const WebsiteDevelopment = () => {
-  let data={
-    title:"Web Development",
-    dec:` Take your online presence to the next level. We specialize in     creating innovative and user-friendly websites tailored to your business needs. Let’s turn your ideas into reality.`,
-    img:img.WebsiteDevelopmentSlider,
-    title2:"Empowering Your Online Presence",
-    dec2:" Social media has influenced enormous waves as a medium of communication and has risen as the best arena that has impacted different audiences from varied backgrounds and cultures. Our strategies for social media trigger your intended interest group and not simply mess the space with insufficient content. Our entire team has been consistently endeavoring to mark an impression and to become a native on Facebook, Pinterest, Instagram, Twitter, LinkedIn and Google+."
+// Fetch translations
+async function getTranslations(locale) {
+  const messages = (await import(`../.././../../messages/${locale}.json`)).default;
+  const t = createTranslator({ locale, messages });
+  return t;
+}
+
+
+const WebsiteDevelopment = async ({ params }) => {
+  const locale = params?.locale || "en"; // Retrieve the current locale from route params
+  const t = await getTranslations(locale); // Get translations
+
+  let data = {
+    title: t('WebsiteDevelopment.title'),
+    dec: t('WebsiteDevelopment.dec'),
+    title2: t('WebsiteDevelopment.title2'),
+    dec2: t('WebsiteDevelopment.dec2'),
+    img: img.WebsiteDevelopmentSlider,
   }
   return (
     <>
-      <ServicesSlider data={data} />
+      <ServicesSlider t={t} data={data} />
       <WhoWeAre />
       <ServiceHome />
       <CustomCMS />
@@ -34,3 +46,11 @@ const WebsiteDevelopment = () => {
 };
 
 export default WebsiteDevelopment;
+
+
+export async function generateStaticParams() {
+  return [
+    { locale: "en" },
+    { locale: "ar" }, // Add other supported locales here
+  ];
+}

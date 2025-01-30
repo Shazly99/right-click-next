@@ -63,6 +63,7 @@
   font-weight: 600;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+
 }
 
 .request-button-modern:hover {
@@ -274,6 +275,7 @@
   margin: auto;
 }
 
+
 .section-title {
   font-size: 24px;
   font-weight: bold;
@@ -320,7 +322,6 @@
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
   height: 100%;
 }
 
@@ -349,7 +350,6 @@
 }
 
 .card ul {
-  /* list-style: none; */
   padding: 0;
 }
 
@@ -365,7 +365,6 @@
 
 .card ul li b {
   color: #ffffff;
-  /* النصوص الرئيسية باللون الأبيض */
 }
 
 .full-width-card {
@@ -384,7 +383,6 @@
   color: #ffffff;
   line-height: 1.6;
   max-width: 22%;
-  /* لتنسيق العناصر */
 }
 
 .horizontal-list li b {
@@ -483,11 +481,20 @@
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 15px;
-  padding-left: 20px;
-
   padding: 20px;
+
+}
+
+:lang(en) .benefits-section ul li {
+  padding-left: 20px;
   background: linear-gradient(-87.11deg, rgba(239, 239, 239, 0) 6.87%, rgba(232, 185, 143, 0.1961) 97.6%);
 
+}
+
+:lang(ar) .benefits-section ul li {
+  padding-right: 20px;
+  text-align: right;
+  background: linear-gradient(87.11deg, rgba(239, 239, 239, 0) 6.87%, rgba(232, 185, 143, 0.1961) 97.6%);
 }
 
 .benefits-section ul li::before {
@@ -495,7 +502,6 @@
   position: absolute;
   left: 0;
   color: #FA6409;
-  /* لون النقطة */
   font-size: 24px;
   line-height: 16px;
 }
@@ -603,13 +609,22 @@
   line-height: 1.6;
 }
 
+:lang(ar) .card ul {
+  padding: 10px 20px
+}
+
+:lang(ar) .card ul li::before {
+  content: "•";
+  position: absolute;
+  right: -20px;
+}
+
 /* الحاوية الرئيسية */
 .copywriting-container {
   background-color: #f8f9fa;
   padding: 40px;
   border-radius: 12px;
   margin: 0 auto;
-  font-family: "Arial", sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -759,7 +774,7 @@
 }
 
 /***NOTE - Branding ServicesGrid  */
- 
+
 .services-grid-container {
   padding: 40px;
   background: rgba(20, 30, 33, 1);
@@ -772,7 +787,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  color: #ffffff; 
+  color: #ffffff;
   height: 100%;
 }
 
@@ -780,15 +795,16 @@
 /* الحاوية الرئيسية */
 .services-grid-container {
   padding: 40px;
- }
+}
 
 /* البطاقات */
 .service-card {
-   padding: 20px;
+  padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  color: #ffffff; /* لون النص */
+  color: #ffffff;
+  /* لون النص */
 }
 
 /* تأثير التفاعل */
@@ -808,7 +824,8 @@
 .service-card p {
   font-size: 16px;
   line-height: 1.6;
-  color: #bfbfbf; /* لون رمادي للنصوص */
+  color: #bfbfbf;
+  /* لون رمادي للنصوص */
 }
 
 /* قائمة الفوائد */
@@ -825,7 +842,203 @@
 
 @media screen and (width < 900px) {
   .copywriting-container .container {
-    width: 95%; 
+    width: 95%;
+  }
+
+  .social-media-section {
+    margin: 0;
+    padding: 0
+  }
+
+  .social-media-section .mt {
+    margin-top: -125px !important;
+  }
+
+  .social-media-section img {
+    width: 100%;
+  }
+
+  /* Hero Section */
+  .hero-section-modern {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 80px 2% 0px 2%;
+
+  }
+
+  .hero-section-modern .title-modern {
+    font-size: 30px;
+    font-weight: 700;
+
+  }
+
+  .hero-section-modern .description-modern {
+    font-size: 16px;
+  }
+
+  .dark-section-modern_container {
+    width: 100%;
+  }
+
+  .dark-section-modern {
+    padding: 60px 15px;
+    border-radius: 0;
+  }
+
+  .dark-title-modern {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center
+  }
+
+  .dark-description-modern {
+    font-size: 16px;
+    text-align: center
+  }
+
+  .request-button-modern {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .who-we-are-container {
+    padding: 40px 0;
+  }
+
+  .who-we-are-content {
+    width: 100%;
+
+  }
+
+  .who-we-are-description {
+    font-size: 16px
+  }
+
+  .who-we-are-title {
+    font-size: 28px
+  }
+
+  .services-section {
+    width: 95%;
+    margin: auto
+  }
+
+  .service-list li {
+    direction: rtl
+  }
+
+  .services-grid-container {
+    padding: 0px;
+  }
+
+  .services-grid-container .service-card h3 {
+    font-size: 18px;
+  }
+
+  .services-grid-container .service-card p {
+    font-size: 14px;
+  }
+
+
+  .benefits-section {
+    width: 90%;
+    margin: auto;
+    color: #ffffff;
+    padding: 40px 0;
+    margin-top: -40px;
+    /* لجعل القسم يندمج مع التصميم */
+    border-radius: 0 0 16px 16px;
+    text-align: left;
+  }
+
+  .benefits-section h3 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .benefits-section ul li {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    padding-left: 20px;
+
+    padding: 20px;
+    background: linear-gradient(-87.11deg, rgba(239, 239, 239, 0) 6.87%, rgba(232, 185, 143, 0.1961) 97.6%);
+
+  }
+
+  .social-media-section h2 {
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 20px
+  }
+
+  /* الحاوية الرئيسية */
+  .documentary-container {
+    padding: 0px;
+    padding-top: 20px;
+    width: 90%;
+  }
+
+  /* البطاقة */
+  .documentary-card {
+    padding: 0px;
+
+  }
+
+  /* العنوان */
+  .documentary-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  /* المميزات */
+  .documentary-features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .VisualProduction .social-media-section {
+    margin-top: -20px;
+    padding: 20px
+  }
+
+  .who-we-are-modern {
+    gap: 20px;
+    padding: 20px 20px;
+  }
+
+  .who-we-are-modern p {
+    font-size: 13px
   }
 }
- 
+
+.app_brand .slider .website-development-modern .hero-section-modern {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+:lang(ar) .hero-section-modern .title-modern {
+  text-align: right;
+}
+
+
+:lang(ar) .hero-section-modern .content-modern {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}

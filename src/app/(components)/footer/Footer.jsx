@@ -68,11 +68,16 @@ const Footer = () => {
             <div
               className="footer_links_socil"
             >
-              <Text className="footer-contact">
-                <EnvironmentOutlined /> <span>{t('footer.address_')}</span>
-              </Text><br />
-              <a href="tel:+201115893336" target="_blank" rel="noopener noreferrer" className="footer-contact">
+              <a href="https://www.google.com/maps/place/24%C2%B044'20.8%22N+46%C2%B038'48.4%22E/@24.7390256,46.6458355,18.85z/data=!4m4!3m3!8m2!3d24.739117!4d46.646789?entry=ttu" target="_blank" rel="noopener noreferrer">
+                <Text className="footer-contact">
+                  <EnvironmentOutlined /> <span>{t('footer.address_')}</span>
+                </Text><br />
+              </a>
+              <a href="tel:+966569090410" target="_blank" rel="noopener noreferrer" className="footer-contact">
                 <PhoneOutlined /> <span dir="ltr">{t('footer.phone_number_1')}</span>
+              </a><br />
+              <a href="tel:+966114501344" target="_blank" rel="noopener noreferrer" className="footer-contact">
+                <PhoneOutlined /> <span dir="ltr">{t('footer.phone_number_2')}</span>
               </a><br />
               <a href="mailto:info@rightclick.com" target="_blank" rel="noopener noreferrer" className="footer-contact">
                 <MailOutlined /> <span>{t('footer.email')}</span>
@@ -82,7 +87,7 @@ const Footer = () => {
         </Row>
       </div>
       <Divider style={{ borderColor: '#f8f9fa', color: '#f8f9fa' }} className='mt-4' >
-        <div dir="ltr" > 
+        <div dir="ltr" >
           © <a href="https://rightclick.sa/" target="_blank" style={{ color: '#f8f9fa' }} >Right Click</a> 2025. All rights reserved.
         </div>
       </Divider>

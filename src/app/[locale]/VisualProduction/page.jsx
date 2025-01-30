@@ -5,16 +5,29 @@ import Image from 'next/image';
 import ServicesSlider from '../(seo)/ServicesSlider';
 import WhyChooseRightClick from '../DigitalMarketing/WhyChooseRightClick';
 import SocialMediaSection2 from './SocialMediaSection2';
+import { createTranslator } from "next-intl";
+import DocumentaryCard from "./VisualProductiondocumentary";
+import EventServices from "./EventServices";
 
-const Page = () => {
+// Fetch translations
+async function getTranslations(locale) {
+    const messages = (await import(`../.././../../messages/${locale}.json`)).default;
+    const t = createTranslator({ locale, messages });
+    return t;
+}
+
+
+const Page = async ({ params }) => {
+    const locale = params?.locale || "en"; // Retrieve the current locale from route params
+    const t = await getTranslations(locale); // Get translations
+
     let data = {
-        title: "Visual Production ",
-        dec: "At Right Click, we bring your vision to life by crafting visual content that captures the essence of your brand. Our diverse range of services is tailored to meet your unique needs, ensuring a memorable impact on your target audience.",
         img: img.VisualProduction,
-        title2: "Promo Video Production",
-        dec2: "Engage Your Audience: We create promotional videos that highlight what sets your brand apart. Custom Storytelling: Collaborate with our team to develop a compelling narrative that resonates with your audience. Build Brand Awareness: Increase visibility and foster lasting engagement with strategic video content."
-    }
-
+        title: t('VisualProduction.title'),
+        dec: t('VisualProduction.dec'),
+        title2: t('VisualProduction.title2'),
+        dec2: t('VisualProduction.dec2')
+    };
     const benefits = [
         {
             title: "Experience You Can Trust:",
@@ -34,31 +47,12 @@ const Page = () => {
         },
     ];
     return (
-        <div>
-            <ServicesSlider data={data} />
+        <div className="VisualProduction overflow-hidden">
+            <ServicesSlider t={t} data={data} />
             <div className="documentary-container">
-                <div className="documentary-card">
-                    <h2 className="documentary-title">Documentary Video Production</h2>
-                    <div className="documentary-features">
-                        <div className="feature">
-                            <p>
-                                <b>Share Authentic Stories:</b> Capture your brand&apos;s journey in a genuine and captivating manner.
-                            </p>
-                        </div>
-                        <div className="feature">
-                            <p>
-                                <b>Professional Management:</b> From concept to final cut, we handle every detail, including interviews and seamless editing.
-                            </p>
-                        </div>
-                        <div className="feature">
-                            <p>
-                                <b>Creative Editing:</b> Enhance your video with professional-grade effects, transitions, and storytelling techniques.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <DocumentaryCard />
             </div>
-            <div className="services-section"> 
+            <div className="services-section">
                 <Row gutter={[32, 32]} align="middle">
                     {/* Events Coverage Section */}
                     <Col xs={24} md={12} className="flex justify-content-start align-items-start">
@@ -68,39 +62,8 @@ const Page = () => {
                             className="service-image"
                         />
                     </Col>
-                    <Col span={12}>
-                        <Row gutter={[32, 32]} align="middle">
-
-                            <Col xs={24} md={24}>
-                                <h2 className="section-title">Events Coverage</h2>
-                                <ul className="service-list">
-                                    <li>
-                                        <strong>Professional Event Documentation:</strong> Ensure every significant moment of your event is captured professionally.
-                                    </li>
-                                    <li>
-                                        <strong>Corporate and Product Events:</strong> Highlight the success of your gatherings, from corporate meetings to product launches.
-                                    </li>
-                                    <li>
-                                        <strong>More Than Just Filming:</strong> Reflect the significance of each moment with professionalism and elegance.
-                                    </li>
-                                </ul>
-                            </Col>
-                            <Col xs={24} md={24}>
-                                <h2 className="section-title">Livestream Services</h2>
-                                <ul className="service-list">
-                                    <li>
-                                        <strong>Real-Time Engagement:</strong> Connect with audiences live, no matter where they are.
-                                    </li>
-                                    <li>
-                                        <strong>Comprehensive Technical Support:</strong> We manage all technical aspects for a smooth, high-quality broadcast.
-                                    </li>
-                                    <li>
-                                        <strong>Maximize Audience Reach:</strong> Expand your engagement opportunities during product launches and corporate events.
-                                    </li>
-                                </ul>
-                            </Col>
-                        </Row>
-
+                    <Col xs={24} md={12}>
+                        <EventServices />
                     </Col>
 
                 </Row>
@@ -115,9 +78,16 @@ const Page = () => {
             />
             <SocialMediaSection2 />
             <WhyChooseRightClick benefits={benefits} />
-     
+
         </div>
     )
 }
 
 export default Page;
+
+export async function generateStaticParams() {
+    return [
+        { locale: "en" },
+        { locale: "ar" }, // Add other supported locales here
+    ];
+}

@@ -4,9 +4,9 @@ import { Cover } from '@/app/(components)/Cover/Cover';
 import img from '@/constants/img';
 import { Button, Card, Col, Row } from 'antd';
 import { createTranslator } from 'next-intl';
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from 'next/image'; 
 import '../(Home)/home.css';
+import { Link } from '@/navigation';
 
 
 
@@ -89,7 +89,7 @@ export default async function Services({ params }) {
                       <Col xl={19} lg={19} md={24} xs={24} sm={24} className='w-full  '  >
                         <h3 className="home-services-title">{service.title}</h3>
                         <p className="home-services-description">{service.description.split(' ').slice(0, 40).join(' ')}</p>
-                        <Link href={'DigitalMarketing'}>
+                        <Link href={`/${service.key_word}`}>
                           <Button type="primary" className="home-services-order-button"> {t('Order')} </Button>
                         </Link>
                       </Col>

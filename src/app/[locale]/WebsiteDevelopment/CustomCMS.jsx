@@ -55,7 +55,7 @@ export const CustomCMS = () => {
 
                 <Col md={14} lg={10} sm={24}>
                     <div className="image-container">
-                        <Image width={500} height={50} src={img.crm} alt="Custom CMS Image" className="w-100" />
+                        <Image width={500} height={50} src={img.crm} alt="Custom CMS Image" className="w-100 h-full" />
                     </div>
                 </Col>
                 <Col md={24} lg={24} sm={24} >

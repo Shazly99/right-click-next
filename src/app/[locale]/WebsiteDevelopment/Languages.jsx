@@ -55,7 +55,7 @@ const Languages = () => {
 
 
     return (
-        <div className='app__service_home overflow-hidden bg_Languages'>
+        <div className='app__service_home overflow-hidden bg_Languages pt-8'>
             <section className='services_container'>
                 <Row className='servicess_mt'>
                     {locale == "en" ?
