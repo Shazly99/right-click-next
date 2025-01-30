@@ -1,16 +1,14 @@
 export const dynamic = "force-dynamic";
 
 import img from "@/constants/img";
+import { Link } from "@/navigation";
 import "@style/Portfolio.css";
-import { Button, Col, Row } from "antd";
+import { Button, Carousel, Col, Row } from "antd";
 import { createTranslator } from "next-intl";
-import { headers } from "next/headers";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import ProjectsSection from "../(Home)/ProjectsSection";
 import ProjectSection1 from "./ProjectSection1";
-import { Link } from "@/navigation";
-import { Carousel } from "antd";
+import ProjectsFeatured from "./ProjectsFeatured";
 // Fetch translations
 async function getTranslations(locale) {
   const messages = (await import(`../.././../../messages/${locale}.json`)).default;
@@ -28,7 +26,7 @@ async function fetchData(locale) {
         "Content-Type": "application/json",
         "Accept-Language": locale || "en", // Default to English if no locale is provided
       },
-      cache: "force-cache", // Ensure fresh data
+      cache: "no-store", // Ensure fresh data
     });
 
     if (!response.ok) {
@@ -46,12 +44,7 @@ async function fetchData(locale) {
 export default async function Portfolio({ params }) {
   const locale = params?.locale || "en"; // Retrieve the current locale from route params
   const t = await getTranslations(locale); // Get translations
-  const data = await fetchData(locale);
-
-  const headersList = headers();
-  const currentUrl = headersList.get("x-invoke-path") || "";
-  const isPortfolioRoute = currentUrl.includes("portfolio");
-
+  const data = await fetchData(locale); 
 
   const clients = [
     img.ourClicnts1,
@@ -198,7 +191,7 @@ export default async function Portfolio({ params }) {
       </div>
       {/* Conditionally render ProjectsSection */}
       <ProjectSection1 />
-      <ProjectsSection />
+      <ProjectsFeatured data={data.projects} />
     </div>
   );
 };

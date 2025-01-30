@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-
+import '../(Home)/home.css'
 const logos = [
   { id: 1, name: "Moon Light", img: img.cmp1, content: "Project description for Kafalah Project description for Kafalah." },
   { id: 2, name: "Logo 2", img: img.cmp2, content: "Project description for Logo 2." },
