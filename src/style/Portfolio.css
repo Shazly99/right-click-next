@@ -10,7 +10,7 @@
 }
 
 .portfolio-container .portfolio-header .portfolio-subtitle {
-  
+
   color: #666;
   margin: 10px 0;
   font-size: 20px;
@@ -29,6 +29,9 @@
 .portfolio-container .portfolio-header .portfolio-description {
   font-size: 1rem;
   color: #666;
+  width: 70%;
+  line-height: 30px;
+  margin: auto;
   margin-bottom: 20px;
 }
 
@@ -47,7 +50,7 @@
 }
 
 .portfolio-container .portfolio-grid {
-  margin-top: 50px;
+  margin-top: 140px;
 }
 
 .portfolio-container .portfolio-grid .portfolio-item {
@@ -56,16 +59,32 @@
 
 .portfolio-container .portfolio-grid .portfolio-item .portfolio-image {
   width: 100%;
-  border-radius: 10px 10px 0 0; 
+  border-radius: 10px 10px 0 0;
   height: auto;
   transition: transform 0.3s ease;
-  /*     &:hover {
-    transform: scale(1.05);
-  } */
+  object-fit: cover;
 }
 
-.portfolio_img {
+
+
+.portfolio_img .center,
+.portfolio_img .right,
+.portfolio_img .left {
+  object-fit: cover;
+  width: 100% !important;
+}
+
+.portfolio_img_center {
   transform: scale(1.05);
+}
+
+
+:lang(en) .portfolio_img_center .center {
+  margin-top: -122px !important;
+}
+
+:lang(ar) .portfolio_img_center .center {
+  margin-top: -60px !important;
 }
 
 /*# sourceMappingURL=Portfolio.css.map */
@@ -101,7 +120,6 @@
   width: 200px;
   height: auto;
   bottom: 200px
-
 }
 
 .portfolio-container .icon_bg_projects_right img {
@@ -112,4 +130,63 @@
 .portfolio-container .icon_bg_projects_left img {
   width: 100%;
   height: auto;
+}
+.portfolio_grid_sm{
+  display: none;
+}
+@media (max-width: 768px) {
+  .portfolio-grid,
+  .icon_bg_projects_left,
+  .icon_bg_projects_right {
+    display: none !important; 
+  }
+  .portfolio_grid_sm{
+    display:block;
+    margin-top:50px
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .portfolio-container .portfolio-grid .portfolio-item {
+    margin-bottom: 20px; 
+  }
+
+  .portfolio_img_center {
+    order: -1; 
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-container .portfolio-header h1 {
+    font-size: 2rem; 
+    line-height: 1.2;
+    background-size: 120px; 
+  }
+
+  .portfolio-container .portfolio-header .portfolio-subtitle {
+    font-size: 16px; 
+  }
+
+  .portfolio-description {
+    width: 90% !important; 
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-item .flex {
+    flex-direction: column; 
+  }
+
+  .ant-col {
+    padding: 0 10px !important; 
+  }
+
+  .portfolio-button {
+    width: 90%; 
+    margin: 15px auto;
+    padding: 12px 24px !important;
+  }
 }

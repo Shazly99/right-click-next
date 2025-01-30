@@ -3,8 +3,7 @@ import React from "react";
 import { Carousel } from "antd";
 import Image from "next/image";
 
-const Slider = ({ sliders }) => {
-    console.log(sliders)
+const Slider = ({ sliders }) => { 
   return (
     <div className="relative">
       <Carousel fade autoplay>

@@ -118,10 +118,10 @@ const ProjectsSection = () => {
                     <div className="calm-projects-display">
                         <div className="calm-projects-display__header">
                             <h1 className="calm-projects-display__title"> {t('FeaturedProjects')}  </h1>
-                            <FilterButtons
+                      {/*       <FilterButtons
                                 selectedCategory={selectedCategory}
                                 setSelectedCategory={setSelectedCategory}
-                            />
+                            /> */}
                         </div>
                     </div>
                 </div>

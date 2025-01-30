@@ -1,13 +1,52 @@
-import { headers } from "next/headers";
+export const dynamic = "force-dynamic";
+
 import img from "@/constants/img";
+import "@style/Portfolio.css";
 import { Button, Col, Row } from "antd";
+import { createTranslator } from "next-intl";
+import { headers } from "next/headers";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import ProjectsSection from "../(Home)/ProjectsSection";
-import "@style/Portfolio.css";
-import ProjectHome from "../(Home)/ProjectHome";
+import ProjectSection1 from "./ProjectSection1";
+import { Link } from "@/navigation";
+import { Carousel } from "antd";
+// Fetch translations
+async function getTranslations(locale) {
+  const messages = (await import(`../.././../../messages/${locale}.json`)).default;
+  const t = createTranslator({ locale, messages });
+  return t;
+}
 
-const Portfolio = () => {
+// Fetch data function
+async function fetchData(locale) {
+  const apiUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL}/home/projects?category=web_development`;
+  try {
+    const response = await fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept-Language": locale || "en", // Default to English if no locale is provided
+      },
+      cache: "force-cache", // Ensure fresh data
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch data: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+
+    return data?.data || null;
+  } catch (error) {
+    console.error("Error fetching data:", error.message);
+    return null;
+  }
+}
+export default async function Portfolio({ params }) {
+  const locale = params?.locale || "en"; // Retrieve the current locale from route params
+  const t = await getTranslations(locale); // Get translations
+  const data = await fetchData(locale);
 
   const headersList = headers();
   const currentUrl = headersList.get("x-invoke-path") || "";
@@ -30,7 +69,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="app_project">
+    <div className="app_project overflow-hidden">
       <div className="portfolio-container">
         <div className="icon_bg_projects_left">
           <Image width={500} height={50} src={img.bg_projects_left} alt="Project 1" className="w-fuk" />
@@ -39,39 +78,34 @@ const Portfolio = () => {
           <Image width={500} height={50} src={img.bg_projects_right} alt="Project 1" />
         </div>
         <div className="portfolio-header">
-          <h1>Our Projects</h1>
-          <p className="portfolio-subtitle">
-            Let’s Start Together And Make Something Trendy And Cool!
-          </p>
-          <p className="portfolio-description">
-            Our Team Is Shining With The Highest Technology To Implement Your
-            Ideas And Dreaming Projects.
-          </p>
-          <Button type="primary" className="portfolio-button">
-            Get In Touch
-          </Button>
+          <h1> {t('OurProjects')}  </h1>
+          <p className="portfolio-subtitle"> {t('OurProjects_title1')}  </p>
+          <p className="portfolio-description"> {data.section_content}  </p>
+          <Link href={'/contact'} >
+            <Button type="primary" className="portfolio-button"> {t('GetInTouch')}  </Button>
+          </Link>
         </div>
-        <Row gutter={[0, 0]} className="portfolio-grid">
+        <Row gutter={[0, 0]} className="portfolio-grid ">
           <Col
             xs={24}
             sm={12}
             md={7}
             className="flex justify-content-center align-items-end  "
           >
-            <div className="portfolio-item flex  ">
+            <div className="portfolio-item flex  portfolio_img ">
               <Image width={500} height={50}
                 src={img.coverTest} // Replace with actual image paths
                 alt="Project 1"
-                className="portfolio-image"
+                className="portfolio-image left"
               />
             </div>
           </Col>
           <Col xs={24} sm={12} md={10}>
-            <div className="portfolio-item portfolio_img">
-              <Image width={500} height={50}
+            <div className="portfolio-item portfolio_img portfolio_img_center">
+              <Image width={1000} height={50}
                 src={img.coverTest}
                 alt="Project 2"
-                className="portfolio-image    "
+                className="portfolio-image   center "
               />
             </div>
           </Col>
@@ -81,15 +115,60 @@ const Portfolio = () => {
             md={7}
             className="flex justify-content-center align-items-end"
           >
-            <div className="portfolio-item flex">
-              <Image width={500} height={50}
+            <div className="portfolio-item flex portfolio_img">
+              <Image width={1000} height={50}
                 src={img.coverTest}
                 alt="Project 3"
-                className="portfolio-image"
+                className="portfolio-image  right"
               />
             </div>
           </Col>
         </Row>
+        <div className="portfolio_grid_sm">
+          <Carousel fade={false} autoplay arrows dots={false} >
+            <div className="w-full h-50">
+              <Image
+                src={img.coverProject1}
+                alt={'project '}
+                width={1000}
+                height={500}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+            <div className="w-full h-50">
+              <Image
+                src={img.coverProject4}
+                alt={'project '}
+                width={1000}
+                height={500}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+            <div className="w-full h-50">
+              <Image
+                src={img.coverProject3}
+                alt={'project '}
+                width={1000}
+                height={500}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+            <div className="w-full h-50">
+              <Image
+                src={img.coverProject2}
+                alt={'project '}
+                width={1000}
+                height={500}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+
+          </Carousel>
+        </div>
       </div>
       <div style={{ backgroundColor: "#FA6409", padding: "20px 0" }} dir="ltr">
         <Marquee speed={50} pauseOnHover={true} gradient={false}>
@@ -108,7 +187,7 @@ const Portfolio = () => {
               <Image
                 src={client}
                 width={1000}
-                height={500}
+                height={1000}
                 priority
                 alt={`Client ${index + 1}`}
                 style={{ height: "100px", width: "auto", objectFit: "contain" }}
@@ -118,10 +197,15 @@ const Portfolio = () => {
         </Marquee>
       </div>
       {/* Conditionally render ProjectsSection */}
-      <ProjectHome /> 
+      <ProjectSection1 />
       <ProjectsSection />
     </div>
   );
 };
 
-export default Portfolio;
+export async function generateStaticParams() {
+  return [
+    { locale: "en" },
+    { locale: "ar" }, // Add other supported locales here
+  ];
+}
