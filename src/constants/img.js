@@ -23,10 +23,7 @@ const img = {
     sIcon6: "/assets/Images/Service/WebsiteDevelopment/icon6.png",
     crm: "/assets/Images/Service/crm.png",
 
-    map: "/assets/Images/location.png",
-    slider1: "/assets/Images/slider2.png",
-    slider2: "/assets/Images/slider1.jpg",
-    slider3: "/assets/Images/slider2.jpg",
+    map: "/assets/Images/location.png", 
     slider: "/assets/Images/slider.png",
     aboutHome: "/assets/Images/home/about.png",
     Stats: "/assets/Images/home/Stats.png",
@@ -76,15 +73,7 @@ const img = {
     tools4: "/assets/Images/tools4.png",
     tools5: "/assets/Images/tools5.png",
     tools6: "/assets/Images/tools6.png",
-
-    project1: "/assets/Images/project/1.webp",
-    project2: "/assets/Images/project/2.webp",
-    project3: "/assets/Images/project/3.webp",
-    project4: "/assets/Images/project/4.webp",
-    project5: "/assets/Images/project/5.webp",
-    project6: "/assets/Images/project/6.webp",
     Service1: "/assets/Images/Service/1.svg",
-
     cover1: "/assets/Images/cmp/cover.png",
 };
 
