@@ -1,13 +1,11 @@
-import React from 'react'
-import ServicesSlider from '../(seo)/ServicesSlider'
+export const dynamic = "force-dynamic";
 import img from "@/constants/img";
 import "@style/services.css";
-import { Col, Row } from 'antd';
-import Image from 'next/image';
-import SocialMediaSection3 from './SocialMediaSection3';
-import WhyChooseRightClick from '../DigitalMarketing/WhyChooseRightClick';
 import { createTranslator } from 'next-intl';
+import ServicesSlider from '../(seo)/ServicesSlider';
+import WhyChooseRightClick from '../DigitalMarketing/WhyChooseRightClick';
 import ServicesSection from './ServicesSection';
+import SocialMediaSection3 from './SocialMediaSection3';
 
 // Fetch translations
 async function getTranslations(locale) {

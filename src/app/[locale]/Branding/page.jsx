@@ -1,4 +1,4 @@
-import React from 'react'
+export const dynamic = "force-dynamic";
 import img from "@/constants/img";
 import "@style/services.css";
 import ServicesSlider from '../(seo)/ServicesSlider'

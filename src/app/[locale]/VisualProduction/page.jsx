@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import img from "@/constants/img";
 import "@style/services.css";
 import { Col, Row } from 'antd';

@@ -1,4 +1,4 @@
-import React from "react";
+export const dynamic = "force-dynamic";
 import "@style/services.css";
 import img from "@/constants/img";
 import WhoWeAre from "./WhoWeAre";
