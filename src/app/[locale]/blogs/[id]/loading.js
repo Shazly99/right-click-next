@@ -17,7 +17,7 @@ export default function Loading() {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    zIndex: "9999999999999999999999999"
+                    zIndex: "5"
                 }}
             >
                 <Spin size="large" />
