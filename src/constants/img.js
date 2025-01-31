@@ -8,8 +8,7 @@ const img = {
     coverProject2: "/assets/Images/blog/2.webp", 
     coverProject3: "/assets/Images/blog/3.webp", 
     coverProject4: "/assets/Images/blog/4.webp", 
-    coverProject5: "/assets/Images/blog/5.webp", 
-    coverProject6: "/assets/Images/blog/6.webp", 
+    
     contactHeader: "/assets/Images/Header/HeaderContactUs.png",
     HeaderServices: "/assets/Images/Header/HeaderServices.png",
     HeaderClients: "/assets/Images/Header/clients.png",

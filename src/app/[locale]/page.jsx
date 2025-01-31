@@ -58,7 +58,7 @@ export default async function Home({ params }) {
       <AboutHome aboutUs={data.about_us} />
       <StatsSection stats={data.about_us} />
       <ProjectHome projects={data.projects} />
-      <ProjectsSection projects={data.projects} />
+      <ProjectsSection data={data.projects} />
       <HomeServices services={data.services} />
       <HomeClients clients={data.clients} />
       <HomeContactsUS contacts={data.contacts} />
