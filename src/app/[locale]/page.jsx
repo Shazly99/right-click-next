@@ -53,7 +53,7 @@ export default async function Home({ params }) {
   }
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <Slider sliders={data.sliders} />
       <AboutHome aboutUs={data.about_us} />
       <StatsSection stats={data.about_us} />
