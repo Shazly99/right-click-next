@@ -2,11 +2,11 @@
   "name": "right-click-next",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rightclick.com.sa",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.2",
@@ -24,6 +24,8 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
+    "@types/node": "22.13.0",
+    "@types/react": "19.0.8",
     "eslint": "^8",
     "eslint-config-next": "14.2.22"
   }
