@@ -10,8 +10,8 @@ import Slider from "./(Home)/Slider";
 import StatsSection from "./(Home)/StatsSection";
 import "./(Home)/home.css";
 import img from "@/constants/img";
-
-// دالة لإحضار البيانات من API
+ 
+// Function to get data from API
 async function fetchData(locale) {
   const apiUrl = `${process.env.NEXT_PUBLIC_API_BASE_URL}/home`;
   try {
@@ -36,45 +36,75 @@ async function fetchData(locale) {
   }
 }
 
-// **إعداد metadata بناءً على اللغة المختارة**
+// **Set metadata based on selected language**
 export async function generateMetadata({ params }) {
   const locale = params?.locale || "en";
   const isLang = locale === "en";
-  const currentUrl = isLang ? "https://rightclick.com.sa/en" : "https://rightclick.com.sa/ar";
-  const imageUrl = img.logo; 
+  const currentUrl = `https://rightclick.com.sa/${locale}`;
+  const imageUrl = img.logo;
 
   return {
     title: isLang
-      ? "Right Click - Digital Marketing Agency in Saudi Arabia"
-      : "رايت كليك - وكالة التسويق الرقمي في السعودية",
-    
+      ? "Right Click - Best Digital Marketing Agency in Saudi Arabia"
+      : "رايت كليك - أفضل وكالة تسويق رقمي في السعودية",
+
     description: isLang
-      ? "Right Click is a leading digital marketing agency in Saudi Arabia. We provide top-notch services in SEO, social media marketing, content creation, and more."
-      : "رايت كليك هي وكالة تسويق رقمي رائدة في السعودية. نقدم خدمات متميزة في تحسين محركات البحث، التسويق عبر وسائل التواصل الاجتماعي، إنشاء المحتوى والمزيد.",
-    
+      ? "Right Click is the best digital marketing agency in Saudi Arabia. We specialize in SEO, PPC, content marketing, social media management, and influencer marketing."
+      : "رايت كليك هي أفضل وكالة تسويق رقمي في السعودية، متخصصة في تحسين محركات البحث، الإعلانات المدفوعة، التسويق بالمحتوى، إدارة وسائل التواصل الاجتماعي، والتسويق عبر المؤثرين.",
+
     keywords: isLang
-      ? "Digital Marketing, SEO, Social Media Marketing, Content Creation, Saudi Arabia, PPC, SEM, Content Strategy"
-      : "التسويق الرقمي، تحسين محركات البحث، التسويق عبر وسائل التواصل الاجتماعي، إنشاء المحتوى، السعودية، استراتيجية المحتوى، الإعلان المدفوع",
-    
-    author: "Right Click",
-    
+      ? [
+          "Digital Marketing Agency",
+          "SEO Services",
+          "Google Ads",
+          "Social Media Marketing",
+          "Content Marketing",
+          "PPC Management",
+          "Influencer Marketing",
+          "Facebook Ads",
+          "E-commerce SEO",
+          "Saudi Arabia Marketing",
+          "Email Marketing",
+          "Website Optimization",
+          "Right Click Agency",
+        ]
+      : [
+          "وكالة تسويق رقمي",
+          "خدمات تحسين محركات البحث",
+          "إعلانات جوجل",
+          "التسويق عبر وسائل التواصل الاجتماعي",
+          "التسويق بالمحتوى",
+          "إدارة الحملات الإعلانية",
+          "التسويق عبر المؤثرين",
+          "إعلانات فيسبوك",
+          "تحسين محركات البحث للمتاجر الإلكترونية",
+          "التسويق الرقمي في السعودية",
+          "التسويق عبر البريد الإلكتروني",
+          "تحسين أداء المواقع",
+          "وكالة رايت كليك",
+        ],
+
+    authors: [{ name: "Right Click Digital Marketing Experts", url: "https://rightclick.com.sa" }],
+
     openGraph: {
       title: isLang
-        ? "Right Click - Digital Marketing Agency in Saudi Arabia"
-        : "رايت كليك - وكالة التسويق الرقمي في السعودية",
-      
+        ? "Right Click - Best Digital Marketing Agency in Saudi Arabia"
+        : "رايت كليك - أفضل وكالة تسويق رقمي في السعودية",
+
       description: isLang
-        ? "Right Click is a leading digital marketing agency in Saudi Arabia. We provide top-notch services in SEO, social media marketing, content creation, and more."
-        : "رايت كليك هي وكالة تسويق رقمي رائدة في السعودية. نقدم خدمات متميزة في تحسين محركات البحث، التسويق عبر وسائل التواصل الاجتماعي، إنشاء المحتوى والمزيد.",
-      
+        ? "Right Click is a leading digital marketing agency in Saudi Arabia, specializing in SEO, PPC, content marketing, and social media management."
+        : "رايت كليك وكالة تسويق رقمي رائدة في السعودية، متخصصة في تحسين محركات البحث، الإعلانات المدفوعة، التسويق بالمحتوى، وإدارة وسائل التواصل الاجتماعي.",
+
       url: currentUrl,
       type: "website",
+      siteName: "Right Click",
+      locale: isLang ? "en_US" : "ar_SA",
       images: [
         {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: isLang ? "Right Click - Digital Marketing" : "رايت كليك - التسويق الرقمي",
+          alt: isLang ? "Right Click - Digital Marketing Experts" : "رايت كليك - خبراء التسويق الرقمي",
         },
       ],
     },
@@ -82,13 +112,13 @@ export async function generateMetadata({ params }) {
     twitter: {
       card: "summary_large_image",
       title: isLang
-        ? "Right Click - Digital Marketing Agency in Saudi Arabia"
-        : "رايت كليك - وكالة التسويق الرقمي في السعودية",
-      
+        ? "Right Click - Digital Marketing Experts in Saudi Arabia"
+        : "رايت كليك - خبراء التسويق الرقمي في السعودية",
+
       description: isLang
-        ? "Right Click is a leading digital marketing agency in Saudi Arabia. We provide top-notch services in SEO, social media marketing, content creation, and more."
-        : "رايت كليك هي وكالة تسويق رقمي رائدة في السعودية. نقدم خدمات متميزة في تحسين محركات البحث، التسويق عبر وسائل التواصل الاجتماعي، إنشاء المحتوى والمزيد.",
-      
+        ? "Top-rated digital marketing agency in Saudi Arabia. Specialized in SEO, PPC, Google Ads, and content marketing."
+        : "وكالة تسويق رقمي حاصلة على تقييمات عالية في السعودية. متخصصة في تحسين محركات البحث، إعلانات جوجل، والتسويق بالمحتوى.",
+
       site: "@RightClickSA",
       creator: "@RightClickSA",
       images: [imageUrl],
@@ -109,11 +139,12 @@ export async function generateMetadata({ params }) {
         "ar-SA": "https://rightclick.com.sa/ar",
       },
     },
+
+    metadataBase: new URL("https://rightclick.com.sa"),
   };
-}
+} 
 
-
-// **الكود الرئيسي لصفحة الـ Home**
+// **Home page main code**
 export default async function Home({ params }) {
   const locale = params?.locale || "en";
   let data;
