@@ -1,0 +1,51 @@
+@charset "UTF-8";
+ .clients-section {
+  padding: 2rem;
+  padding-top: 5rem;
+  background-color: #f9f9f9;
+  width: 85%;
+  margin: auto;
+  position: relative;
+  padding-bottom: 100px;
+}
+.clients-section .right_page {
+  position: absolute;
+  left: -440px;
+  transform: rotate(180deg);
+  top: -100px;
+}
+.clients-section .right_page img {
+  width: 480px !important;
+  height: 480px !important;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.client-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-card img {
+  width: 100%;
+  height: 80px;
+  /* ضبط الحجم الأقصى للصورة */
+}
+
+.client-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}/*# sourceMappingURL=clients.css.map */

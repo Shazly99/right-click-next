@@ -1,0 +1,600 @@
+{
+  "app_title": "   ",
+  "Language": "ع",
+  "lang": "عربيه",
+  "nav_home": "Home",
+  "nav_service": "Services ",
+  "nav_Products": "Products",
+  "nav_Projects": "Projects",
+  "OUR_CLIENTS": "Clients",
+  "nav_about": "About  ",
+  "nav_blogs": "Blogs  ",
+  "nav_contact": "Contacts Us",
+  "btn_nav": "let’s Talk",
+  "period": "Period",
+  "year": "Year",
+  "scope": "Scope",
+  "projectdetails": "Project Details",
+  "whoWeAre": "Who We Are",
+  "SeeAllProjects": "See All Projects",
+  "Order": "Order Now",
+  "OurMission": "Our Mission",
+  "OurVision": "Our Vision",
+  "Experience": "Experience",
+  "Years": "Years",
+  "Sending": "Sending.....",
+  "OurProjects": "Our Projects",
+  "OurProjects_title1": "Let’s Start Together And Make Something Trendy And Cool!",
+  "OurServices": "Our Services", 
+  "Project": "  Project",
+  "SeeProject": "  See Project",
+  "TheAddress": "The Address",
+  "GetInTouch": "Get In Touch",
+  "full_name": "Full Name",
+  "full_name_placeholder": "Write your name",
+  "your_email": "Your Email",
+  "email_placeholder": "Write your email",
+  "your_phone": "Your Phone",
+  "phone_placeholder": "+966 *********",
+  "title_message": "Title Message",
+  "title_message_placeholder": "Type the type of message you want to communicate",
+  "message_text_optional": "Message Text (Optional)",
+  "message_placeholder": "Write your message",
+  "submit_button": "Submit",
+
+  "Naming": {
+    "title": "Naming",
+    "items": [
+      {
+        "title": "Foundation of Success",
+        "desc": "A strong name is the foundation of a successful brand. Our naming services create names that are memorable, meaningful, and reflective of your brand’s identity."
+      },
+      {
+        "title": "Global Appeal",
+        "desc": "Consider linguistic, cultural, and market factors to ensure that your brand’s name resonates with your target audience, both locally and globally."
+      },
+      {
+        "title": "Lasting Impression",
+        "desc": "The result is a name that captures your brand’s essence and leaves a lasting impression on your customers."
+      }
+    ]
+  },
+  "FeaturedProjects": "Our Featured Projects",
+
+  "full_name_required": "Full Name is required",
+  "email_required": "Email is required",
+  "email_invalid": "Please enter a valid email",
+  "phone_required": "Phone number is required",
+  "title_required": "Reason is required",
+  "form_success": "Your message has been sent successfully!",
+  "form_error": "Failed to send your message. Please try again.",
+  "categories": [
+    "All",
+    "Web Development",
+    "Visual Production",
+    "Digital Marketing",
+    "Branding",
+    "Social media management"
+  ],
+  "footer": {
+    "welcome_text": "Welcome to rightclick, a leading software development company at the forefront of the digital revolution.",
+    "quick_links": "Quick Links",
+    "contact_us": "Contact Us",
+    "clients": "Clients",
+    "contact_us_link": "Contact Us",
+    "privacy_policy": "Privacy Policy",
+    "terms_conditions": "Terms & Conditions",
+    "address_": "Takhassusi StAlthuniyan, South Building, Office #12 Riyadh 12363",
+    "phone_number_1": "+966 56 9090 410  ",
+    "phone_number_2": "+966 56 9090 410  ",
+    "email": "info@rightclick.com",
+    "address": "Address",
+    "address_text": "Takhassusi StAlthuniyan, South Building, Office #12 Riyadh 12363",
+    "send_email": "Send Email",
+    "email_text": "Info@rightclick.com",
+    "call_emergency": "Call Emergency",
+    "phone_number": "+966 56 9090 410  "
+  },
+  "about_us": {
+    "header": "About Us",
+    "breadcrumb_home": "Home",
+    "breadcrumb_about": "About Us"
+  },
+  "blog": {
+    "header": "Blogs",
+    "breadcrumb_home": "Home",
+    "breadcrumb_about": "Blogs",
+    "read_more": "Read More"
+  },
+  "services": {
+    "header": "Our Services",
+    "breadcrumb_home": "Home",
+    "breadcrumb_about": "Services"
+  },
+  "clients": {
+    "header": "Our Clients",
+    "breadcrumb_home": "Home",
+    "breadcrumb_about": "Clients"
+  },
+  "contact_us": {
+    "header": "Contact Us",
+    "breadcrumb_home": "Home",
+    "breadcrumb_contact": "Contact Us",
+    "location_title": "Our location",
+    "location_text": "Kingdom of Saudi Arabia",
+    "location_button": "Takhassusi St , Riyadh",
+    "email_title": "Email",
+    "email_text": "We welcome your requests",
+    "email_button": "info@rightclick.sa",
+    "phone_title": "Contact us",
+    "phone_text": "Contact us anytime within 24 hours",
+    "phone_button": "+966-56-909-0410"
+  },
+  "ContactUs": {
+    "title": "  Us",
+    "spanText": "Contact"
+  },
+  "GetStarted": "Get Started",
+  "Branding": {
+    "title": "Branding",
+    "dec": "At Right Click, we believe that a strong brand is the foundation of a successful business. Our branding services are designed to create and elevate your brand, helping it stand out in a competitive marketplace. We work with you to develop a cohesive identity that communicates your values, attracts your target audience, and builds long-term loyalty. As one of the best branding agencies in Saudi Arabia, we bring expertise and creativity to every project, ensuring that your brand leaves a lasting impact.",
+    "title2": "Branding Strategy",
+    "dec2": "We create customized branding strategies tailored to your business goals and the unique demands of the local market. By conducting in-depth market research and competitor analysis, we ensure that your brand not only stands out but also resonates with your target audience. Whether you’re launching a new business or rebranding, we help craft a clear and impactful brand story that connects with customers.",
+    "who_we_are_title": "Who We Are",
+    "who_we_are_description": "Right Click is a leading branding agency with over a decade of experience in delivering effective brand solutions. We’ve worked with more than 100 businesses, both local and international, providing creative branding strategies tailored to the specific needs of the market. Our team is passionate about building brands that enhance brand awareness and foster customer loyalty.",
+    "BrandPositioning": {
+      "title": "Brand Positioning",
+      "uniqueMarketSpace": "Unique Market Space",
+      "uniqueMarketSpaceDesc": "Ensure your brand occupies a unique space in the market, differentiating you from competitors and appealing to your target audience.",
+      "highlightStrengths": "Highlight Strengths",
+      "highlightStrengthsDesc": "Help differentiate your brand by highlighting your strengths and creating a compelling value proposition.",
+      "connectAudiences": "Connect with Audiences",
+      "connectAudiencesDesc": "Ensure your brand connects with both local and international audiences, making it easier to build long-term loyalty."
+    },
+    "Naming": {
+      "title": "Naming",
+      "foundationSuccess": "Foundation of Success",
+      "foundationSuccessDesc": "A strong name is the foundation of a successful brand. Our naming services create names that are memorable, meaningful, and reflective of your brand’s identity.",
+      "globalAppeal": "Global Appeal",
+      "globalAppealDesc": "Consider linguistic, cultural, and market factors to ensure that your brand’s name resonates with your target audience, both locally and globally.",
+      "lastingImpression": "Lasting Impression",
+      "lastingImpressionDesc": "The result is a name that captures your brand’s essence and leaves a lasting impression on your customers."
+    },
+    "Services": {
+      "BrandPositioning": {
+        "title": "Brand Positioning",
+        "description": "We ensure your brand occupies a unique market space that appeals to your target audience. By highlighting your strengths and crafting compelling value propositions, we make your brand memorable and impactful, locally and globally."
+      },
+      "LogoDesign": {
+        "title": "Logo Design",
+        "description": "Your logo is your brand’s visual anchor. We design impactful logos that align with your values and work seamlessly across platforms, ensuring consistent representation on your website, packaging, and more."
+      },
+      "Slogan": {
+        "title": "Slogan",
+        "description": "A well-crafted slogan reinforces your brand’s message. We create slogans that enhance recall and emotional connection, ensuring your brand stays top of mind."
+      },
+      "StationaryDesign": {
+        "title": "Stationary Design",
+        "description": "We design professional stationery, including business cards and letterheads, that reflect your brand’s identity and enhance credibility at every interaction."
+      },
+      "PackagingDesign": {
+        "title": "Packaging Design",
+        "description": "Packaging is a vital touchpoint for customers. We design appealing, functional packaging that aligns with your identity and communicates trust and quality."
+      },
+      "SignageDesign": {
+        "title": "Signage Design",
+        "description": "We create signage that establishes your brand’s presence in physical spaces like stores or offices. Whether indoor or outdoor, our signage enhances visibility and reinforces your identity."
+      },
+      "IdentityGuideline": {
+        "title": "Identity Guideline Development",
+        "description": "A solid identity guideline ensures consistency across all platforms. It defines logo usage, color schemes, fonts, and tone of voice, helping your brand maintain a professional image across digital and print channels.",
+        "benefit1": "Uniform application of your brand across platforms.",
+        "benefit2": "Professionalism in internal and external communications.",
+        "benefit3": "Enhanced recognition and trust."
+      },
+      "InternalBranding": {
+        "title": "Internal Branding",
+        "description": "We develop strategies that align employees with your brand’s mission, creating a cohesive and motivated team. Whether through office design or communication tools, we turn your employees into brand ambassadors."
+      },
+      "CorporateProfile": {
+        "title": "Corporate Profile",
+        "description": "A professional corporate profile tells your brand’s story and communicates your values. We design profiles that are visually appealing and aligned with your identity, leaving a strong impression on clients and investors."
+      },
+      "BrochureDesign": {
+        "title": "Brochure Design",
+        "description": "We create brochures that effectively communicate your brand’s messages. Whether for events, meetings, or marketing campaigns, our designs ensure maximum impact."
+      },
+      "WhyWait": {
+        "title": "Why Wait? Let's Build Your Brand Identity Today",
+        "description": "Your brand identity is your business’s voice. With over a decade of experience, Right Click is here to ensure your identity resonates with your audience and drives results. Contact us today to start building a brand that truly stands out."
+      },
+
+      "WhyWait2": {
+        "title": "Why Wait? Let's Build Your Brand Identity Today",
+        "description": "Your brand identity is your business’s voice. With over a decade of experience, Right Click is here to ensure your identity resonates with your audience and drives results. Contact us today to start building a brand that truly stands out."
+      }
+    }
+  },
+  "WhyChooseRightClick": {
+    "title": "Why Choose Right Click?",
+    "description": "At Right Click, we see your success as our own. We understand the challenges businesses face in the Saudi market, and we’re here to make sure you don’t just compete but dominate. Our team combines over a decade of expertise with the latest tools and strategies to deliver results that speak for themselves.",
+    "benefitsTitle": "Key Benefits of Working with Us:",
+    "benefit1": {
+      "title": "Experience You Can Trust:",
+      "description": "Over 10 years of helping businesses like yours succeed online."
+    },
+    "benefit2": {
+      "title": "Tailored Solutions:",
+      "description": "Every strategy is customized to fit your business needs and goals."
+    },
+    "benefit3": {
+      "title": "Real Results:",
+      "description": "We focus on driving measurable growth, from traffic to revenue."
+    },
+    "benefit4": {
+      "title": "Your Growth Partners:",
+      "description": "We're here to guide you every step of the way, ensuring your success in a competitive market."
+    }
+  },
+  "ContentMarketing": {
+    "title": "Content Marketing",
+    "dec": "At Right Click, we understand that content is the backbone of every successful digital marketing strategy. Whether it’s crafting engaging blogs, creating eye-catching visuals, or developing strategies that drive traffic and conversions, our content marketing services are designed to help your brand stand out. With over 10 years of experience, we create content that resonates with your audience, builds trust, and drives measurable growth.",
+    "title2": "Digital Marketing Strategy Development",
+    "dec2": "Wondering how to get started with digital marketing? We've got you covered. Blog Articles: Share your expertise with well-researched, engaging blog posts that position your brand as an industry leader. Landing Page Copy: Drive conversions with clear, compelling copy optimized for your audience and search engines. Product Descriptions: Showcase your offerings with detailed, persuasive descriptions designed to convert browsers into buyers.",
+    "CopywritingServicesh": "Copywriting Services",
+    "CopywritingServicesp": "Wondering how to get started with digital marketing?",
+    "CopywritingServicesSpan": "We’ve got you covered.",
+    "SalesCopywriting": {
+      "title": "Sales Copywriting",
+      "description": "Create persuasive copy that converts leads into loyal customers."
+    },
+    "BrandStorytelling": {
+      "title": "Brand Storytelling",
+      "description": "Share your brand’s story in a way that captivates and inspires your audience."
+    },
+    "AdCopy": {
+      "title": "Ad Copy for Digital Campaigns",
+      "description": "Get results with impactful ad copy tailored to grab attention and drive clicks."
+    },
+
+    "ServicesSection": {
+      "CopywritingServices": {
+        "title": "Copywriting Services",
+        "subtitle": "Struggling to find the right words to connect with your audience? Let us help.",
+        "items": {
+          "SalesCopywriting": {
+            "title": "Sales Copywriting",
+            "description": "Create persuasive copy that converts leads into loyal customers."
+          },
+          "BrandStorytelling": {
+            "title": "Brand Storytelling",
+            "description": "Share your brand’s story in a way that captivates and inspires your audience."
+          },
+          "AdCopy": {
+            "title": "Ad Copy for Digital Campaigns",
+            "description": "Get results with impactful ad copy tailored to grab attention and drive clicks."
+          }
+        }
+      },
+      "SocialMediaContent": {
+        "title": "Social Media Content Creation",
+        "subtitle": "Struggling to find the right words to connect with your audience? Let us help.",
+        "items": {
+          "EngagementPosts": {
+            "title": "Engagement Posts",
+            "description": "Create content that boosts engagement and audience interaction."
+          },
+          "VisualContent": {
+            "title": "Visual Content",
+            "description": "Design eye-catching visuals and videos to enhance your brand presence."
+          },
+          "PlatformOptimization": {
+            "title": "Platform Optimization",
+            "description": "Optimize content for different social media platforms."
+          }
+        }
+      }
+    },
+    "SocialMediaSection3": {
+      "LeadGeneration": {
+        "title": "Lead Generation Services",
+        "description": "Turn clicks into customers with smart lead-generation strategies.",
+        "title1": "We design funnels",
+        "description1": "that guide potential customers from discovery to purchase, ensuring no lead goes untapped.",
+        "title2": "Our team focuses on quality over quantity",
+        "description2": "targeting the right audiences to bring in leads that convert.",
+        "title3": "B2B or B2C campaigns",
+        "description3": "We craft campaigns that build your customer base and boost sales opportunities."
+      },
+      "CROServices": {
+        "title": "CRO Services (Conversion Rate Optimization)",
+        "description": "Is your website traffic not converting into revenue? We'll fix that.",
+        "title1": "User Behavior Insights",
+        "description1": "Understand how your visitors interact with your website and identify friction points.",
+        "title2": "A/B Testing",
+        "description2": "Test different headlines, designs, or CTAs to see what drives the best results.",
+        "title3": "Optimized Funnels",
+        "description3": "Refine your sales journey to ensure a smooth and conversion-friendly user experience."
+      },
+      "LinkBuilding": {
+        "title": "Link Building",
+        "description": "Boost your credibility online with high-quality backlinks.",
+        "title1": "Digital PR Outreach",
+        "description1": "Partner with trusted publishers to secure placements that increase your authority.",
+        "title2": "HARO Campaigns",
+        "description2": "Connect with journalists to position your brand as a thought leader in your industry.",
+        "title3": "Guest Posts",
+        "description3": "Build backlinks and drive referral traffic through strategic blogging on industry-relevant websites."
+      }
+    }
+  },
+  "DigitalMarketing": {
+    "Process": "Our Process",
+    "Processd": "The most integral part of any brand&apos;s success in social media is to understand the audience. To gather information, usage, and sharing the content right from the journey of B2B to B2C, identification to conversion may take weeks to months.",
+    "title": "Digital Marketing",
+    "dec": "At Right Click, we empower businesses with the tools and strategies needed to thrive in the digital world. With 10+ years of experience, we&apos;ve helped businesses of all sizes achieve growth through enhanced visibility and quality leads. Whether launching a product or scaling your brand, we&apos;re here to elevate your success.",
+    "title2": "SEO Content Writing",
+    "dec2": "Our team specializes in creating custom digital strategies tailored to your business goals and target audience. We analyze your industry, competitors, and audience to develop plans that drive long-term growth. From setting measurable KPIs to executing campaigns, we are with you every step of the way to deliver impactful results.",
+    "SEO": {
+      "title": "Search Engine Optimization (SEO)",
+      "subtitle": "Struggling to rank on Google? Let us help you get noticed.",
+      "services": {
+        "LocalSEO": {
+          "title": "Local SEO",
+          "description": "Drive foot traffic and online visibility with strategies designed to attract local customers."
+        },
+        "TechnicalSEO": {
+          "title": "Technical SEO",
+          "description": "Optimize your website's performance to improve speed, user experience, and rankings."
+        },
+        "EnterpriseSEO": {
+          "title": "Enterprise SEO",
+          "description": "For large-scale websites, we implement advanced techniques to improve visibility across multiple pages."
+        },
+        "FranchiseSEO": {
+          "title": "Franchise SEO",
+          "description": "Consistent branding and visibility for businesses with multiple locations."
+        },
+        "SEOAudits": {
+          "title": "SEO Audits",
+          "description": "Get a detailed analysis of your website's SEO health and recommendations to fix any gaps."
+        },
+        "GenerativeSEO": {
+          "title": "Generative SEO",
+          "description": "Stay ahead of the competition with AI-driven strategies that adapt to the latest trends."
+        }
+      }
+    },
+    "PPC": {
+      "title": "Pay-Per-Click (PPC) Marketing",
+      "subtitle": "Want instant results? PPC gets you there.",
+      "services": {
+        "SearchAds": {
+          "title": "Search Ads",
+          "description": "Target customers actively searching for your products or services on search engines like Google."
+        },
+        "DisplayAds": {
+          "title": "Display Ads",
+          "description": "Capture your audience’s attention with engaging visual ads on various advertising networks."
+        },
+        "ShoppingAds": {
+          "title": "Shopping Ads",
+          "description": "Boost your e-commerce sales by showcasing your products directly in search results."
+        },
+        "Retargeting": {
+          "title": "Retargeting Ads",
+          "description": "Re-engage visitors who have previously interacted with your website and encourage them to complete their purchase."
+        },
+        "VideoAds": {
+          "title": "Video Ads",
+          "description": "Deliver compelling video ads to your audience on platforms like YouTube."
+        },
+        "PerformanceMax": {
+          "title": "Performance Max Ads",
+          "description": "Leverage AI to maximize returns across multiple advertising channels."
+        }
+      }
+    },
+
+    "Marketing": {
+      "title": "Social Media Marketing",
+      "subtitle": "Looking to connect with your audience? Social media is where they are.",
+      "services": {
+        "SocialMediaManagement": {
+          "title": "Social Media Management",
+          "description": "We handle everything—from content creation to scheduling and engagement."
+        },
+        "BrandBuilding": {
+          "title": "Brand Building",
+          "description": "Strengthen your brand identity with campaigns designed to foster trust and loyalty."
+        },
+        "EnterpriseSocialMedia": {
+          "title": "Enterprise Social Media",
+          "description": "Manage large-scale accounts with strategies tailored to maximize impact."
+        },
+        "FranchiseSocialMedia": {
+          "title": "Franchise Social Media",
+          "description": "Ensure consistent branding while catering to the unique needs of each location."
+        }
+      }
+    },
+    "Advertising": {
+      "title": "Social Media Advertising",
+      "subtitle": "Want to make an impression that converts? Social media ads work wonders.",
+      "services": {
+        "FacebookAds": {
+          "title": "Facebook Ads",
+          "description": "Precise targeting to generate leads and increase conversions."
+        },
+        "LinkedInAds": {
+          "title": "LinkedIn Ads",
+          "description": "Tap into professional networks to connect with decision-makers and grow your B2B audience."
+        },
+        "InstagramAds": {
+          "title": "Instagram Ads",
+          "description": "Stunning visuals and creative campaigns to captivate and inspire your audience."
+        },
+        "TwitterAds": {
+          "title": "Twitter Ads",
+          "description": "Engage in trending conversations to drive traffic and amplify your brand’s voice."
+        },
+        "TikTokCampaigns": {
+          "title": "TikTok Campaigns",
+          "description": "Leverage influencer marketing and video ads to capture attention on one of the fastest-growing platforms."
+        }
+      }
+    },
+    "LeadGeneration": {
+      "title": "Lead Generation Services",
+      "description": "Turn clicks into customers with smart lead-generation strategies.",
+      "items": {
+        "Funnels": {
+          "title": "We design funnels",
+          "description": "that guide potential customers from discovery to purchase, ensuring no lead goes untapped."
+        },
+        "QualityOverQuantity": {
+          "title": "Our team focuses on quality over quantity",
+          "description": "targeting the right audiences to bring in leads that convert."
+        },
+        "B2BCampaigns": {
+          "title": "B2B or B2C campaigns",
+          "description": "We craft campaigns that build your customer base and boost sales opportunities."
+        }
+      }
+    },
+    "CRO": {
+      "title": "Conversion Rate Optimization (CRO)",
+      "description": "Is your website traffic not converting into revenue? We'll fix that.",
+      "items": {
+        "UserBehavior": {
+          "title": "User Behavior Insights",
+          "description": "Understand how your visitors interact with your website and identify friction points."
+        },
+        "ABTesting": {
+          "title": "A/B Testing",
+          "description": "Test different headlines, designs, or CTAs to see what drives the best results."
+        },
+        "OptimizedFunnels": {
+          "title": "Optimized Funnels",
+          "description": "Refine your sales journey to ensure a smooth and conversion-friendly user experience."
+        }
+      }
+    },
+    "LinkBuilding": {
+      "title": "Link Building",
+      "description": "Boost your credibility online with high-quality backlinks.",
+      "items": {
+        "DigitalPROutreach": {
+          "title": "Digital PR Outreach",
+          "description": "Partner with trusted publishers to secure placements that increase your authority."
+        },
+        "HARO": {
+          "title": "HARO Campaigns",
+          "description": "Connect with journalists to position your brand as a thought leader in your industry."
+        },
+        "GuestPosts": {
+          "title": "Guest Posts",
+          "description": "Build backlinks and drive referral traffic through strategic blogging on industry-relevant websites."
+        }
+      }
+    }
+  },
+  "VisualProduction": {
+    "title": "Visual Production ",
+    "dec": "At Right Click, we bring your vision to life by crafting visual content that captures the essence of your brand. Our diverse range of services is tailored to meet your unique needs, ensuring a memorable impact on your target audience.",
+    "title2": "Promo Video Production",
+    "dec2": "Engage Your Audience: We create promotional videos that highlight what sets your brand apart. Custom Storytelling: Collaborate with our team to develop a compelling narrative that resonates with your audience. Build Brand Awareness: Increase visibility and foster lasting engagement with strategic video content.",
+    "DocumentaryProduction": {
+      "title": "Documentary Video Production",
+      "features": {
+        "AuthenticStories": {
+          "title": "Share Authentic Stories",
+          "description": "Capture your brand's journey in a genuine and captivating manner."
+        },
+        "ProfessionalManagement": {
+          "title": "Professional Management",
+          "description": "From concept to final cut, we handle every detail, including interviews and seamless editing."
+        },
+        "CreativeEditing": {
+          "title": "Creative Editing",
+          "description": "Enhance your video with professional-grade effects, transitions, and storytelling techniques."
+        }
+      }
+    },
+    "EventServices": {
+      "EventsCoverage": {
+        "title": "Events Coverage",
+        "services": {
+          "ProfessionalDocumentation": {
+            "title": "Professional Event Documentation",
+            "description": "Ensure every significant moment of your event is captured professionally."
+          },
+          "CorporateProductEvents": {
+            "title": "Corporate and Product Events",
+            "description": "Highlight the success of your gatherings, from corporate meetings to product launches."
+          },
+          "BeyondFilming": {
+            "title": "More Than Just Filming",
+            "description": "Reflect the significance of each moment with professionalism and elegance."
+          }
+        }
+      },
+      "LivestreamServices": {
+        "title": "Livestream Services",
+        "services": {
+          "RealTimeEngagement": {
+            "title": "Real-Time Engagement",
+            "description": "Connect with audiences live, no matter where they are."
+          },
+          "TechnicalSupport": {
+            "title": "Comprehensive Technical Support",
+            "description": "We manage all technical aspects for a smooth, high-quality broadcast."
+          },
+          "MaximizeAudience": {
+            "title": "Maximize Audience Reach",
+            "description": "Expand your engagement opportunities during product launches and corporate events."
+          }
+        }
+      }
+    },
+    "SocialMediaSection2": {
+      "MotionVideoProduction": {
+        "title": "Motion Video Production",
+        "description1": "Dynamic Visual Content: Create eye-catching animations and graphics that captivate your audience.",
+        "description2": "Perfect for Digital Campaigns: Enhance your brand’s visibility on social media, presentations, and websites.",
+        "description3": "Make a Memorable Impact: Stand out with impactful visuals in a fast-paced digital world."
+      },
+      "ReelsProduction": {
+        "title": "Reels Production",
+        "description1": "Create Social Media-Friendly Content: Craft short, engaging videos tailored for platforms like Instagram.",
+        "description2": "Showcase Products and Moments: Connect with a digital-savvy audience and highlight your brand personality.",
+        "description3": "Boost Brand Visibility: Keep your brand in the spotlight with a modern touch to your online presence."
+      },
+      "GraphicDesignForVideo": {
+        "title": "Graphic Design for Video",
+        "description1": "Enhance Video Appeal: Our graphic design team creates polished elements like branded title screens, overlays, and animations.",
+        "description2": "Maintain Brand Consistency: Custom-designed graphics that match your brand’s image for a cohesive appearance.",
+        "description3": "Add a Professional Touch: High-quality graphics make your videos more effective and visually appealing."
+      }
+    }
+  },
+  "WebsiteDevelopment": {
+    "title": "Web Development",
+    "dec": "Take your online presence to the next level. We specialize in creating innovative and user-friendly websites tailored to your business needs. Let’s turn your ideas into reality.",
+    "title2": "Empowering Your Online Presence",
+    "dec2": " Social media has influenced enormous waves as a medium of communication and has risen as the best arena that has impacted different audiences from varied backgrounds and cultures. Our strategies for social media trigger your intended interest group and not simply mess the space with insufficient content. Our entire team has been consistently endeavoring to mark an impression and to become a native on Facebook, Pinterest, Instagram, Twitter, LinkedIn and Google+.",
+    "WhoWeAre": {
+      "WhoWeAreSection": {
+        "title": "Who We Are",
+        "description": "Right Click is a passionate team of developers with over ten years of experience creating impactful websites and applications. Our dedicated team provides customized solutions by combining creativity and technical expertise. Stories from more than 100 clients demonstrate how we have guided them through successful projects."
+      },
+      "WhyRightClick": {
+        "title": "Why Right Click",
+        "description": "We just don't build websites. Our approach ensures your website is optimized for search engines, user experience, and conversions. We stay ahead of the curve with the latest web development trends and technologies to deliver future-proof solutions. Our development process considers your future growth and promises a collaborative journey from initial concept to launch and beyond."
+      }
+    }
+  },
+  "header": "Blog",
+  "breadcrumb_home": "Home",
+  "breadcrumb_about": "Blog"
+}

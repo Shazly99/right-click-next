@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On RewriteBase / RewriteRule ^index\.html$ — [L] RewriteCond
+  %{REQUEST_FILENAME} !-f RewriteCond %{REQUEST_FILENAME} !-d RewriteCond
+  %{REQUEST_FILENAME} !-l RewriteRule . /index.html [L]
+</IfModule>
+
+# Redirect non-www URLs to www URLs 
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^rightclick.sa/ [NC]
+RewriteRule ^(.*)$ http://www.rightclick.sa/$1 [L,R=301]

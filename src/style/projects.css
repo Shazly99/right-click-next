@@ -1,0 +1,178 @@
+ .app__projects-section {
+   width: 95%;
+   margin: auto;
+ }
+
+ .app__projects-section .projects-section {
+   background-color: #fff;
+ }
+
+ .app__projects-section .projects-section .tabs {
+   margin-bottom: 20px;
+ }
+
+ .app__projects-section .projects-section .tabs .ant-btn-link {
+   color: #555;
+   font-size: 1rem;
+   margin: 0 10px;
+ }
+
+ .app__projects-section .projects-section .tabs .ant-btn-link.active-tab {
+   color: #ff5722;
+   font-weight: bold;
+ }
+
+ .app__projects-section .projects-section .projects-grid .project-card img {
+   max-height: 200px;
+   -o-object-fit: cover;
+   object-fit: cover;
+ }
+
+ .app__projects-section .projects-section .projects-grid .project-card .ant-card-meta-title {
+   font-size: 1.2rem;
+   color: #333;
+   margin-top: 10px;
+ }
+
+ .app__projects-section .projects-section .projects-grid .project-card .ant-card-meta-description {
+   font-size: 0.9rem;
+   color: #555;
+ }
+
+ .app__projects-section .projects-section .view-more {
+   margin-top: 30px;
+ }
+
+ .app__projects-section .projects-section .view-more .ant-btn-primary {
+   background-color: #000;
+   border-color: #000;
+ }
+
+ .app__projects-section .projects-section .view-more .ant-btn-primary:hover {
+   background-color: #333;
+   border-color: #333;
+ }
+
+ .app__projects-section .projects-section {
+   padding: 50px;
+ }
+
+ .app__projects-section .projects-section .custom-card {
+   position: relative;
+   background-color: #000;
+   border-radius: 8px;
+   overflow: hidden;
+   color: #fff;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .app__projects-section .projects-section .custom-card .card-image {
+   position: relative;
+ }
+
+ .app__projects-section .projects-section .custom-card .card-image img {
+   transition: transform 0.3s;
+ }
+
+ .app__projects-section .projects-section .custom-card .card-image img:hover {
+   transform: scale(1.08);
+ }
+
+ .app__projects-section .projects-section .custom-card .card-image .card-category {
+   position: absolute;
+   top: 30px;
+   left: 20px;
+   background: linear-gradient(90deg, #4a4a4a 0%, #2a2a2a 100%);
+   padding: 7px 16px;
+   color: #fff;
+   font-size: 13px;
+   font-weight: 500;
+   line-height: 15px;
+   border-radius: 52px;
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+   transition: transform 0.3s ease;
+ }
+
+ .app__projects-section .projects-section .custom-card .card-image .card-category:hover {
+   transform: scale(1.05);
+ }
+
+ .app__projects-section .projects-section .custom-card .card-image .card-icon {
+   position: absolute;
+   top: 30px;
+   right: 40px;
+   background: #fff;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #000;
+   font-size: 16px;
+ }
+
+ .app__projects-section .projects-section .custom-card .card-content {
+   padding: 15px;
+   position: absolute;
+   bottom: 20px;
+
+ }
+
+ :lang(en) .app__projects-section .projects-section .custom-card .card-content {
+   left: 20px;
+ }
+
+ :lang(ar) .app__projects-section .projects-section .custom-card .card-content {
+   right: 20px;
+ }
+
+ .app__projects-section .projects-section .custom-card .card-content h3 {
+   font-size: 1.2rem;
+   font-weight: bold;
+   margin-bottom: 10px;
+   color: #fff;
+   position: relative;
+   z-index: 1;
+ }
+
+ .app__projects-section .projects-section .custom-card .card-content h3::before {
+   content: '';
+   position: absolute;
+   width: 90px;
+   height: 35px;
+   z-index: -1;
+   background-color: rgba(0, 0, 0, 0.8);
+ }
+
+ :lang(en) .app__projects-section .projects-section .custom-card .card-content h3::before {
+   left: -15px;
+   top: -4px;
+ }
+
+ :lang(ar) .app__projects-section .projects-section .custom-card .card-content h3::before {
+   right: -15px;
+   top: 2px;
+ }
+
+ .app__projects-section .projects-section .custom-card .card-content p {
+   font-size: 0.9rem;
+   line-height: 1.4;
+   color: rgba(255, 255, 255, 0.8);
+ }
+
+ /*# sourceMappingURL=projects.css.map */
+ @media screen and (width < 900px) {
+   .projects-section {
+     padding: 50px 20px;
+   }
+
+   .app__projects-section .projects-section {
+     padding: 30px 20px 50px 20px;
+
+   }
+ }

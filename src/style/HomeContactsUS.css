@@ -1,0 +1,266 @@
+ .contact_us {
+   background-color: #1b2838;
+   color: #fff;
+   padding: 50px 20px;
+ }
+
+ .contact_us .container {
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+
+ .contact_us .container h2 {
+   color: #fff;
+
+   font-size: 50px;
+   font-weight: 700;
+   line-height: 96px;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+ }
+
+ .contact_us .container .contact-form {
+   margin-top: 30px;
+ }
+
+ .contact_us .container .contact-form .form-grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 20px;
+ }
+
+ @media (max-width: 768px) {
+   .contact_us .container .contact-form .form-grid {
+     grid-template-columns: 1fr;
+   }
+ }
+
+ .contact_us .container .contact-form .submit-container {
+   text-align: center;
+   margin-top: 20px;
+ }
+
+ .contact_us .container .contact-form .submit-button {
+   background-color: #FA6409;
+   border-color: #FA6409;
+   padding: 10px 100px;
+   border-radius: 5px;
+   font-size: 16px;
+   margin-top: 10px;
+ }
+
+ .label label {
+
+   font-size: 20px;
+   font-weight: 700;
+   line-height: 30px;
+   text-align: right;
+   text-underline-position: from-font;
+   -webkit-text-decoration-skip-ink: none;
+   text-decoration-skip-ink: none;
+   color: #fff !important;
+ }
+
+ .label textarea,
+ .label input {
+   background-color: transparent;
+   border: none !important;
+   border-radius: 0;
+   box-shadow: none !important;
+   color: rgb(203, 203, 203);
+   border-bottom: 1px solid rgb(203, 203, 203) !important;
+ }
+
+ .label textarea::-moz-placeholder,
+ .label input::-moz-placeholder {
+   color: rgba(203, 203, 203, 0.2);
+ }
+
+ .label textarea::placeholder,
+ .label input::placeholder {
+   color: rgba(203, 203, 203, 0.2);
+ }
+
+ .label textarea:hover,
+ .label input:hover {
+   background-color: transparent !important;
+ }
+
+ .label textarea:focus,
+ .label input:focus {
+   background-color: transparent !important;
+ }
+
+ .address__section {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 50px 20px;
+ }
+
+ .address__section .container {
+   width: 80%;
+   margin: auto;
+ }
+
+ .address__section .container h3 {
+   font-size: 24px;
+   font-weight: bold;
+   margin-bottom: 10px;
+   color: #222;
+ }
+
+ .address__section .container .divider {
+   width: 100px;
+   height: 3px;
+   background-color: #f96332;
+   border: none;
+   margin-bottom: 20px;
+ }
+
+ .address__section .container .location-text {
+   font-size: 18px;
+   margin-bottom: 10px;
+   color: #444;
+ }
+
+ .address__section .container .location-link {
+   font-size: 14px;
+   color: #555;
+   text-decoration: underline;
+   word-break: break-all;
+ }
+
+ .address__section .container .copy-link {
+   margin-top: 20px;
+   padding: 10px 20px;
+   background-color: #f96332;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+ }
+
+ .address__section .container .copy-link:hover {
+   background-color: #d6542d;
+ }
+
+ .address__section .map-image {
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+ }
+
+ .address__section .map-image img {
+   width: 70%;
+   height: auto;
+   border-radius: 10px;
+ }
+
+ /* القسم الرئيسي */
+ .address__section {
+   background-color: #f9f9f9;
+   padding: 50px 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ /* الحاوية */
+ .address__section .container {
+   max-width: 1200px;
+   width: 90%;
+   margin: auto;
+ }
+
+ /* النصوص */
+ .address__section .location-text {
+   font-size: 18px;
+   margin-bottom: 10px;
+   color: #444;
+  }
+  
+  .address__section .location-link {
+    font-size: 14px;
+    color: #555;
+    text-decoration: underline;
+    word-break: break-word;
+    margin-bottom: 20px;
+    margin-top: 10px;
+ }
+
+ /* الزر */
+ .address__section .copy-link {
+   background-color: #f96332;
+   color: white;
+   padding: 10px 20px;
+   border-radius: 5px;
+   font-size: 14px;
+   border: none;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+ }
+
+ .address__section .copy-link:hover {
+   background-color: #d6542d;
+ }
+
+ /* الصورة */
+ .address__section .map-image {
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .address__section .map-img {
+   border-radius: 10px;
+   max-width: 100%;
+   height: auto;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+ }
+
+ /* تحسين التجاوب */
+ @media (max-width: 768px) {
+   .address__section {
+     padding: 30px 10px;
+   }
+
+   .address__section .location-text {
+     font-size: 16px;
+   }
+
+   .address__section .location-link {
+     font-size: 13px;
+   }
+
+   .address__section .copy-link {
+     font-size: 12px;
+     padding: 8px 15px;
+   }
+ }
+
+
+
+ @media (max-width: 768px) {
+   .address__section {
+     flex-direction: column;
+     text-align: center;
+   }
+   .address__section .map-image {
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+  }
+ 
+
+   .address__section .map-image {
+     margin-top: 20px;
+   }
+   .address__section .container ,
+   .contact_us .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+ }
+
+ /*# sourceMappingURL=HomeContactsUS.css.map */

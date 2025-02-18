@@ -1,0 +1,32 @@
+{
+  "name": "right-click-next",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://rightclick.com.sa",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.5.2",
+    "antd": "^5.22.7",
+    "babel-plugin-import": "^1.13.8",
+    "framer-motion": "^11.15.0",
+    "next": "14.2.22",
+    "next-i18n-router": "^5.5.1",
+    "next-intl": "^3.14.1",
+    "primeflex": "^3.3.1",
+    "react": "^18",
+    "react-countup": "^6.5.3",
+    "react-dom": "^18",
+    "react-fast-marquee": "^1.6.5"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "22.13.0",
+    "@types/react": "19.0.8",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.22"
+  }
+}
