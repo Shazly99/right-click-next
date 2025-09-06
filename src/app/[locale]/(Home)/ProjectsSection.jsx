@@ -1,7 +1,7 @@
 
 import { Link } from '@/navigation';
 import '@style/projects.css';
-import { Col, Row } from 'antd';
+import { Button, Col, Row } from 'antd';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
@@ -23,9 +23,11 @@ const ProjectCard = ({ project }) => (
     </Col>
 );
 
-const ProjectsSection = ({ data }) => {
+const ProjectsSection = ({ data, isHomePage = false }) => {
     let t = useTranslations();
 
+    // عرض 6 مشاريع فقط في الصفحة الرئيسية
+    const displayProjects = isHomePage ? data?.data?.slice(0, 6) : data?.data;
 
     return (
         <> 
@@ -41,15 +43,25 @@ const ProjectsSection = ({ data }) => {
                     </div>
                 </div>
 
-
                 {/* Projects Grid */}
                 <div className="projects-section">
                     <Row gutter={[20, 20]} justify="center">
-                        {data?.data?.map((project, index) => (
+                        {displayProjects?.map((project, index) => (
                             <ProjectCard key={index} project={project} />
                         ))}
                     </Row>
                 </div>
+
+                {/* Show More Button for Home Page */}
+                {isHomePage && data?.data?.length > 6 && (
+                    <div className="text-center mt-0">
+                        <Link href="/portfolio">
+                            <Button type="primary" size="large" className="px-8 py-3">
+                                {t('ViewAllProjects')}
+                            </Button>
+                        </Link>
+                    </div>
+                )}
             </div>
         </>
     );

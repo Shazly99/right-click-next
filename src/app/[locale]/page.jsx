@@ -1,5 +1,7 @@
 export const dynamic = "force-dynamic";
+import img from "@/constants/img";
 import AboutHome from "./(Home)/AboutHome";
+import "./(Home)/home.css";
 import HomeAddress from "./(Home)/HomeAddress";
 import HomeClients from "./(Home)/HomeClients";
 import HomeContactsUS from "./(Home)/HomeContactsUS";
@@ -8,8 +10,6 @@ import ProjectHome from "./(Home)/ProjectHome";
 import ProjectsSection from "./(Home)/ProjectsSection";
 import Slider from "./(Home)/Slider";
 import StatsSection from "./(Home)/StatsSection";
-import "./(Home)/home.css";
-import img from "@/constants/img";
 
 // Function to get data from API
 async function fetchData(locale) {
@@ -300,8 +300,8 @@ export default async function Home({ params }) {
       <Slider sliders={data.sliders} />
       <AboutHome aboutUs={data.about_us} />
       <StatsSection stats={data.about_us} />
-      <ProjectHome projects={data.projects} />
-      <ProjectsSection data={data.projects} />
+      <ProjectHome projects={data.projects} /> 
+      <ProjectsSection data={data.projects} isHomePage={true} />
       <HomeServices services={data.services} />
       <HomeClients clients={data.clients} />
       <HomeContactsUS contacts={data.contacts} />

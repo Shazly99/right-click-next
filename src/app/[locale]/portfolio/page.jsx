@@ -46,19 +46,20 @@ export default async function Portfolio({ params }) {
   const t = await getTranslations(locale); // Get translations
   const data = await fetchData(locale); 
 
-  const clients = [
-    img.ourClicnts1,
-    img.ourClicnts2,
-    img.ourClicnts3,
-    img.ourClicnts4,
-    img.ourClicnts5,
-    img.ourClicnts6,
-    img.ourClicnts1,
-    img.ourClicnts2,
-    img.ourClicnts3,
-    img.ourClicnts4,
-    img.ourClicnts5,
-    img.ourClicnts6,
+  const clients = [ 
+    img.ourClicnts13,
+    img.ourClicnts14,
+    img.ourClicnts15,
+    img.ourClicnts16, 
+    img.ourClicnts18,
+    img.ourClicnts19,
+    img.ourClicnts20,
+    img.ourClicnts21  ,
+    img.ourClicnts22,
+    img.ourClicnts23,
+    img.ourClicnts24,
+    img.ourClicnts25,
+    
   ];
 
   return (
@@ -87,7 +88,7 @@ export default async function Portfolio({ params }) {
           >
             <div className="portfolio-item flex  portfolio_img ">
               <Image width={500} height={50}
-                src={img.coverTest} // Replace with actual image paths
+                src={img.coverTest2} // Replace with actual image paths
                 alt="Project 1"
                 className="portfolio-image left"
               />
@@ -96,7 +97,7 @@ export default async function Portfolio({ params }) {
           <Col xs={24} sm={12} md={10}>
             <div className="portfolio-item portfolio_img portfolio_img_center">
               <Image width={1000} height={50}
-                src={img.coverTest}
+                src={img.coverTest1}
                 alt="Project 2"
                 className="portfolio-image   center "
               />
@@ -110,7 +111,7 @@ export default async function Portfolio({ params }) {
           >
             <div className="portfolio-item flex portfolio_img">
               <Image width={1000} height={50}
-                src={img.coverTest}
+                src={img.coverTest3}
                 alt="Project 3"
                 className="portfolio-image  right"
               />
@@ -183,6 +184,7 @@ export default async function Portfolio({ params }) {
                 height={1000}
                 priority
                 alt={`Client ${index + 1}`}
+                className="p-3"
                 style={{ height: "100px", width: "auto", objectFit: "contain" }}
               />
             </div>

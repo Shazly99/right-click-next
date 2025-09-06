@@ -332,6 +332,7 @@
  .projectHome .contentContainer .projectDetails .description {
    margin-bottom: 1rem;
    color: #666;
+   text-align: start;
  }
 
  .projectHome .contentContainer .projectDetails .button {
