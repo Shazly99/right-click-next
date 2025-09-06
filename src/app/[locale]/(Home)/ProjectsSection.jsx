@@ -1,7 +1,7 @@
 
 import { Link } from '@/navigation';
 import '@style/projects.css';
-import { Col, Row } from 'antd';
+import { Button, Col, Row } from 'antd';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
@@ -30,21 +30,17 @@ const ProjectsSection = ({ data, isHomePage = false }) => {
     const displayProjects = isHomePage ? data?.data?.slice(0, 6) : data?.data;
 
     return (
-        <> 
-            <div className="app__projects-section">
+        <>
+            <div className="app__projects-section mt-6">
                 {/* Header Section */}
-                <div className='display__filters_lg'>
-                    <div className="container_header">
-                        <div className="calm-projects-display">
-                            <div className="calm-projects-display__header">
-                                <h1 className="calm-projects-display__title"> {t('FeaturedProjects')}  </h1>
-                            </div>
-                        </div>
-                    </div>
+                <div className='display__filters_lg mb-0'> 
+                        <div className="calm-projects-display__header mb-0">
+                            <h1 className="calm-projects-display__title mb-0"> {t('FeaturedProjects')}  </h1>
+                        </div> 
                 </div>
 
                 {/* Projects Grid */}
-                <div className="projects-section">
+                <div className="projects-section pt-6">
                     <Row gutter={[20, 20]} justify="center">
                         {displayProjects?.map((project, index) => (
                             <ProjectCard key={index} project={project} />
@@ -53,7 +49,7 @@ const ProjectsSection = ({ data, isHomePage = false }) => {
                 </div>
 
                 {/* Show More Button for Home Page */}
-                {/* {isHomePage && data?.data?.length > 6 && (
+                {isHomePage && data?.data?.length > 6 && (
                     <div className="text-center mt-0">
                         <Link href="/portfolio">
                             <Button type="primary" size="large" className="px-8 py-3">
@@ -61,7 +57,7 @@ const ProjectsSection = ({ data, isHomePage = false }) => {
                             </Button>
                         </Link>
                     </div>
-                )} */}
+                )}
             </div>
         </>
     );
