@@ -1,7 +1,7 @@
 
 import { Link } from '@/navigation';
 import '@style/projects.css';
-import { Button, Col, Row } from 'antd';
+import { Col, Row } from 'antd';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
@@ -53,7 +53,7 @@ const ProjectsSection = ({ data, isHomePage = false }) => {
                 </div>
 
                 {/* Show More Button for Home Page */}
-                {isHomePage && data?.data?.length > 6 && (
+                {/* {isHomePage && data?.data?.length > 6 && (
                     <div className="text-center mt-0">
                         <Link href="/portfolio">
                             <Button type="primary" size="large" className="px-8 py-3">
@@ -61,7 +61,7 @@ const ProjectsSection = ({ data, isHomePage = false }) => {
                             </Button>
                         </Link>
                     </div>
-                )}
+                )} */}
             </div>
         </>
     );

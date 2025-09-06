@@ -683,7 +683,7 @@
    flex-direction: column;
    /* الاتجاه عمودي افتراضيًا */
    align-items: center;
-   gap: 10px;
+   gap: 0px;
  }
 
  .projectHome .logo_Container .logoContainer .Container::-webkit-scrollbar {
