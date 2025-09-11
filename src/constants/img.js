@@ -12,7 +12,7 @@ const img = {
     contactHeader: "/assets/Images/Header/HeaderContactUs.png",
     HeaderServices: "/assets/Images/Header/HeaderServices.png",
     HeaderClients: "/assets/Images/Header/clients.png",
-    coverTest1: "/assets/Images/project/cover4.webp",
+    coverTest1: "/assets/Images/project/cover1.png",
     coverTest2: "/assets/Images/project/cover2.webp",
     coverTest3: "/assets/Images/project/cover3.webp",
 

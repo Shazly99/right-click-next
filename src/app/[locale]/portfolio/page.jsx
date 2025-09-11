@@ -87,7 +87,7 @@ export default async function Portfolio({ params }) {
             className="flex justify-content-center align-items-end  "
           >
             <div className="portfolio-item flex  portfolio_img ">
-              <Image width={500} height={50}
+              <Image width={500} height={100}
                 src={img.coverTest2} // Replace with actual image paths
                 alt="Project 1"
                 className="portfolio-image left"
@@ -110,7 +110,7 @@ export default async function Portfolio({ params }) {
             className="flex justify-content-center align-items-end"
           >
             <div className="portfolio-item flex portfolio_img">
-              <Image width={1000} height={50}
+              <Image width={1000} height={100}
                 src={img.coverTest3}
                 alt="Project 3"
                 className="portfolio-image  right"
